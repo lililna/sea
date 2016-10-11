@@ -1,0 +1,62 @@
+/*content*/
+/****************************************/
+.content{
+	width: 1093px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.content #tuijian{
+	border-bottom: 1px solid #000000;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.content .lihe{
+	text-align: center;
+	display: block;
+}
+.content .lihe img{
+	border: 30px solid #dcdcdc;
+}
+.content .ula{
+	overflow: hidden;
+	width: 1093px; 
+	padding: 0 36px;
+	margin: 48px 0;
+}
+.content .ula li{
+	float: left;
+	line-height: 30px;
+	margin: 0 6px;
+}
+.content .ula li.moren{
+	background: #660000;
+	font-weight: bold;
+	color: white;
+}
+.content .ula .ulano{
+	width: 168px;
+	height: 42px;
+	float: left;
+	font-size: 22px;
+	text-align: center;
+	line-height: 42px;
+	background: #CCCCCC;
+	border-radius: 20px;
+}
+.content .kindwine{
+	width: 990px;
+	background: #8f0000;
+	overflow: hidden;
+	padding: 29px;
+	margin: 0 20px 30px 20px;
+	display: none;
+}
+.content .kindwine a{
+	display: block;
+	float: left;
+	margin: 1px;
+}
+ 
+.content div.showdiv{
+	display: block;
+}

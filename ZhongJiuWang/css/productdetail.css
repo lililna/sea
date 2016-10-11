@@ -1,0 +1,463 @@
+/*firstpagelist*/
+/************nav下面的list************/
+.firstpagelist{
+	width:100%;
+	height: 40px;
+}
+.fplist{
+	width: 1006px;
+	height: 40px;
+	background: white;
+	margin: 0 auto;
+	padding-left: 20px;
+}
+ul.fplist li{
+	float: left;
+	line-height: 38px;
+}
+ul.fplist li.redli{
+	color: red;
+}
+ul.fplist li span{
+	margin: 0 20px;
+}
+/*guimao*/
+/***********贵州茅台***************/
+.guimao{
+	width: 986px;
+	height: 114px;
+	margin: 5px auto;
+	background: white;
+	padding: 28px 20px 0 20px;
+}
+.guimao p{
+	width: 720px;
+	float: left;
+	font-size: 18px;
+	line-height: 24px;
+}
+.guimao p span{
+	color: red;
+}
+.guimao img{
+	float: left;
+	margin-left: 50px;
+} 
+.showimg{
+	width: 1006px;
+	height: 426px;
+	margin: 0 auto;
+}
+.showimg img.maotaijiu{
+	float: left;
+}
+.showimg ul{
+	width: 250px;
+	height: 426px;
+	background: #b81c22;
+	float: left;
+	color: white;
+	font-size: 14px;
+}
+.showimg ul .lia{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.showimg ul .lib{
+	height: 70px;
+	width: 250px;
+	font-size: 24px;
+	line-height: 70px;
+	background: #2a2a2a;
+	position: relative;
+}
+.showimg ul .lib input{
+	width: 92px;
+	height: 42px;
+	background: url(../img/qinggou.jpg) no-repeat center;
+	border: 0;
+	position: absolute;
+	right: 3px;
+	top: 12px;
+}
+.showimg ul .lic{
+	width: 210px;
+	height: 82px;
+	margin:0 20px ;
+	border-bottom: 1px solid #fff;
+}
+.showimg ul .lic p{
+	width: 42px;
+	float: left;
+	line-height: 22px;
+	margin: 20px 20px 0 0;
+}
+.showimg ul .lid{
+	width: 210px;
+	height: 73px;
+	margin:0 20px;
+	border-bottom: 1px solid white;
+}
+ 
+.showimg ul .lid dl dt{
+	margin-top: 18px;
+	float: left;
+}
+.showimg ul .lid dl dd{
+	margin: 16px 0 0 8px;
+	line-height: 24px;
+	float: left;
+}
+.showimg ul .lif{
+	line-height: 64px;
+	margin-left: 20px;
+}
+/*content*/
+/*****************中间的内容*************/
+.content{
+	width: 1006px;
+	margin: 14px auto;
+	overflow: hidden;
+}
+/*leftcontent*/
+.leftcontent{
+	width: 732px;
+	background: white;
+	float: left;
+}
+
+.leftcontent ul{
+	width: 732px;
+	height: 38px;
+	background: #000;
+	line-height: 38px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.leftcontent ul li{
+	width: 88px;
+	float: left;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+.leftcontent ul li img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.leftcontent ul li:hover{
+	background: #d10700;
+}
+.leftcontent .sankuai{
+	overflow: hidden;
+}
+.leftcontent .sankuai p{
+	width: 193px;
+	height: 148px;
+	border: 1px solid #dbd7d3;
+	background: #f3f3f3;
+	float: left;
+	line-height: 20px;
+	color: #353535;
+	padding: 0 16px;
+	margin: 0 5px 50px 8px;
+}
+.leftcontent .sankuai p b{
+	font-size: 22px;
+	color: #e74343;
+	line-height: 46px;
+}
+.leftcontent .specs{
+	width: 696px;
+	height: 460px;
+	margin: 0 15px 50px 15px;
+	overflow: hidden;
+}
+.leftcontent .details,
+.leftcontent .reviews{
+	margin-left: 15px;
+}
+.leftcontent .specs h3,
+.leftcontent .details h3,
+.leftcontent .reviews h3{
+	font-size: 22px;
+	width: 696px;
+	height: 42px;
+	line-height: 40px;
+	border-bottom: 1px solid #000;
+}
+.leftcontent .specs h3 span,
+.leftcontent .details h3 span,
+.leftcontent .reviews h3 span{
+	font-size: 14px;
+	color: #666666;
+}
+.leftcontent .specs dl{
+	margin-top: 30px;
+}
+.leftcontent .specs dl dt{
+	line-height: 30px;
+	float: left;
+}
+.leftcontent .specs dl dt b{
+	font-size: 14px;
+}
+.leftcontent .specs dl dd{
+	margin-left: 246px;
+	float: left;
+}
+.leftcontent .details .detailsct{
+	width: 686px;
+	overflow: hidden;
+	background: ##f9f9f9;
+	margin-left: 15px;
+}
+.leftcontent .details .detailsct img{
+	margin-top: 10px;
+}
+.leftcontent .details .detailsct dl{
+	margin-top: 75px;
+	width: 680px;
+	height: 325px;
+	margin: 0 15px;
+	padding-top: 70px;
+}
+.leftcontent .details .detailsct dl dt{
+	float: left;
+}
+.leftcontent .details .detailsct dl dd{
+	width: 315px;
+	margin:15px 0 0 54px;
+	float: left;
+}
+.leftcontent .details .detailsct dl dd b{
+	font-size: 16px;
+	line-height: 36px;
+}
+.leftcontent .details .detailsct dl dd span{
+	display: block;
+	line-height: 22px;
+}
+.leftcontent .details .detailsct .show{
+	width: 696px;
+	height: 1846px;
+	background: #f9f9f9;
+	position: relative;
+}
+.leftcontent .details .detailsct .show .imga{
+	position: absolute;
+	left: 74px;
+	top:60px
+}
+.leftcontent .details .detailsct .show .imgb{
+	position: absolute;
+	left: 240px;
+	top:60px
+}
+.leftcontent .details .detailsct .show .imgc{
+	position: absolute;
+	left: 475px;
+	top:60px
+}
+.leftcontent .details .detailsct .show .imgd{
+	position: absolute;
+	left: 74px;
+	top:322px
+}
+.leftcontent .details .detailsct .show .imge{
+	position: absolute;
+	left: 478px;
+	top:370px
+}
+.leftcontent .details .detailsct .show .imgf{
+	position: absolute;
+	left: 80px;
+	top:610px
+}
+.leftcontent .details .detailsct .show .imgg{
+	position: absolute;
+	left: 390px;
+	top:562px
+}
+.leftcontent .details .detailsct .show .imgh{
+	position: absolute;
+	left: 390px;
+	top: 847px;
+}
+.leftcontent .details .detailsct .show .situ{
+	position: absolute;
+	left: 25px;
+	bottom: 0;
+}
+.leftcontent .reviews{
+	overflow: hidden;
+}
+.leftcontent .reviews dl{
+	width: 696px;
+	height: 114px;
+	margin-top: 24px;
+}
+.leftcontent .reviews dl dt{
+	margin: 16px 20px 0 0;
+	text-align: center;
+	line-height: 18px;
+	float: left;
+}
+.leftcontent .reviews dl dd{
+	width: 602px;
+	height: 104px;
+	border: 1px solid #A2A2AF;
+	float: left;
+}
+.leftcontent .reviews dl dd span{
+	width: 574px;
+	margin-left: 6px;
+	line-height: 32px;
+	padding-top: 10px;
+	display: block;
+	border-bottom: 1px solid #A2A2AF;
+}
+.leftcontent .reviews dl dd p{
+	padding: 16px;
+	color: #666666;
+}
+/*rightcontent*/
+.rightcontent{
+	width: 248px;
+	float: right;
+	background: white;
+	overflow: hidden;
+}
+.rightcontent .chengnuo{
+	width: 248px;
+	height: 160px;
+	border-bottom: 1px solid #A2A2AF;
+	margin-bottom: 20px;
+}
+.rightcontent .chengnuo h3,
+.rightcontent .zhida h3,
+.rightcontent .tuijian h3,
+.rightcontent .paihang h3,
+.rightcontent .dapai h3{
+	width: 224px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: white;
+	padding-left: 24px;
+	background: #000;
+}
+.rightcontent .chengnuo dl{
+	width: 70px;
+	text-align: center;
+	margin: 10px 6px;
+	float: left;
+}
+.rightcontent .chengnuo dl dd b{
+	font-size: 14px;
+	line-height: 26px;
+	display: block;
+}
+.rightcontent .zhida{
+	width: 248px;
+	height: 136px;
+	border-bottom: 1px solid #A2A2AF;
+	margin-bottom: 20px;
+}
+.rightcontent .zhida .likebtn{
+	padding: 16px;
+}
+.rightcontent .zhida .likebtn input{
+	margin-top: 5px;
+}
+.rightcontent .tuijian{
+	margin-bottom: 20px;
+}
+.rightcontent .tuijian dl{
+	 
+	height: 120px;
+	border-bottom: 1px solid #A2A2AF;
+}
+.rightcontent .tuijian dl dt{
+	width: 108px;
+	height: 120px;
+	float: left;
+	text-align: center;
+}
+.rightcontent .tuijian dl dt img{
+	vertical-align: middle;
+}
+.rightcontent .tuijian dl dt span{
+	width: 0;
+	height: 120px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.rightcontent .tuijian dl dd{
+	width: 120px;
+	float: left;
+	line-height: 18px;
+	margin: 12px 0 0 18px;
+}
+.rightcontent .tuijian dl dd b{
+	font-weight: normal;
+	display: block;
+	color: red;
+}
+.rightcontent .tuijian dl dd span{
+	line-height: 20px;
+	font-size: 14px;
+	color: #666666;
+}
+.rightcontent .paihang{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.rightcontent .paihang ul li{
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px dashed #A2A2AF;
+	position: relative;
+}
+.rightcontent .paihang ul li .bb{
+	width: 20px;
+	height: 20px;
+	display: block;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	float: left;
+	margin: 11px;
+	background: #dddddd;
+}
+.rightcontent .paihang ul li dl{
+	width: 250px;
+	height: 244px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.rightcontent .paihang ul li dl dt{
+	text-align: center;
+	margin-top: 10px;
+}
+.rightcontent .paihang ul li dl dd{
+	text-align: center;
+}
+.rightcontent .paihang ul li dl dd span{
+	color: red;
+}
+.rightcontent .paihang ul li dl dd span b{
+	font-size: 24px;
+}
+.rightcontent .paihang ul li dl dd i{
+	text-decoration: line-through;
+	font-style: normal;
+}
+.rightcontent .dapai ul li{
+	float: left;
+	border: 1px solid #A2A2AF;
+}

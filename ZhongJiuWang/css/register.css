@@ -1,0 +1,150 @@
+.logincontent .rightct{
+	width: 314px;
+	height: 446px;
+	margin-left: 86px;
+	float: left;
+	position: relative;
+}
+.head .sp{
+	margin-top: 60px;
+	font-size: 16px;
+	width: 100px;
+	color: #666666;
+	display: block;
+	float: left;
+}
+.logincontent .rightct .havezhc{
+	position: absolute;
+	right: 0;
+	top: 2px;
+}
+.logincontent .rightct .havezhc a{
+	color: red;
+}
+.logincontent .rightct .phoneNo{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	width: 282px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.logincontent .rightct .pwd{
+	position: absolute;
+	left: 0;
+	top: 245px;
+	width: 282px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.logincontent .rightct .cfmpwd{
+	position: absolute;
+	left: 0;
+	top: 314px;
+	width: 282px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.logincontent .rightct .yanzheng{
+	position: absolute;
+	left: 0;
+	top: 108px;
+	width: 118px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.logincontent .rightct .jiaoyan{
+	position: absolute;
+	left: 0;
+	top: 176px;
+	width: 118px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.logincontent .rightct .btn{
+	position: absolute;
+	left: 140px;
+	top: 176px;
+	width: 116px;
+	height: 44px;
+}
+.logincontent .rightct .agree{
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #de3a39;
+	font-size: 16px;
+	color: white;
+	position: absolute;
+	left: 0;
+	top: 378px;
+	border-radius: 3px;
+}
+
+.logincontent .rightct .tiaokuan{
+	color: #de3a39;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.logincontent .rightct .yzhm{
+	width: 120px;
+	height: 42px;
+	background: white;
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	left: 140px;
+	top: 108px;
+	line-height: 42px;
+	font-size: 26px;
+	text-align: center;
+	color: green;
+}
+.logincontent .rightct .nolook{
+	position: absolute;
+	right: 0;
+	top: 110px;
+	line-height: 18px;
+	cursor: pointer;
+}
+.logincontent .rightct .shjh{
+	color: red;
+	position: absolute;
+	left: 0;
+	top: 85px;
+	display: none;
+}
+.logincontent .rightct .yzm{
+	color: red;
+	position: absolute;
+	left: 0;
+	top: 155px;
+	display: none;
+}
+.logincontent .rightct .jiao{
+	color: red;
+	position: absolute;
+	left: 0;
+	top: 225px;
+	display: none;
+}
+.logincontent .rightct .mm{
+	color: red;
+	position: absolute;
+	left: 0;
+	top: 295px;
+	display: none;
+}
+.logincontent .rightct .qrmm{
+	color: red;
+	position: absolute;
+	left: 0;
+	top: 360px;
+	display: none;
+}

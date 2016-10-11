@@ -1,0 +1,682 @@
+html,body{
+	width:100%;
+	background: #f7f7f7;
+}
+/*logoTop*/
+/**************最顶部LOGO和内容*******************/
+.logoTop{
+	width: 100%;
+	height:90px;
+}
+.logoTop img{
+	width: 100%;
+	height: 90px;
+	margin: 0 auto;
+}
+.topIofo{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #e6e6e6;
+	background: #f2f2f2;
+}
+.topInfoContent{
+	width: 1093px;
+	line-height: 30px;
+	margin: 0 auto;
+}
+.topInfoContent a{
+	color: #666666;
+	margin: 0 5px;
+}
+.topInfoLeft{
+	float: left;
+}
+.topInfoRight{
+	float: right;
+}
+.topInfoRight span{
+	color: #f69223;
+}
+
+/*searchContent*/
+/**********************顶部搜索框部分内容********************/
+.searchCt{
+	width: 100%;
+	height: 78px;
+	padding-top: 30px;
+	background: white;
+}
+.searchContent{
+	width: 1093px;
+	height: 78px;
+	position: relative;
+	margin: 0 auto;
+}
+.zhongjiuwang{
+	margin-right: 16px;
+	float: left;
+}
+.searchContent form{
+	height: 35px;
+	margin-right: 12px;
+	float: left;
+}
+#txt{
+	width: 418px;
+	height: 31px;
+	float: left;
+	border: 2px solid #c8030a;
+	 
+}
+#btn{
+	width: 72px;
+	height: 37px;
+	background: #C8030A;
+	float: left;
+	border: 0;
+	color: white;
+}
+.searchContent dl{
+	width: 102px;
+	height: 46px;
+	margin-left: 10px;
+	float: left;
+}
+.searchContent dl dt{
+	float: left;
+}
+.searchContent dl dd{
+	line-height: 18px;
+	margin-left: 3px;
+	color: #666666;
+	float: left;
+}
+.searchContent dl dd b{
+	font-size: 14px;
+}
+.searchContent p{
+	position:absolute;
+	left: 345px;
+	top: 50px;
+	color: #666666;
+}
+.searchContent p a{
+	color: #666666;
+	margin: 0 5px;
+}
+/*nav*/
+/****************头部列表部分*********************/
+.nav{
+	width: 100%;
+	height: 40px;
+	background: #080808;
+}
+.nav ul{
+	width: 1093px;
+	margin: 0 auto;
+}
+.nav ul li{
+	width: 108px;
+	height: 40px;
+	color: white;
+	line-height: 40px;
+	font-size: 14px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.nav ul li.shopping-cart{
+	width: 143px;
+	height: 33px;
+	line-height: 32px;
+	color: #666666;
+	font-size: 12px;
+	background: #f7f7f7;
+	margin-top: 3px;
+	border-radius: 2px;
+	float: right;
+}
+.nav ul li img{
+	vertical-align: middle;
+	margin: 0 6px;
+}
+.hideImg{
+	z-index: 10;
+}
+.downtriangle{
+	padding-left: 10px;
+}
+.nav ul li.gift .hot,.nav ul li.wedding .hot{
+	position: absolute;
+	left: 18px;
+	top: -11px;
+}
+.zero{
+	position: absolute;
+	left: 15px;
+	top: -19px;
+}
+.hideImg{
+	position: absolute;
+	left: -7px;
+	top: 40px;
+	display: none;
+}
+/*banner*/
+/***********************轮播图*********************/
+.banner{
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+.banner ul{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.banner ul li{
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.banner ul li.liz{
+	display: block;
+	z-index: 1;
+}
+.banner ul li img{
+	width: 100%;
+	height: 300px;
+	margin: 0 auto; 
+}
+.banner ol{
+	width: 130px;
+	height: 20px;
+	z-index: 10;
+	position: absolute;
+	left: 550px;
+	top: 270px;
+}
+.banner ol li{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: white;
+	float: left;
+	margin: 0 5px;
+}
+/*ZhShYZh*/
+/*banner下方的文字内容*/
+.ZhShYZh{
+	width: 100%;
+	height: 102px;
+	background: white;
+}	
+.ZhShYZhContent{
+	width: 1093px;
+	height: 102px;
+	margin: 0 auto;
+}
+.ZhShYZhContent dl{
+	width: 274px;
+	margin-top: 24px;
+	float: left;
+}
+.ZhShYZhContent dl dt{
+	float: left;
+}
+.ZhShYZhContent dl dd{
+	width: 180px;
+	height: 40px;
+	margin: 10px 22px 0 0;
+	border-right: 1px dashed #666666;
+	float: left;
+}
+.ZhShYZhContent dl dd b{
+	font-size: 14px;
+	line-height: 20px;
+}
+.ZhShYZhContent dl dd span{
+	line-height: 18px;
+}
+.ZhShYZhContent dl.noborder{
+	width: 220px;
+}
+.ZhShYZhContent dl.noborder dd{
+	border: 0;
+	margin-right: 0;
+	width: 150px;
+}
+/*content*/
+/***************正文部分内容**********************/
+.content{
+	width: 100%;
+	padding-top: 12px;
+}
+.content dl{
+	width: 1093px;
+	height: 352px;
+	margin: 0 auto;
+	background: white;
+	padding: 12px;
+	margin-top: 20px;
+}
+.content dl dt{
+	float: left;
+}
+.content dl dd{
+	width: 378px;
+	height: 315px;
+	margin: 10px 0 0 28px;
+	float: left;
+	position: relative;
+}
+.content dl dd .time{
+	width: 367px;
+	height: 34px;
+	background: #fff2f2;
+	margin-bottom: 22px;
+}
+.content dl dd .time img{
+	float: left;
+}
+.content dl dd .time p{
+	line-height: 34px;
+	margin-left: 10px;
+	float: left;
+}
+.discount{
+	width: 363px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.discount b{
+	color: #d10700;
+}
+.content dl dd strong{
+	font-size: 34px;
+	color: #d10700;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+}
+.content dl dd a{
+	display: block;
+	width: 110px;
+	height: 38px;
+	background: #d10700;
+	line-height: 38px;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	border-radius: 3px;
+	right: 0;
+	bottom: 50px;
+}
+.star{
+	position: absolute;
+	left: 0;
+	bottom: 15px;
+}
+.haveBuy{
+	position: absolute;
+	right: 0;
+	bottom: 15px;
+	color: #a2a2af;
+}
+.haveBuy span{
+	font-size: 16px;
+	color: #c8966a;
+}
+/*newGoods*/
+/******************每日新品***********************/
+.newGoods{
+	width: 100%;
+}
+.newGoods .goodsHead{
+	width: 1093px;
+	height: 30px;
+	margin: 0 auto;
+	border-bottom: 2px solid #000;
+	position: relative;
+	padding-top: 20px;
+}
+.newGoods .goodsHead img{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.newGoods .goodsHead p{
+	width: 175px;
+	line-height: 30px;
+	background: #000;
+	color: white;
+	font-size: 18px;
+}
+.newGoods .goodsHead span{
+	position: absolute;
+	left: 184px;
+	top: 24px;
+	font-size: 20px;
+}
+.newGoods .goodsHead i{
+	position: absolute;
+	right: 5px;
+	top: 32px;
+	color: red;
+	font-style: normal;
+}
+.newGoodsCt{
+	width: 1093px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.newGoodsCt dl{
+	width: 328px;
+	height: 460px;
+	background: white;
+	float: left;
+	border: 6px solid lightyellow;
+	/*padding: 6px;*/
+	margin-top: 20px;
+}
+*html .newGoodsCt dl img{
+	display: block;
+}
+.newGoodsCt dl.centerDl{
+	margin: 20px 18px 0 18px;
+}
+.newGoodsCt dl dd{
+	width: 330px;
+	height: 110px;
+	position: relative;
+}
+.zhe{
+	font-size: 14px;
+	line-height: 48px;
+}
+.zhe span{
+	color: #d10700;
+}
+.price{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.price b{
+	font-size: 18px;
+	color: #d10700;
+}
+.price span{
+	color: #A2A2AF;
+	text-decoration: line-through;
+}
+.sales{
+	position: absolute;
+	right: 5px;
+	bottom: 0;
+}
+/*condo*/
+/*********************商品销售小房间**********************/
+.condo{
+	width: 1073px;
+	background: white;
+	margin: 45px auto;
+	padding: 10px;
+	position: relative;
+}
+.condo div{
+	overflow: hidden;
+}
+.condo div.hidediv{
+	display: none;
+}
+.condo .ula{
+	height: 45px;
+	border-bottom: 1px solid #A2A2AF;
+}
+.condo .ula li{
+	padding: 13px 18px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+}
+.condo .ula li.showborder{
+	border-bottom: 4px solid #000;
+}
+.condo .ulb{
+	height: 230px;
+	border-bottom: 1px solid #A2A2AF;
+}
+.condo .ulb li dl{
+	width: 348px;
+	float: left;
+}
+.condo .ulb li dl dt{
+	width: 144px;
+	height: 230px;
+	text-align: center;
+	float: left;
+}
+.condo .ulb li dl dt span{
+	width: 0;
+	height: 236px;
+	display: inline-block;
+	vertical-align: middle;	
+}
+.condo .ulb li dl dt img{
+	vertical-align: middle;
+}
+.condo .ulb li dl dd{
+	margin-top: 68px;
+	float: left;
+}
+.condo .ulb li dl dd h3{
+	font-size: 18px;
+	line-height: 24px;
+}
+.condo .ulb li dl dd p{
+	color: #A2A2AF;
+	line-height: 16px;
+}
+.condo .ulb li dl dd span{
+	line-height: 50px;
+	color: red;
+}
+.condo .ulb li dl dd b{
+	font-size: 16px;
+	color: red;
+}
+/*btmTop*/
+/*底部品质保证部分*/
+.btmTop{
+	width: 100%;
+	height: 163px;
+	background: #eeeeee;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+.btmTopCt{
+	width: 1093px;
+	margin: 0 auto;
+}
+.btmTopCt dl{
+	width: 180px;
+	float: left;
+	text-align: center;
+	padding-top:12px ;
+	color: #7b6666;
+}
+.btmTopCt dl dd b{
+	font-size: 18px;
+	line-height: 32px;
+	
+}
+/*btmShopGuide*/
+/********************底部购物指南部分**********************/
+.btmShopGuide{
+	width: 100%;
+	height: 166px;
+	background: #eeeeee;
+}
+.guideCt{
+	width: 1093px;
+	margin: 0 auto;
+	padding: 26px 12px 5px 12px;
+	position: relative;
+}
+.guideCt .mdl{
+	width: 135px;
+	height: 128px;
+	float: left;
+	margin: 0 14px;
+	color: #666666;
+}
+.guideCt .mdl dt{
+	width: 135px;
+	height: 32px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px dashed #A2A2AF;
+	line-height: 32px;
+}
+.guideCt .mdl dd a{
+	margin-left: 16px;
+	line-height: 24px;
+	display: block;
+	color: #666666;
+}
+.erweima{
+	height: 166px;
+	width: 250px;
+	border-left: 1px solid #A2A2AF;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.erweima dl{
+	width: 124px;
+	text-align: center;
+	float: left;
+}
+.erweima h3{
+	font-weight: bold;
+	margin-top: 26px;
+	line-height: 18px;
+}
+.erweima dl dd{
+	line-height: 18px;
+	color: #666666;
+}
+/*btmList*/
+/*页脚的列表部分*/
+.btmList{
+	width: 100%;
+	height: 38px;
+	background: #353535;
+}
+.btmList p{
+	width: 1093px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 38px;
+}
+.btmList p a{
+	color: white;
+	font-size: 14px;
+}
+.btmList p span{
+	color: white;
+	font-size: 14px;
+	margin: 0 16px;
+}
+/*bottom*/
+/*页脚内容*/
+.bottom{
+	width: 1093;
+	height: 124px;
+	margin: 0 auto;
+	text-align: center;
+}
+.bottom p{
+	text-align: center;
+	line-height: 26px;
+}
+.bottom p span{
+	color: #C8030A;
+}
+.bottom p img{
+	margin: 0 5px;
+}
+/*弹出窗口*/
+.outer{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.tanchu{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: black;
+	opacity: .6;
+	filter:alpha(opacity=60);
+}
+.outer dl{
+	width: 650px;
+	height: 450px;
+	margin: 0 auto;
+	position: absolute;
+	left: 300px;
+	top: 100px;
+}
+.outer dl dt{
+	z-index: 20;
+	float: left;
+}
+.outer dl dt img{
+	z-index: 20;
+}
+.outer dl dd{
+	width: 150px;
+	float: left;
+}
+.outer dl dd p{
+	font-size: 30px;
+	font-weight: bold;
+	color: yellow;
+	margin-top: 120px;
+	line-height: 50px;
+}
+.outer dl dd a{
+	display: block;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	color: #FFF;
+	background: #FF0000;
+	line-height: 40px;
+	font-size: 18px;
+	border-radius: 3px;
+	margin: 10px;
+}
+.outer dl span{
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: white;
+	cursor: pointer;
+}
+.rttop{
+	position: fixed;
+	right:0;
+	bottom: 0;
+}

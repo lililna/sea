@@ -1,0 +1,285 @@
+html,body{
+	width:100%;
+	background: #f7f7f7;
+}
+/*logoTop*/
+/**************最顶部LOGO和内容*******************/
+.logoTop{
+	width: 100%;
+	height:90px;
+}
+.logoTop img{
+	width: 100%;
+	height: 90px;
+	margin: 0 auto;
+}
+.topIofo{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #e6e6e6;
+	background: #f2f2f2;
+}
+.topInfoContent{
+	width: 1093px;
+	line-height: 30px;
+	margin: 0 auto;
+}
+.topInfoContent a{
+	color: #666666;
+	margin: 0 5px;
+}
+.topInfoLeft{
+	float: left;
+}
+.topInfoRight{
+	float: right;
+}
+.topInfoRight span{
+	color: #f69223;
+}
+
+/*searchContent*/
+/**********************顶部搜索框部分内容********************/
+.searchCt{
+	width: 100%;
+	height: 78px;
+	padding-top: 30px;
+	background: white;
+}
+.searchContent{
+	width: 1093px;
+	height: 78px;
+	position: relative;
+	margin: 0 auto;
+}
+.zhongjiuwang{
+	margin-right: 16px;
+	float: left;
+}
+.searchContent form{
+	height: 35px;
+	margin-right: 12px;
+	float: left;
+}
+#txt{
+	width: 418px;
+	height: 31px;
+	float: left;
+	border: 2px solid #c8030a;
+	 
+}
+#btn{
+	width: 72px;
+	height: 37px;
+	background: #C8030A;
+	float: left;
+	border: 0;
+	color: white;
+}
+.searchContent dl{
+	width: 102px;
+	height: 46px;
+	margin-left: 10px;
+	float: left;
+}
+.searchContent dl dt{
+	float: left;
+}
+.searchContent dl dd{
+	line-height: 18px;
+	margin-left: 3px;
+	color: #666666;
+	float: left;
+}
+.searchContent dl dd b{
+	font-size: 14px;
+}
+.searchContent p{
+	position:absolute;
+	left: 345px;
+	top: 50px;
+	color: #666666;
+}
+.searchContent p a{
+	color: #666666;
+	margin: 0 5px;
+}
+/*nav*/
+/****************头部列表部分*********************/
+.nav{
+	width: 100%;
+	height: 40px;
+	background: #080808;
+}
+.nav>ul{
+	width: 1093px;
+	margin: 0 auto;
+}
+.nav>ul>li{
+	width: 108px;
+	height: 40px;
+	color: white;
+	line-height: 40px;
+	font-size: 14px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.nav>ul>li.shopping-cart{
+	width: 143px;
+	height: 33px;
+	line-height: 32px;
+	color: #666666;
+	font-size: 12px;
+	background: #f7f7f7;
+	margin-top: 3px;
+	border-radius: 2px;
+	float: right;
+}
+.nav>ul>li img{
+	vertical-align: middle;
+	margin: 0 6px;
+}
+.hideImg{
+	z-index: 10;
+}
+.downtriangle{
+	padding-left: 10px;
+}
+.nav>ul>li.gift .hot,.nav>ul>li.wedding .hot{
+	position: absolute;
+	left: 18px;
+	top: -11px;
+}
+.zero{
+	position: absolute;
+	left: 15px;
+	top: -19px;
+}
+.hideImg{
+	position: absolute;
+	left: -7px;
+	top: 40px;
+	display: none;
+}
+
+/*btmTop*/
+/*底部品质保证部分*/
+.btmTop{
+	width: 100%;
+	height: 163px;
+	background: #eeeeee;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+.btmTopCt{
+	width: 1093px;
+	margin: 0 auto;
+}
+.btmTopCt dl{
+	width: 180px;
+	float: left;
+	text-align: center;
+	padding-top:12px ;
+	color: #7b6666;
+}
+.btmTopCt dl dd b{
+	font-size: 18px;
+	line-height: 32px;
+	
+}
+/*btmShopGuide*/
+/********************底部购物指南部分**********************/
+.btmShopGuide{
+	width: 100%;
+	height: 166px;
+	background: #eeeeee;
+}
+.guideCt{
+	width: 1093px;
+	margin: 0 auto;
+	padding: 26px 12px 5px 12px;
+	position: relative;
+}
+.guideCt .mdl{
+	width: 135px;
+	height: 128px;
+	float: left;
+	margin: 0 14px;
+	color: #666666;
+}
+.guideCt .mdl dt{
+	height: 32px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px dashed #A2A2AF;
+	line-height: 32px;
+}
+.guideCt .mdl dd a{
+	margin-left: 16px;
+	line-height: 24px;
+	display: block;
+	color: #666666;
+}
+.erweima{
+	height: 166px;
+	width: 250px;
+	border-left: 1px solid #A2A2AF;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.erweima dl{
+	width: 124px;
+	text-align: center;
+	float: left;
+}
+.erweima h3{
+	font-weight: bold;
+	margin-top: 26px;
+	line-height: 18px;
+}
+.erweima dl dd{
+	line-height: 18px;
+	color: #666666;
+}
+/*btmList*/
+/*页脚的列表部分*/
+.btmList{
+	width: 100%;
+	height: 38px;
+	background: #353535;
+}
+.btmList p{
+	width: 1093px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 38px;
+}
+.btmList p a{
+	color: white;
+	font-size: 14px;
+}
+.btmList p span{
+	color: white;
+	font-size: 14px;
+	margin: 0 16px;
+}
+/*bottom*/
+/*页脚内容*/
+.bottom{
+	width: 1093;
+	height: 124px;
+	margin: 0 auto;
+	text-align: center;
+}
+.bottom p{
+	text-align: center;
+	line-height: 26px;
+}
+.bottom p span{
+	color: #C8030A;
+}
+.bottom p img{
+	margin: 0 5px;
+}

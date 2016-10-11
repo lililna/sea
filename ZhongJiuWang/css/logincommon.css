@@ -1,0 +1,54 @@
+/*head*/
+/**********************************/
+.head{
+	width: 982px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.head .zj{
+	float: left;
+	padding: 10px;
+	border-right: 1px solid #CCCCCC;
+	margin: 35px 10px;
+}
+.head span{
+	margin-top: 60px;
+	font-size: 18px;
+	color: #666666;
+	display: block;
+	float: left;
+}
+.head p{
+	width: 110px;
+	float: left;
+	line-height: 34px;
+	margin: 54px 15px 0 0;
+}
+.head p.pa{
+	margin-left: 258px;
+}
+.head p img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/*content*/
+/*******************************/
+.logincontent{
+	width: 982px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+.logincontent .leftct{
+	float: left;
+}
+
+.bottom{
+	width: 982px;
+	margin: 0 auto;	
+}
+.bottom p{
+	text-align: center;
+	line-height: 20px;
+	color: #666666;
+}

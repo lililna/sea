@@ -1,0 +1,112 @@
+/*banner*/
+/***********************轮播图*********************/
+.banner{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+.banner ul{
+	width: 10000px;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.banner ul li{
+	width: 1623px;
+	height: 500px;
+	position: relative;
+	/*position: absolute;
+	left: 0;
+	top: 0;*/
+	float: left;
+}
+.banner ul li img.bg{
+	width: 1623px;
+	height: 500px;
+	/*margin: 0 auto; */
+	float: left;
+	position: relative;
+}
+.banner ul li img.feng{
+	position: absolute;
+	top: 35px;
+	left: 100px;
+	 
+}
+.banner ul li img.g3{
+	position: absolute;
+	top: 35px;
+	left: 580px;
+	 
+}
+.banner ul li img.gtp{
+	position: absolute;
+	top: 20px;
+	left: 100px;
+	 
+}
+.banner ul li img.gtz{
+	position: absolute;
+	top: 10px;
+	left: 580px;
+	 
+}
+.banner ol{
+	width: 130px;
+	height: 20px;
+	z-index: 10;
+	position: absolute;
+	left: 580px;
+	top: 470px;
+}
+.banner ol li{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: white;
+	float: left;
+	margin: 0 5px;
+}
+.banner span{
+	width: 45px;
+	height: 124px;
+	display: block;
+	background: #000;
+	color: #A2A2AF;
+	z-index: 10;
+	font-size: 40px;
+	text-align: center;
+	line-height: 124px;
+	opacity: .6;
+	display: none;
+}
+.banner span.spanleft{
+	position: absolute;
+	left: 60px;
+	top: 170px;
+}
+.banner span.spanright{
+	position: absolute;
+	right: 60px;
+	top: 170px;
+}
+/*content*/
+/*******************************/
+.content{
+	width: 100%;
+	background: #fb1d1c;
+	overflow: hidden;
+}
+.content .ct{
+	width: 998px;
+	margin: 10px auto;
+	padding: 6px;
+	background: #fff;
+	overflow: hidden;
+}
+.content .ct a{
+	margin: 5px 3px 0 3px;
+	display: block;
+	float: left;
+}

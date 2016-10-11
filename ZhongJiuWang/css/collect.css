@@ -1,0 +1,168 @@
+/*content*/
+/*中间部分内容*/
+.content{
+	width: 1093px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.content .ctleft{
+	width: 192px;
+	height: 456px;
+	margin-bottom: 45px;
+	float: left;
+}
+.content .ctleft p{
+	margin-top: 10px;
+}
+.content .ctleft p,
+.content .ctleft .jiaoyi dl dt{
+	height: 36px;
+	background: white;
+	line-height: 36px;
+	font-size: 14px;
+}
+.content .ctleft .jiaoyi dl dt{
+	border-bottom: 1px solid #f5f5f5;
+}
+.content .ctleft p img,
+.content .ctleft .jiaoyi dl dt img{
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.content .ctleft .jiaoyi{
+	height: 226px;
+	margin-top: 10px;
+	background: white;
+}
+.content .ctleft div.zhanghu{
+	height: 160px;
+	
+}
+.content .ctleft .jiaoyi dl dd a{
+	display: block;
+	color: #666666;
+	line-height: 28px;
+	margin-left: 18px;
+}
+.content .ctright{
+	position: relative;
+	width: 886px;
+	overflow: hidden;
+}
+.content .ctright .ctrt{
+	width: 886px;
+	/*overflow: hidden;*/
+	background: white;
+	margin-top: 10px;
+}
+.content .ctright .ctrt h3{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	padding-left: 20px;
+	border-bottom: 1px solid #A2A2AF;
+}
+.content .ctright .ctrt>p{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	color: #666666;
+	border-bottom: 1px solid #F5F5F5;
+}
+.content .ctright .ctrt>span{
+	display: block;
+	width: 128px;
+	height: 42px;
+	background: #F5F5F5;
+	font-weight: bold;
+	line-height: 42px;
+	font-size: 14px;
+	text-align: center;
+}
+.content .ctright .ctrt .mycollect>b{
+	font-style: normal;
+	display: block;
+	color: #666666;
+	margin: 30px 0 30px 20px;
+}
+.content .ctright .ctrt .mycollect dl{
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	margin: 10px;
+}
+.content .ctright .ctrt .mycollect dl dt{
+	width: 190px;
+	height: 180px;
+	vertical-align: middle;
+}
+.content .ctright .ctrt .mycollect dl dt span{
+	width: 0;
+	height: 180px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.content .ctright .ctrt .mycollect dl dd{
+	line-height: 18px;
+}
+.content .ctright .ctrt .mycollect dl dd b{
+	font-size: 14px;
+	color: #C8030A;
+}
+.content .ctright .ctrt .mycollect dl dd span{
+	text-decoration: line-through;
+	color: #A2A2AF;
+}
+.content .ctright .ctrt .mycollect dl dd a{
+	display: block;
+	border: 1px solid #A2A2AF;
+	color: #666666;
+	height: 24px;
+	line-height: 24px;
+	float: left;
+	margin: 6px;
+}
+.content .ctright .ctrt .mycollect dl dd a img{
+	vertical-align: middle;
+	margin: -3px 3px 0 0;
+}
+.content .ctright .ctrt .mycollect dl dd a.addcart{
+	width: 96px;
+}
+.content .ctright .ctrt .mycollect dl dd a.quxian{
+	width: 56px;
+}
+.content .ctright .page{
+	 width: 266px;
+	 height: 30px;
+	 float: right;
+	 line-height: 40px;
+	 margin: 300px 0 30px 0;
+}
+.content .ctright .page span{
+	width: 84px;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	float: left;
+	border: 1px solid #A2A2AF;
+	margin: 5px;
+}
+.content .ctright .page span:hover{
+	background: #666666;
+	color: white;
+}
+.content .ctright .page b{
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	float: left;
+	background: #353535;
+	color: white;
+	border: 1px solid #A2A2AF;
+	margin: 5px;
+}
+.content .ctright .page i{
+	font-style: normal;
+}

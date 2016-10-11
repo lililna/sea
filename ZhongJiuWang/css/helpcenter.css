@@ -1,0 +1,140 @@
+/*content*/
+/**********************************/
+body, html{
+	background: #ede7e1;
+}
+.content{
+	width: 1093px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.content .check{
+	height: 80px;
+	width: 1090px;
+	/*padding:20px 0;*/
+	border: 1px solid #CCCCCC;
+	background: white;
+	margin: 8px 0 20px 0;
+}
+.content .check dl{
+	width: 137px;
+	height: 40px;
+	padding: 20px 40px;
+	border-right: 1px solid #A2A2AF;
+	float: left;
+}
+.content .check dl.noborder{
+	border: 0;
+}
+.content .check dl dt{
+	float: left;
+}
+.content .check dl dd{
+	padding: 5px 0 0 5px;
+	float: left;
+}
+.content .check dl dd p{
+	font-size: 14px;
+	font-weight: bold;
+}
+.content .check dl dd span{
+	color: #A2A2AF;
+}
+.content .help{
+	width: 1090px;
+	height: 788px;
+	background: white;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 20px;
+}
+.content .helpleft{
+	width: 164px;
+	 
+	float: left;
+	border-right: 1px solid #CCCCCC;
+}
+.content .helpleft .helpUla>li{
+	background: #ede7e1;
+	line-height: 42px;
+	position: relative;
+	text-align: center;	
+	font-size: 16px;
+	color: red;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+.content .helpleft .helpUla>li>img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.content .helpleft .helpUla>li .helpUlb{
+	background: #fff;
+}
+.content .helpleft .helpUla>li .helpUlb>li span{
+	display: block;
+	background: url(../img/yousanjiao.jpg) no-repeat 25px 15px;
+}
+.content .helpleft .helpUla>li .helpUlb>li{
+	width: 164px;
+	line-height: 42px;
+	color: #000;
+	background: #f8f6f4;
+	font-size: 14px;
+	border-bottom: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+.content .helpleft .helpUla>li .helpUlb>li span img{
+	 margin: 0 20px 0 -30px;
+}
+.content .helpleft .helpUla>li .helpUlb>li .helpUlc{
+	display: none;
+	overflow: hidden;
+}
+.content .helpleft .helpUla>li .helpUlb>li ul.hchide{
+	display: block;
+}
+.content .helpleft .helpUla>li .helpUlb>li .helpUlc>li{
+	width: 144px;
+	height: 42px;
+	padding: 0 10px;
+	border-bottom: 1px dashed #CCCCCC;
+	line-height: 42px;
+	text-align: center;
+}
+ 
+.content .helpright{
+	float: left;
+}
+.content .helpright h3{
+	width: 882px;
+	height: 48px;
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0 10px;
+	line-height: 48px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.content .helpright .zhinan{
+	width: 882px;
+	height: 48px;
+	margin: 10px 10px;
+	padding-left: 10px;
+	line-height: 48px;
+	font-size: 16px;
+	background: #efeeee;
+}
+.content .helpright .liucheng{
+	margin-left: 56px;
+}
+.content .helpright .helpguide{
+	padding: 30px;
+	left: 5px;
+}
+.content .helpright .helpguide p{
+	line-height: 48px;
+}
+.content .helpright .helpguide a{
+	color: red;
+	margin: 0 15px;
+}

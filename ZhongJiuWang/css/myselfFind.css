@@ -1,0 +1,204 @@
+ 
+.selfnav>ul{
+	width: 1093px;
+	margin: 0 auto;
+	height: 40px;
+	z-index: 12;
+}
+ 
+.selfnav .allselect{
+	background: #b81c22;
+}
+.ul_second{
+	position: absolute;
+	left: 0;
+	top: 40px;
+	height: 160px;
+	width: 160px;
+	display: none;
+}
+.ul_second>li{
+	border: 1px solid white;
+	background: #7A6E6E;
+	position: relative;
+}
+.ul_thred{
+	width: 200px;
+	height: 200px;
+	background: yellow;
+	position: absolute;
+	left: 160px;
+	color: #000000;
+	text-align: left;
+	z-index: 10;
+	display: none;
+}
+#threda{
+	top: 0;
+}
+#thredb{
+	top: -41px;
+	background: blueviolet;
+}
+#thredc{
+	top: -84px;
+	background: blue;
+}
+#thredd{
+	top: -126px;
+	background: gold;
+}
+/*content*/
+.changebig {
+	overflow: hidden;
+	width: 1093px;
+	margin: 0 auto;
+	position: relative;
+}
+.changebig .bleftct{
+	float: left;
+	overflow: hidden;
+}
+.changebig .bleftct dt{
+	width: 370px;
+	height: 406px;
+	position: relative;
+	text-align: center;
+}
+.changebig .bleftct dd{
+	padding-left: 10px;
+	width: 370px;
+	overflow: hidden;
+}
+.changebig .bleftct dd img{
+	width: 70px;
+	height: 80px;
+	margin: 10px;
+	float: left;
+}
+.changebig .bleftct dt .smallimg{
+	vertical-align: middle;
+	width: 306px;
+	height: 370px;
+	background: url(../img/smallimg0.jpg);
+}
+ 
+.changebig .bleftct dt .smalldiv{
+	width: 150px; 
+	height: 150px;
+	background: #CCCCCC;
+	position: absolute;
+	z-index: 20;
+	opacity: 0.6;
+	filter:alpha(opacity = 60);
+	display: none;
+}
+.changebig .bbigimg{
+	width: 500px;
+	height: 500px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	display: none;
+	z-index: 10;
+}
+.imgdiv{
+	width: 600px;
+	overflow: hidden;
+	position: relative;
+}
+.list{
+	height: 40px;
+	line-height: 40px;
+	width: 1093px;
+	margin: 0 auto;
+}
+.list a{
+	color: black;
+}
+.list a:hover{
+	color: red;
+}
+.detail{
+	width: 445px;
+	height: 486px;
+	border: 1px solid #CCCCCC;
+	line-height: 30px;
+	padding: 20px;
+	position: absolute;
+	left: 390px;
+	top: 0;
+}
+.detail span{
+	margin-left: 10px;
+}
+.detail h3{
+	font-size: 18px;
+	font-weight: bold;
+}
+.detail .p1, 
+.detail .p2{
+	background: #fff;
+	padding: 10px 0;
+}
+.detail .p1 b{
+	font-size: 16px;
+	color: red;
+}
+.detail .p1 i{
+	font-style: normal;
+	color: red;
+}
+.detail ol{
+	margin-left: 20px;
+}
+.detail ol li{
+	list-style: decimal;
+}
+.number{
+	width: 52px;
+	height: 36px;
+	border: 1px solid #CCCCCC;
+	position: relative;
+	float: left;
+}
+.number #txte{
+	width: 31px;
+	height: 30px;
+	text-align: center;
+}
+.number #jia, .number #jian{
+	width: 17px;
+	height: 17px;
+	text-align: center;
+	line-height: 14px;
+	border: 1px solid #CCCCCC;
+}
+.number #jia{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.number #jian{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.addmycart, .buy{
+	display: block;
+	height: 38px;
+	text-align: center;
+	line-height: 38px;
+	font-size: 16px;
+	color: white;
+	background: #bbbbbb;
+	border-radius: 5px;
+	float: left;
+	margin-left: 20px;
+}
+.addmycart{
+	width: 130px;
+}
+.buy{
+	width: 100px;
+}

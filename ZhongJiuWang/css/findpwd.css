@@ -1,0 +1,122 @@
+.logincontent{
+	position: relative;
+	padding-top: 30px;
+}
+.logincontent .changtiao{
+	width: 888px;
+	height: 3px;
+	background: #353535;
+	overflow: hidden;
+	margin-left: 30px;
+}
+.logincontent dl{
+	width: 60px;
+	text-align: center;
+}
+.logincontent dl dt{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #353535;
+	color: #353535;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	z-index: 5;
+	background: #fff;
+	margin: 10px;
+}
+.logincontent #dla{
+	position: absolute;
+	left: 0;
+	top: 5px;
+	
+}
+.logincontent dl.dlall dt{
+	border-color: #008000;
+	color: #008000;
+}
+.logincontent dl.dlall dd{
+	color: #008000;
+}
+.logincontent #dlb{
+	position: absolute;
+	left: 320px;
+	top: 5px;
+}
+.logincontent #dlc{
+	position: absolute;
+	left: 600px;
+	top: 5px;
+}
+.logincontent #dld{
+	position: absolute;
+	left: 880px;
+	top: 5px;
+}
+.logincontent .message{
+	width: 282px;
+	height: 216px;
+	margin: 80px auto;
+	display: none;
+}
+.logincontent .message #txt{
+	width: 272px;
+	height: 40px;
+	padding-left: 3px;
+	margin-bottom: 24px;	
+}
+.logincontent .message #code{
+	width: 120px;
+	height: 40px;
+	padding-left: 3px;
+	float: left;
+}
+.logincontent .message .ptcode{
+	width: 98px;
+	height: 44px;
+	border: 1px solid #666666;
+	float: left;
+	margin: 0 3px;
+	text-align: center;
+	line-height: 44px;
+	font-size: 26px;
+	font-weight: bold;
+	color: purple;
+}
+.logincontent .message span{
+	display: block;
+	float: left;
+	margin-top: 10px;
+	width: 48px;
+	cursor: pointer;
+	
+}
+.logincontent .message p{
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	background: #de3a39;
+	float: left;
+	margin-top: 25px;
+	border-radius: 3px;
+}
+.logincontent div.showdiv{
+	display: block;
+}
+.message .pb{
+	font-size: 24px;
+	font-weight: bold;
+	color: blue;
+	line-height: 216px;
+	text-align: center;
+}
+.logincontent .message #pwd,
+.logincontent .message #cfpwd{
+	width: 272px;
+	height: 40px;
+	padding-left: 3px;
+	margin-bottom: 24px;	
+}

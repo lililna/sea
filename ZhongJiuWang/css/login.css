@@ -1,0 +1,58 @@
+ 
+/*content*/
+/*******************************/
+ 
+.logincontent .rightct{
+	width: 300px;
+	height: 306px;
+	padding: 50px;
+	float: left;
+	position: relative;
+}
+.logincontent .rightct .txtemail,
+.logincontent .rightct .pwd{
+	width: 269px;
+	height: 37px;
+	margin: 10px;
+	background: white;
+	padding-left: 10px;
+}
+#login{
+	display: block;
+	width: 140px;
+	height: 38px;
+	background: #de3a39;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	line-height: 38px;
+	border-radius: 3px;
+	position: absolute;
+	left: 60px;
+	top:218px
+}
+#zhuce{
+	color: red;
+	position: absolute;
+	font-size: 14px;
+	top: 230px;
+	right: 50px;
+}
+#ckbox{
+	position: absolute;
+	left: 60px;
+	top: 180px;
+}
+.logincontent .rightct span{
+	margin-left:40px;
+	line-height: 26px;
+	color: #666666;
+}
+.logincontent .rightct p{
+	color: #666666;
+	position: absolute;
+	left: 60px;
+	bottom: 60px;
+	line-height: 26px;
+}
+ 
