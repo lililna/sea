@@ -1,0 +1,68 @@
+{
+"f1":[{
+		"pct":"摩登秋日必备单品",
+		"spanct":"低至39",
+		"imgsrc":"img/a1.jpg"
+	   },
+	  {
+		"pct":"女神度假清单",
+		"spanct":"满349减100",
+		"imgsrc":"img/a2.jpg"
+	   },
+	   {
+		"pct":"秋季出游 下单立减",
+		"spanct":"低至39",
+		"imgsrc":"img/a4.jpg"
+	   },
+	   {
+		"pct":"女神度假清单",
+		"spanct":"低至39",
+		"imgsrc":"img/a5.jpg"
+	   },
+	   
+	   {
+		"pct":"出行国际范",
+		"spanct":"闷闷恶魔",
+		"imgsrc":"img/a10.jpg"
+	   },
+	    {
+		"pct":"女神度假清单",
+		"spanct":"低至39",
+		"imgsrc":"img/a6.jpg"
+	   }
+	],
+"f2":[{
+		"imgsrc":"img/f2c.jpg"
+	   },
+	  {
+		"pct":"每满199减100",
+		"spanct":"韩后周年庆",
+		"imgsrc":"img/f2d.jpg"
+	   }
+	],
+"f3":[ 
+	  {
+		"pct":"OPPO 全场12期免息",
+		"spanct":"领券立减20",
+		"imgsrc":"img/f301.jpg"
+	   },
+	   {
+		"pct":"OPPO 全场12期免息",
+		"spanct":"领券立减20",
+		"imgsrc":"img/f302.jpg"
+	   },
+	   {
+		"pct":"OPPO 全场12期免息",
+		"spanct":"魅族MX6享免息",
+		"imgsrc":"img/f303.jpg"
+	   }
+	],
+"f6":[ 
+	  {
+		"imgsrc":"img/f601.jpg"
+	   },
+	   {
+		"imgsrc":"img/f608.jpg"
+	   }
+	]
+}
