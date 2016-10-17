@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table, td{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		ID:<input type="text" id = "txt1" />
+		姓名:<input type="text" id = "txt2" />
+		电话:<input type="text" id = "txt3" />
+		<input type="button" id = "btn" value="保存"/>
+		<table id="t">
+				<tr>
+				<td>ID</td>
+				<td>NAME</td>
+				<td>TEL</td>
+				<td>操作</td>
+				</tr>
+		</table>
+		<script>
+			var oT = document.getElementById("t");
+			var oBtn = document.getElementById("btn");
+			var oTxt1 = document.getElementById("txt1");
+			var oTxt2 = document.getElementById("txt2");
+			var oTxt3 = document.getElementById("txt3");
+			var oTr = document.getElementsByTagName("tr");
+			
+			var k=1;
+			oBtn.onclick = function(){
+				var _tr = document.createElement("tr");
+				var _a = document.createElement("a");
+				_a.innerHTML = "删除";
+				_a.href = "#";
+				t.appendChild(_tr);
+					for(var i=0;i<4;i++){
+						var _td = document.createElement("td");
+						var oTd = document.getElementsByTagName("td");
+						 oTr[k].appendChild(_td);
+						 
+					}
+					
+					oTd[oTd.length-4].innerHTML = oTxt1.value;
+					oTd[oTd.length-3].innerHTML = oTxt2.value;
+					oTd[oTd.length-2].innerHTML = oTxt3.value;
+					oTd[oTd.length-1].appendChild(_a); 
+					k++;
+			var oA = document.getElementsByTagName("a");
+			for(var i=0;i<oA.length;i++){
+				oA[i].onclick = function(){
+					oT.removeChild(this.parentNode.parentNode);
+					//this.parentNode.parentNode.remove();
+					k--;
+				}
+			}
+			}
+			
+		</script>
+	</body>
+</html>

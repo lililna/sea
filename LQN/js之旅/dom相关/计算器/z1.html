@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/z1.css">
+</head>
+<body>
+	<div class="box">
+		<div class="input">
+			<div id="input1"></div>
+			<div id="input2"></div>
+		</div>
+		<input type="button" value="c" id="btn1"/>
+		<input type="button" value="+/-" id="btn2"/>
+		<input type="button" value="%" id="btn3" class="btn"/>
+		<input type="button" value="/" class="btn"/>
+		<input type="button" value="7" class="num"/>
+		<input type="button" value="8" class="num"/>
+		<input type="button" value="9" class="num"/>
+		<input type="button" value="*" class="btn"/>
+		<input type="button" value="4" class="num"/>
+		<input type="button" value="5" class="num"/>
+		<input type="button" value="6" class="num"/>
+		<input type="button" value="-" class="btn"/>
+		<input type="button" value="1" class="num"/>
+		<input type="button" value="2" class="num"/>
+		<input type="button" value="3" class="num"/>
+		<input type="button" value="+" class="btn"/>
+		<input type="button" value="0" id="btn17" class="num"/>
+		<input type="button" value="." class="num"/>
+		<input type="button" value="=" id="btn19"/>
+	</div>
+	<script>
+		var obtn1 = document.getElementById("btn1"),
+			obtn2 = document.getElementById("btn2"),
+			obtn19 = document.getElementById("btn19"),
+			onum = document.getElementsByClassName("num"),
+			odiv = document.getElementById("input2"),
+			odivs = document.getElementById("input1");
+		var obtn = document.getElementsByClassName("btn");
+		var output = "";
+		var output1 = "";
+		function last(x,y,z){
+			switch(y){
+				case "/":
+					return Number(x)/Number(z);
+					break;
+				case "*":
+					return Number(x)*Number(z);
+					break;
+				case "+":
+					return Number(x)+Number(z);
+					break;
+				case "-":
+					return Number(x)-Number(z);
+					break;
+				case "%":
+					return Number(x)-Number(z);
+					break;
+			}
+		}
+		for(var i=0;i<onum.length;i++){
+			onum[i].onclick = function(){
+				if(odiv.innerHTML=="0"){
+					output1 = this.value;
+					odiv.innerHTML = output1;
+				}else{
+					output1 += this.value;
+					odiv.innerHTML = output1;
+				}
+			}
+		}
+		obtn1.onclick = function(){
+			output = "";
+			output1 = "";
+			odiv.innerHTML = "";
+			odivs.innerHTML = "";
+		}
+		obtn2.onclick = function(){
+			if(odiv.innerHTML==""||odiv.innerHTML==0){
+				odiv.innerHTML = odiv.innerHTML;
+			}else{
+				if(odiv.innerHTML.charAt(0)!="-"){
+					odiv.innerHTML = "-"+odiv.innerHTML;
+				}else{
+					odiv.innerHTML = odiv.innerHTML.slice(1);
+				}
+			}
+		}
+		for(var j=0;j<obtn.length;j++){
+			obtn[j].onclick = function(){
+				if(isNaN(Number(odivs.innerHTML))&&odiv.innerHTML==""){
+					odivs.innerHTML = odivs.innerHTML.slice(0,odivs.innerHTML.length-1)+this.value;
+				}else{
+					if(output==""){
+						output=Number(odiv.innerHTML);
+					}else{
+						var sign = odivs.innerHTML.charAt(odivs.innerHTML.length-1);
+						output = last(output,sign,odiv.innerHTML);
+					}
+					odivs.innerHTML += odiv.innerHTML+this.value;
+					output1 = "";
+					odiv.innerHTML = "";
+				}
+			}
+		}
+		obtn19.onclick = function(){
+			if(odivs.innerHTML==""){
+				odiv.innerHTML = odiv.innerHTML;
+			}else{
+				var sign = odivs.innerHTML.charAt(odivs.innerHTML.length-1);
+				odiv.innerHTML = last(output,sign,odiv.innerHTML);
+				output = "";
+				output1 = "";
+				odivs.innerHTML = "";
+			}
+		}
+	</script>
+</body>
+</html>

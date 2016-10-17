@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+			background: black;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var obody = document.getElementsByTagName('body')[0];
+		var bottom = obody.offsetHeight;
+		document.onclick = function (event) {
+			var event = event||window.event;
+			var disX = event.clientX;
+			var disY = event.clientY;
+			var fireworks = new Firework(obody,bottom,disX,disY);
+		}
+		function Firework(obody,bottom,disX,disY) {
+			this.obody = obody;
+			this.maxY = bottom;
+			this.X = disX;
+			this.Y = disY;
+			this.sizes = 10;
+			this.createfire();
+		}
+		Firework.prototype.rand = function (min,max) {
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		Firework.prototype.createfire = function () {
+			this.ele = document.createElement("div");
+			this.ele.style.cssText = "position:absolute;left:"+this.X+"px;top:"+this.maxY+"px;width:"+this.sizes+"px;height:"+this.sizes+"px;background:rgb("+this.rand(0,255)+","+this.rand(0,255)+","+this.rand(0,255)+");"
+			this.obody.appendChild(this.ele);
+			this.fly(this.ele);
+		}
+		Firework.prototype.fly = function (obj) {
+			var start = 0;
+			var end = Math.PI/2;
+			var step = (end-start)/100;
+			var num = 0;
+			var that = this;
+			obj.time = setInterval(function () {
+				num++;
+				start += step;
+				if(num==100){
+					clearInterval(obj.time);
+					start = end;
+					that.obody.removeChild(obj);
+					that.createPiece();
+				}
+				obj.style.top = that.maxY-(that.maxY-that.Y)*Math.sin(start)+"px";
+			},10)
+		}
+		Firework.prototype.createPiece = function () {
+			var piecenum = this.rand(80,100);
+			for (var i = 0; i < piecenum; i++) {
+				this.ele = document.createElement("div");
+				this.ele.style.cssText = "position:absolute;left:"+this.X+"px;top:"+this.Y+"px;width:"+this.sizes/2+"px;height:"+this.sizes/2+"px;background:rgb("+this.rand(0,255)+","+this.rand(0,255)+","+this.rand(0,255)+");"
+				var rad = 2*Math.PI/piecenum*i;
+				this.obody.appendChild(this.ele);
+				this.boom(this.ele,i,rad);
+			}
+		}
+		Firework.prototype.boom = function (obj,i,rad) {
+			var init = 0;
+			var step = 1/3;
+			var that = this;
+			obj.time = setInterval(function () {
+				init += step;
+				if (init>=35) {
+					clearInterval(obj.time);
+					that.obody.removeChild(obj);
+				}
+				obj.style.left = that.X+init*(16*Math.pow(Math.sin(rad),3))+"px";
+				obj.style.top = that.Y-init*(13*Math.cos(rad) - 5*Math.cos(2*rad) - 2*Math.cos(3*rad) - Math.cos(4*rad))+"px";
+			},10)
+		}
+	</script>
+</body>
+</html>

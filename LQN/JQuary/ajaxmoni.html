@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<input type="text" />
+		<ul>
+			<li>****</li>
+			<li>****</li>
+			<li>****</li>
+		</ul>
+		<script>
+			$("input").keyup(function(){
+				$.ajax({
+					type:"get",
+					url:"moni.txt",
+					async:true,
+					dataType:"json",
+					success:function(msg){
+						$("ul li").remove();
+						for(var i=0;i<msg.length;i++){
+							$("ul").append("<li>"+msg[i].name+"</li>")
+						}
+						$("li").click(function(){
+							$("input").val($(this).html());
+							$("li").remove();
+						})
+						$("li").css("cursor","pointer");
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

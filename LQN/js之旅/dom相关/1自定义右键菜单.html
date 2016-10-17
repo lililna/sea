@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>自定义右键菜单</title>
+<style type="text/css">
+body,ul,li{margin:0;padding:0;}
+body{font:12px/24px arial;}
+#menu{position:absolute;top:-9999px;left:-9999px;width:100px;border-radius:3px;list-style-type:none;border:1px solid #8f8f8f;padding:2px;background:#fff;}
+#menu li{position:relative;height:24px;padding-left:24px;background:#eaead7;vertical-align:top;}
+#menu li a{display:block;color:#333;background:#fff;padding-left:5px;text-decoration:none;}
+#menu li.active{background:#999;}
+#menu li.active a{color:#fff;background:#8f8f8f;}
+#menu li em{position:absolute;top:0;left:0;width:24px;height:24px;background:url(img/ico.png) no-repeat;}
+#menu li em.cur{background-position:0 0;}
+#menu li em.copy{background-position:0 -24px;}
+#menu li em.paste{background-position:0 -48px;}
+</style>
+</head>
+<body>
+
+	<center>自定义右键菜单，请在页面点击右键查看效果。</center>
+	<ul id="menu" style="display: none; top: 54px; left: 645px;">
+		<li class=""><em class="cut"></em><a href="javascript:;">剪切</a></li>
+		<li class=""><em class="copy"></em><a href="javascript:;">复制</a></li>
+		<li class=""><em class="paste"></em><a href="javascript:;">粘贴</a></li>
+	</ul>
+	<script>
+		var oMenu = document.getElementById("menu");
+		document.oncontextmenu = function(event){
+			var ev = event||window.event;
+			oMenu.style.display = "block";
+			oMenu.style.left = ev.clientX+"px";
+			oMenu.style.top = ev.clientY+"px";
+			if(ev.preventDefault){
+				ev.preventDefault();
+			}else{
+				return false; //ie下阻止默认事件
+			}
+		}
+		
+		var lis = document.getElementsByTagName("li");
+		for(var i=0;i<lis.length;i++){
+			lis[i].onclick = function(){
+				for(var j in lis){
+					if(this ==lis[j]){
+						this.className = "active";
+					}else{
+						lis[j].className = "";
+					}
+				}
+				var ev = event||window.event;
+				if(ev.stopPropagation){
+					ev.stopPropagation();
+				}else{
+					ev.cancelBubble = true;
+				}
+			}
+			/*lis[i].onmouseout = function(){
+				this.className = "";
+			}*/
+		}
+		
+		document.onclick = function(){
+			oMenu.style.display = "none";
+		}
+	
+	
+	
+	</script>
+
+</body>
+
+</html>

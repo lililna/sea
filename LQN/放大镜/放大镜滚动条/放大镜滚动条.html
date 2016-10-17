@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#bk{overflow: hidden;margin: 30px 0 0  30px;}
+			#left{width: 600px;height: 338px;border: 1px solid red;
+			float: left;position: relative;background: url(img/alliancem.jpg) 0 0 no-repeat;}
+			#lj{width: 150px;height: 84.5px;background: yellowgreen;opacity: 0.4;
+			position: absolute;display: none;cursor: move;}
+			#right{width: 600px;height: 338px;float: left;
+			margin-left: 20px;overflow: scroll;}
+			#buttom{margin-top: 20px;margin-left: 30px;}
+		</style>
+	</head>
+	<body>
+		<div id="bk">
+			<div id="left">
+				<div id="lj">
+				</div>
+			</div>
+			<div id="right">
+				<img id="im" src="img/alliance.jpg"/>
+			</div>
+		</div>
+		<div id="buttom">
+			<img src="img/alliances.jpg"/>
+			<img src="img/hordes.jpg"/>
+		</div>
+		<script type="text/javascript">
+			var bk=document.getElementById("bk");
+			var lf=document.getElementById("left");
+			var ri=document.getElementById("right");
+			var lj=document.getElementById("lj");
+			var im=document.getElementById("im");
+			var but=document.getElementById("buttom").getElementsByTagName('img');
+			lf.onmouseover=function(){
+				lj.style.display='block';
+				ri.style.display='block';
+				lf.onmousemove=function(ev){
+					var event=ev||window.event;
+					var sbx=event.clientX-bk.offsetLeft-lj.offsetWidth/2; 
+					/*鼠标坐标减去滤镜本身的宽度/2滤镜就往相反的方向移动他自身的一半*/
+					var sby=event.clientY-bk.offsetTop-lj.offsetHeight/2;
+					var maxw=lf.clientWidth-lj.offsetWidth; 
+					var minh=lf.clientHeight-lj.offsetHeight; //滤镜走的最大距离；
+//					var nul=2400/600;
+//					var nut=1350/338;
+//					var nus=600/150;
+//					var nuh=338/84.5;
+					var nul=lf.clientWidth/lj.offsetWidth;
+					var nut=lf.clientHeight/lj.offsetHeight;
+					if(sbx<=0){
+						sbx=0
+					}
+					if(sbx>=maxw){
+						sbx=maxw
+					}
+					if(sby<=0){
+						sby=0;
+					}
+					if(sby>=minh){
+						sby=minh;
+					}
+//					ri.scrollLeft=sbx*nul;
+//					ri.scrollTop=sby*nut;
+					ri.scrollLeft=lj.offsetLeft*nul;
+					ri.scrollTop=lj.offsetTop*nut;
+					lj.style.left=sbx+'px';
+					lj.style.top=sby+'px';
+					console.log(sbx);
+					console.log(sby);
+				}
+			}
+			
+			lf.onmouseout=function (){
+				lj.style.display='none';
+				ri.style.display='none';
+			}
+			
+			but[0].onclick=function (){
+				lf.style.background='url(img/alliancem.jpg) 0 0 no-repeat';
+				im.src='img/alliancem.jpg';
+			}
+			but[1].onclick=function (){
+				lf.style.background='url(img/hordem.jpg) 0 0 no-repeat';
+				im.src='img/horde.jpg';
+			}
+		</script>
+	</body>
+</html>

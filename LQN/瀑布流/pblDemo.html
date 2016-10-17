@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			#main{
+				position:relative;
+			}
+			.box{
+				padding:15px 0px 0px 15px;
+				float: left;
+			}
+			.pic{
+				padding:10px;
+				border:1px solid #ccc;
+				border-radius:5px;
+				box-shadow: 0 0 5px #ccc;
+			}
+			.pic img{
+				width:165px;
+				height:auto;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="main">
+				<div class="box">
+					<div class="pic">
+						<img src="images/0.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/1.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/2.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/3.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/4.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/5.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/6.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/7.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/8.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/9.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/10.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/11.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/12.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/13.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/14.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/15.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/16.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/17.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/18.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/19.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/20.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/21.jpg"/>
+					</div>
+				</div>
+				<div class="box">
+					<div class="pic">
+						<img src="images/22.jpg"/>
+					</div>
+				</div>
+				
+			</div>
+	</body>
+</html>
+<script type="text/javascript" src="jquery-1.11.1.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(window).on("load",function(){
+		waterFall();
+		$(window).scroll(function(){
+			if ( isLoadImg() ) {
+				var jsonData = {"data":[{"src":"1.jpg"},{"src":"2.jpg"},{"src":"3.jpg"}]};
+				$.each(jsonData.data,function(key,value){
+					//动态创建div  和  img
+					var obox = $("<div>").addClass("box").appendTo("#main");
+					var opic = $("<div>").addClass("pic").appendTo(obox);
+					$("<img>").attr("src","images/"+$(value).attr("src")).appendTo(opic);
+				})
+				waterFall();
+			}
+		})
+	})
+	/*window.onload = function(){
+		waterFall();
+		$(window).scroll(function(){
+			if ( isLoadImg() ) {
+				var jsonData = {"data":[{"src":"1.jpg"},{"src":"2.jpg"},{"src":"3.jpg"}]};
+				$.each(jsonData.data,function(key,value){
+					//动态创建div  和  img
+					var obox = $("<div>").addClass("box").appendTo("#main");
+					var opic = $("<div>").addClass("pic").appendTo(obox);
+					$("<img>").attr("src","images/"+$(value).attr("src")).appendTo(opic);
+				})
+				waterFall();
+			}
+		})
+	}*/
+
+    //确定是否需要加载图片
+    function isLoadImg(){
+    	//找到最后一个box
+    	var lastBox = $("#main>div").last();
+    	var lastBoxTop =   lastBox.offset().top;
+    	var lastBoxHeight = lastBox.outerHeight() /2 ;
+    	var windowHeight = $(window).height() + $(document).scrollTop();
+    	
+    	return  (lastBoxTop + lastBoxHeight) < windowHeight ? true : false;
+    }
+	function waterFall(){
+		//确定页面中 瀑布流的列数
+		var $box = $("#main>div");
+		var w = $box.eq(0).outerWidth();
+		var cols = Math.floor( $(window).width() / w );
+		
+		$("#main").width( w*cols ).css("margin","0 auto");
+		
+		var hArr = new Array();
+		$box.each(function(index,element){
+			var h = $box.eq(index).outerHeight();
+			if (index < cols) {
+				hArr.push(h);
+			}else{
+				//找到盒子中的最小高度值
+				var minH = Math.min.apply(null,hArr);
+				//找到最小高度的下标     $.inArray()   找到数组中某个值的索引
+				var minHIndex = $.inArray(minH,hArr);				
+				
+				//处理第七个（后面的）盒子的位置
+				$box.eq(index).css({
+					"position":"absolute",
+					"top": minH +"px",
+					"left": w * minHIndex + "px"
+				})
+				
+				//minHIndex  位置处的高度  变成
+				hArr[minHIndex] += $box.eq(index).outerHeight();
+			}
+		})
+		
+		 
+	}
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.2.6.js"></script>
+	</head>
+	<body>
+		<input type="checkbox" name="all" />all/
+		<input type="checkbox" name="fChoose" />fChoose<br />
+		<input type="checkbox" name="c" />1
+		<input type="checkbox" name="c" />2
+		<input type="checkbox" name="c" />3
+		<input type="checkbox" name="c" />4
+		<input type="checkbox" name="c" />5
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<script>	
+		 //方法一
+		/*$(function(){
+			$("input:first").click(function(){
+				if($(this).attr("checked")){
+					$("input").attr("checked",true);
+				}else{
+					$("input").removeAttr("checked");
+				}
+			})
+		})*/
+		$(function(){
+			$("input[name=all]").click(function(){
+				if($(this).attr("checked")){
+					$("input[name=c]").attr("checked",true);
+				}else{
+					$("input[name=c]").removeAttr("checked");
+				}
+			})
+		})
+		$(function(){
+			$("input[name=fChoose]").click(function(){
+				for(var i=0;i<=$("input[name=c]").size();i++){
+					if($("input[name=c]").eq(i).attr("checked")){
+						$("input[name=c]").eq(i).removeAttr("checked");
+					}else{
+						$("input[name=c]").eq(i).attr("checked",true);
+					}
+				}
+			})
+		})
+		</script>
+	</body>
+</html>

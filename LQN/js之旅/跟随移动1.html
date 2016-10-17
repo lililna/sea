@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	div{
+		background:#fff;
+		border-radius:50%;
+		border:4px solid #fff;
+	}
+	#box0{
+		height:32px;
+		width:32px;
+		position:absolute;
+		left:40px;
+		top:40px;
+	}
+	#box1{
+		height:52px;
+		width:52px;
+		position:absolute;
+		left:30px;
+		top:30px;
+	}
+	#box2{
+		height:72px;
+		width:72px;
+		position:absolute;
+		left:20px;
+		top:20px;
+	}
+	#box3{
+		height:92px;
+		width:92px;
+		position:absolute;
+		left:10px;
+		top:10px;
+	}
+    #box4{
+		height:92px;
+		width:92px;
+		position:absolute;
+		left:10px;
+		top:10px;
+	}
+	#box5{
+		height:72px;
+		width:72px;
+		position:absolute;
+		left:20px;
+		top:20px;
+	}
+	#box6{
+		height:52px;
+		width:52px;
+		position:absolute;
+		left:30px;
+		top:30px;
+	}
+	#box7{
+		height:32px;
+		width:32px;
+		position:absolute;
+		left:40px;
+		top:40px;
+	}
+</style>
+</head>
+
+<body>
+	<div id="box0">
+	</div>
+	<div id="box1">
+	</div>
+	<div id="box2">
+	</div>
+	<div id="box3">
+	</div>
+    <div id="box4">
+	</div>
+	<div id="box5">
+	</div>
+	<div id="box6">
+	</div>
+	<div id="box7">
+	</div>
+	<script>
+		var box = document.getElementsByTagName("div");
+		document.onmousemove = function(ev){
+			var ev = event||window.event;
+			var i =8;
+			var timer = setInterval(function(){//让一个比一个跟的慢
+					i--;//从box7的开始
+					if(i<0){
+						clearInterval(timer)
+					}else{
+						setTimeout(function(){//延时器
+							box[i].style.left = (ev.clientX-(7-i)*10)+"px";/*减去的数是为了让鼠标在中心的box上*/
+							box[i].style.top = (ev.clientY-(7-i)*10)+"px";
+							box[i].style.background = "rgba("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+",0.5)";
+							box[i].style.borderColor = "rgba("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+",0.3)";
+						},(7-i)*3);
+					}
+				},30)
+					
+		}
+	</script>
+</body>
+</html>

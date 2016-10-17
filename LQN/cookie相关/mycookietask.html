@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body {
+				background-color: lightgrey;
+			}
+			
+			form {
+				width: 360px;
+				height: 230px;
+				background-color: lightblue;
+				margin: 0 auto;
+				padding: 20px;
+				border: 2px solid greenyellow;
+				border-radius: 5%;
+			}
+			
+			span,
+			#rt {
+				margin-left: 50px;
+			}
+			
+			#user,
+			#pass,
+			#exd,
+			#btn,
+			#rt {
+				margin-top: 20px;
+			}
+			
+			#exd,
+			#btn {
+				margin-left: 75px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form id="form1" action="">
+			<span>账&nbsp;号: </span><input type="text" id="user" /><br /> <br />
+			<span>密&nbsp;码: </span><input type="password" id="pass" /><br /><br />
+			<input type="checkbox" id="exd" />10天之内自动登录<br /><br />
+			<input type="submit" id="btn" value="确定" />
+			<input type="reset" id="rt" value="清空" />
+		</form>
+	</body>
+	 
+	<script>
+		var oUser = document.getElementById("user"),
+			oPass = document.getElementById("pass"),
+			oBtn = document.getElementById("btn"),
+			oExd = document.getElementById("exd"),
+			oRt = document.getElementById("rt");
+		if(getCookie("user")) {
+			oUser.value = getCookie("user");
+		}
+		if(getCookie("password")) {
+			oPass.value = getCookie("password");
+		}
+		oBtn.onclick = function() {
+			if(oExd.checked) {
+				setCookie("user", oUser.value);
+				setCookie("password", oPass.value);
+			}
+			//alert("登录成功！");
+		}
+		oRt.onclick = function() {
+			removeCookie(oUser.value);
+			removeCookie(oPass.value);
+		}
+		 
+		function setCookie(name, value, exdays) {
+			var now = new Date();
+			now.setTime(now.getTime() + exdays * 24 * 60 * 1000);
+			document.cookie = name + "=" + value + "; " + "Expires" + "=" + now.toGMTString() + "; ";
+		}
+	
+		function getCookie(name) {
+			var cookieArr = document.cookie.split("; ");
+			for(var i = 0; i < cookieArr.length; i++) {
+				var arr = cookieArr[i].split("=");
+				if(name == arr[0]) {
+					return arr[1];
+				}
+			}
+		}
+	
+		function removeCookie(name) {
+			setCookie(name, "", -1);
+		}
+		 
+	</script>
+	 
+</html>

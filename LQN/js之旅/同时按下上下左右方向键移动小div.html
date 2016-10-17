@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小div移动</title>
+<style>
+	div{
+		width:100px;
+		height:100px;
+		background-color:red;
+		position:absolute;
+		left:100px;
+		top:100px;
+	}
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		var div1 = document.getElementById("div1");
+			var l = false,
+				t = false,
+				r = false,
+				b = false;
+			
+			document.onkeydown = function(ev) {
+				switch (ev.keyCode) {
+					case 37:
+						l = true;
+						break;
+					case 38:
+						t = true;
+						break;
+					case 39:
+						r = true;
+						break;
+					case 40:
+						b = true;
+						break;
+				}
+				
+				if (l) {
+					div1.style.left = div1.offsetLeft - 5 + "px";
+				}
+				if (t) {
+					div1.style.top = div1.offsetTop - 5 + "px";
+				}
+				if (r) {
+					div1.style.left = div1.offsetLeft + 5 + "px";
+				}
+				if (b) {
+					div1.style.top = div1.offsetTop + 5 + "px";
+				}
+								
+			}
+			
+			document.onkeyup = function() {
+				l = false;
+				t = false;
+				r = false;
+				b = false;
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.min{
+				width:350px;
+				height: 350px;
+				border: 1px solid black;
+				float:left;
+				position:relative;
+			}
+			
+			.max{
+				width:350px;
+				height: 350px;
+				border: 1px solid black;
+				float:left;
+				display: none;
+				overflow:hidden;
+				position: relative;
+			}
+			
+			.fd{
+				width:150px;
+				height: 150px;
+				background-color: skyblue;
+				opacity: 0.3;
+				position: absolute;
+				left:0;
+				top:0;
+				display: none;
+			}
+			.max img{
+				position: absolute;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="min">
+			<img src="min.jpg" alt="" />
+			<div class="fd"></div>
+		</div>
+		<div class="max">
+			<img src="max.jpg" alt="" />
+		</div>
+		<script>
+		   var min = document.querySelector(".min");
+		   var max = document.querySelector(".max");
+		   var fd = document.querySelector(".fd");
+		   var img = document.querySelector(".max img");
+		   min.onmouseover = function(){
+				max.style.display = "block";
+				fd.style.display = "block";
+				document.onmousemove = function(event){
+					var ev = event||window.event;
+					var x = ev.clientX; //鼠标的坐标位置
+					var y = ev.clientY; //鼠标的坐标位置
+					var l = min.offsetLeft;
+					var t = min.offsetTop;
+					
+					//左右边界--clientWidth（内容大小+padding）
+					//offsetWidth --content+padding+border(除掉margin)
+					var maxX = min.clientWidth - fd.offsetWidth/2+l;
+					var maxY = min.clientHeight-fd.offsetHeight/2+t;
+					//最小左右边界
+					var minX = fd.offsetWidth/2+l;
+					var minY = fd.offsetHeight/2+t;
+					
+					//处理左右边界
+					if(x<=minX){
+						x = minX;
+					}else if(x>maxX){
+						x = maxX;
+					}
+					
+					//处理上下边界
+					if(y<=minY){
+						y = minY;
+					}else if(y>maxY){
+						y = maxY;
+					}
+	
+					//fd的位置--鼠标位置居中
+					fd.style.left = x-fd.offsetWidth/2-l+"px";
+					fd.style.top = y - fd.offsetHeight/2-t+"px";
+					
+					//求比例
+					var biliX = fd.offsetLeft/min.offsetWidth;
+					var biliY = fd.offsetTop/min.offsetHeight;
+					
+					//max的显示
+					img.style.left = -biliX*img.offsetWidth+"px";
+					img.style.top = -biliY*img.offsetHeight+"px";
+					
+				}
+			}
+			
+			 min.onmouseout = function(){
+				max.style.display = "none";
+				fd.style.display = "none";
+			}
+		   
+		   
+		   
+			
+		</script>
+	</body>
+</html>

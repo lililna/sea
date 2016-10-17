@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<input type="text"  id="txt"/>
+		<ul id="dropList">
+			<li>xxx</li>
+			<li>xxsxxx</li>
+			<li>xxxxx</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	  $(function(){
+	  	 $("#txt").keyup(function(){
+	  	 	$.ajax({
+	  	 		type:"get",
+	  	 		url:"baidu.txt",
+	  	 		async:true,
+	  	 		dataType:"json",
+	  	 		success:function(msg){
+	  	 			$("li").remove();
+	  	 			for (var i in msg) {
+	  	 				$("#dropList").append("<li>"+msg[i].pname+"</li>")
+	  	 			}
+	  	 			$("li").click(function(){
+	  	 				$("#txt").val( $(this).html() );
+	  	 				$("#dropList").hide();
+	  	 			})
+	  	 		}
+	  	 		
+	  	 	});
+	  	 })
+	  })
+</script>

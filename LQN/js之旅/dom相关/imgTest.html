@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#mainbox{ width: 400px; height: 300px; overflow: hidden; position: relative;}
+			.imgall{ width: 1600px; height: 300px; position: absolute;}
+			.imgBox{ width: 400px; height: 300px; float: left; font-size: 28px; color: #fff;}
+			.ion-image01{background: #900;}
+			.ion-image02{background: #090;}
+			.ion-image03{background: #909;}
+			.ion-image04{background: #009;}
+			.btnBox{ width: 100%; position: absolute; left: 0px; bottom: 0px; text-align: right;}
+		</style>
+	</head>
+	<body>
+		<div id="mainbox">
+			<div class="imgall">
+				<div class="imgBox ion-image01">1</div>
+				<div class="imgBox ion-image02">2</div>
+				<div class="imgBox ion-image03">3</div>
+				<div class="imgBox ion-image04">4</div>
+			</div>
+			<div class="btnBox">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+			</div>
+		</div>
+		<script>
+		/*加载事件*/
+			window.onload=function(){
+				/*获取动画容器*/
+				var mianbox=document.getElementById("mainbox");
+				/*获取所有按钮*/
+				var buttons=mianbox.getElementsByTagName("button");
+				/*获取图片装在容器*/
+				var imgall=mianbox.getElementsByClassName("imgall")[0];
+				/*给图片容器添加定时器属性*/
+				imgall.timer=null;
+				/*设置初始行内横坐标，不然不能获取到此行内样式*/
+				imgall.style.left="0px";
+				/*便利按钮，添加事件*/
+				for(var i=0;i<buttons.length;i++){
+					/*给当前按钮添加索引*/
+					buttons[i].index=i;
+					/*给当前按钮添加事件*/
+					buttons[i].onclick=function(){
+						/*计算目标坐标*/
+						var thisLeft=this.index*400;
+						/*设置初始速度*/
+						var speed=10;
+						/*先清除原有定时器，再进行添加*/
+						clearInterval(imgall.timer);
+						/*给图片容器添加定时器*/
+						imgall.timer=setInterval(function(){
+							//console.log(imgall);
+							/*获取图片容器当前坐标*/
+							var imgleft=parseInt(imgall.style.left);
+							/*计算图片容器的移动速度,减缓*/
+							var thisS=(thisLeft-Math.abs(imgleft))/10;
+							/*速度值取整，最小取值1或-1*/
+							speed=thisS>0?Math.ceil(thisS):Math.floor(thisS);
+							/*用图片容器原有坐标减去速度，达到移动效果*/
+							imgall.style.left=imgleft-speed+"px";
+							/*当图片坐标等于目标坐标时，动画结束，清除定时器*/
+							if(Math.abs(imgleft)==thisLeft){
+								clearInterval(imgall.timer);
+							}
+						},1000/20);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

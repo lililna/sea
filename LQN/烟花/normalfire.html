@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html{
+				height:100%;
+			}
+			body{
+				height:100%;
+				background:black;
+				overflow:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var bottom = document.documentElement.offsetHeight||document.body.offsetHeight;
+		var oBody = document.getElementsByTagName("body")[0];
+		document.onclick = function(e){
+			var e = event||window.event;
+			var oLeft = e.clientX;
+			var oTop = e.clientY;
+			var newFireworks = new Fireworks(oBody,oLeft,oTop,bottom);
+		}
+		function Fireworks(parfire,oLeft,oTop,bottom){
+			this.parfire = parfire;
+			this.oLeft = oLeft;
+			this.oTop = oTop;
+			this.maxY = bottom;
+			this.createFireworks();
+		}
+		Fireworks.prototype.createFireworks = function(){
+			this.firework = document.createElement("div");
+			this.firework.style.cssText = "width:6px;height:6px;background:white;position:absolute;left:"+this.oLeft+"px;top:"+this.maxY+"px;";
+			this.parfire.appendChild(this.firework);
+			this.shoot();
+		}
+		Fireworks.prototype.getRan = function(min,max){
+			return Math.floor(Math.random()*(max-min+1))+min;
+		}
+		Fireworks.prototype.shoot = function(){
+			var that = this;
+			this.num = 0;
+			this.init = 0;
+			this.end = Math.PI/2;
+			this.step = (this.end-this.init)/100;
+			this.firework.time = setInterval(function(){
+				that.init += that.step;
+				that.num++;
+				if(that.num==100){
+					clearInterval(that.firework.time);
+					that.init = that.end;
+					that.parfire.removeChild(that.firework);
+					that.createPiece();
+				}
+				that.firework.style.top = that.maxY + (that.oTop-that.maxY)*Math.sin(that.init) + "px";
+			},10);
+		}
+		Fireworks.prototype.createPiece = function(){
+			for(var i=0;i<50;i++){
+				this.piece = document.createElement("div");
+				this.piece.style.cssText = "position:absolute;left:"+this.oLeft+"px;top:"+this.oTop+"px;background:"+"rgb("+this.getRan(0,255)+","+this.getRan(0,255)+","+this.getRan(0,255)+");height:5px;width:5px;";
+				this.parfire.appendChild(this.piece);
+				this.boom(this.piece);
+			}
+		}
+		Fireworks.prototype.boom = function(obj){
+			var that = this;
+			var speedL = (Math.random()>=0.5)?parseInt("+"+this.getRan(0,10)):parseInt("-"+this.getRan(0,10));
+		     var speedT = (Math.random()>=0.5)?parseInt("+"+this.getRan(0,8)):parseInt("-"+this.getRan(0,10));
+		     //(function(obj,speedL,speedT){
+		     	var nowX = that.oLeft;
+			     var nowY = that.oTop;
+			     obj.time = setInterval(function(){
+			     	nowX +=speedL;
+			     	nowY +=speedT++;
+			     	if(nowY>=that.maxY){
+			     		clearInterval(obj.time);
+			     		that.parfire.removeChild(obj);
+			     	}
+			     	obj.style.left = nowX + "px";
+			     	obj.style.top = nowY + "px";  
+			     },1000/30);
+		    // })(obj,speedL,speedT);
+		     
+		}
+		</script>
+	</body>
+</html>

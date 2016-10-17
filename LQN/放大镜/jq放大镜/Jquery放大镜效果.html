@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+	
+	<body>
+		<div id="smallImg" style="position: absolute; background:url(img/星际穿越.jpg) center; background-size: cover; top: 100px; left:100px; width:200px; height:200px;">
+			<div id="smallCursor" style="position: absolute; left: 0; top: 0; display:none; width: 40px; height: 40px; background: rgba(200,198,255,0.8);"></div>
+		</div>
+		<div id="bigCursor" style="position: absolute; height:300px; width:300px; left: 350px; top: 10px; background: rgba(200,198,255,0.1); overflow: hidden;">
+			<img id="bigImg" style="position: absolute; left: 0px; top: 0px;" src="img/星际穿越.jpg"/>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+	//  大图宽度 / 小图宽度   =   大图可视区宽度   /  小图可视区宽度  =  大图的偏移 / 小图可视区的偏移
+	//小图/ 大图 = 小图可视区 / 大图可视区
+	$(function(){
+		var $objSmallImg = $("#smallImg");  //小图
+		var $objSmallCur = $("#smallCursor");// 小图可视区
+		
+		var $objBigImg = $("#bigImg");//大图
+		var $objBigCur = $("#bigCursor");//大图可视区
+		
+		//重新计算 小图可视区的宽度 和高度  （之前不具备分析的比例）
+		$objSmallCur.outerWidth( $objSmallImg.outerWidth() * $objBigCur.outerWidth() / $objBigImg.outerWidth() );
+		$objSmallCur.outerHeight( $objSmallImg.outerHeight() * $objBigCur.outerHeight() / $objBigImg.outerHeight() );
+		
+		//console.log( $objSmallCur.outerWidth()  + "," + $objSmallCur.outerHeight());
+		
+		//大小可视区的比例
+		var scale = $objBigCur.outerWidth() / $objSmallCur.outerWidth();
+		
+		$objSmallImg.mousemove(function(e){
+			var evt = e  ||  event ;
+			var left = evt.clientX - $objSmallImg.offset().left - $objSmallCur.outerWidth()/2;
+			var top =  evt.clientY - $objSmallImg.offset().top - $objSmallCur.outerHeight()/2;
+			
+			var leftSide = $objSmallImg.offset().left + $objSmallCur.outerWidth()/2;
+			var topSide = $objSmallImg.offset().top + $objSmallCur.outerHeight()/2;
+			
+			var rightSide = $objSmallImg.offset().left + $objSmallImg.outerWidth() -  $objSmallCur.outerWidth()/2;
+			var bottomSide = $objSmallImg.offset().top + $objSmallImg.outerHeight() -  $objSmallCur.outerHeight()/2;
+			
+			if (evt.clientX >= leftSide && evt.clientX <= rightSide && evt.clientY >= topSide && evt.clientY <= bottomSide) {
+				$objSmallCur.css({
+				"display":"block",
+				"top": top,
+				"left":left
+				})
+				
+				$objBigImg.css({
+					"top": -scale * top,
+					"left":-scale * left
+				})				
+			}
+			
+		})
+		
+	})
+	
+</script>

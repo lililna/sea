@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+			#ds{
+				width: 450px;
+				margin: 30px auto 0;
+				overflow: hidden;
+			}
+			span{
+				border: 1px solid red;
+				width: 148px;
+				text-align: center;
+				float: left;
+				font-size: 25px;
+				padding: 5px 0;
+				cursor: pointer;
+			}
+			#uls{
+				width: 450px;
+				margin: 0 auto;
+			}
+			#uls li{
+				width: 448px;
+				height: 220px;
+				border: 1px solid red;
+				font-size: 36px;
+				border-top:none ;
+				text-align: center;
+				line-height: 220px;
+				display: none;
+			}
+			.ss{
+				background: #ccc;
+			}
+			#uls .lli{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ds">
+			<span class="ss">第一页</span>
+			<span>第二页</span>
+			<span>第三页</span>
+		</div>
+		<ul id="uls">
+			<li class="lli">内容1</li>
+			<li>内容2</li>
+			<li>内容3</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ds=document.getElementById('ds');
+		var spn=ds.getElementsByTagName('span');
+		var uls=document.getElementById('uls');
+		var lis=uls.getElementsByTagName('li');
+		for (var i = 0; i < spn.length; i++) {
+//			第一个for只是用来遍历以便spn的长度
+//			并且给每个spn加上事件
+			spn[i].onclick=function(){
+				for (var j = 0; j < lis.length; j++) {
+//			第二个for用来确定具体点的那一个然后来判断
+					if (spn[j]==this) {
+						spn[j].className='ss';
+						lis[j].className='lli';
+					} else{
+						spn[j].className='';
+						lis[j].className='';
+					}
+				}
+			}
+		}
+	</script>
+</html>

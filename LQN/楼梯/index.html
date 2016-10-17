@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#LoutiNav{
+				
+				position: fixed;
+				top: 25%;
+				left: 40px;
+				width:30px;
+				border: 1px solid ;
+			}
+			#LoutiNav ul li{
+				position:relative;
+				width:30px;
+				height:30px;
+				list-style:none;
+				text-align:center;
+				line-height: 30px;
+				font-size: 12px;
+				cursor: pointer;
+				border-bottom: 1px dotted #AAAAAA;
+			}
+			#LoutiNav ul li.last {
+				background: darkred;
+				color: white;
+				border-bottom: none;
+			}
+			#LoutiNav ul li span{
+				display: none;
+				width:30px;
+				height: 30px;
+				position: absolute;	
+				top: 0;
+				left: 0;
+				color:red;
+			}
+			#LoutiNav ul li:hover span{
+				display: block;
+				background: darkred;
+				color: white;
+			}
+			#LoutiNav ul li span.active {
+				display: block;
+				background: white;
+				color: red;
+			}
+			#LoutiNav ul li:hover span.active{
+				display: block;
+				background: darkred;
+				color: white;
+			}
+			#header,#main,#footer {
+				margin: auto;
+				width: 1000px;
+				text-align: center;
+				font-size: 40px;
+				font-weight: bold;
+				line-height: 500px;
+			}
+			
+			#main div{
+				height: 700px;
+				font-size: 50px;
+				color: honeydew;
+				line-height: 700px;
+			}
+			
+			#header{
+				height: 500px;
+				background: darkcyan;
+			}
+			#footer{
+				height: 500px;
+				background: darkcyan;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="LoutiNav">
+			<ul>
+				<li>1F <span>服饰</span> </li>
+				<li>2F <span>美妆</span> </li>
+				<li>3F <span>手机</span> </li>
+				<li>4F <span>家电</span> </li>
+				<li>5F <span>数码</span> </li>
+				<li>6F <span>运动</span> </li>
+				<li>7F <span>居家</span> </li>
+				<li>8F <span>母婴</span> </li>
+				<li>9F <span>食品</span> </li>
+				<li>10F <span>图书</span> </li>
+				<li>11F <span>服务</span> </li>
+				<li class="last">Top</li>
+			</ul>
+		</div>
+
+		<!--楼层内容开始-->
+		<div id="header">头部</div>
+		<div id="main">
+			<div class="Louti" style="background: #cc0033;">服饰</div>
+			<div class="Louti" style="background: #999933;">美妆</div>
+			<div class="Louti" style="background: #ccff33;">手机</div>
+			<div class="Louti" style="background: #006633;">家电</div>
+			<div class="Louti" style="background: #6666cc;">数码</div>
+			<div class="Louti" style="background: #ff6600;">运动</div>
+			<div class="Louti" style="background: #ffcc00;">居家</div>
+			<div class="Louti" style="background: #3333ff;">母婴</div>
+			<div class="Louti" style="background: #ff00cc;">食品</div>
+			<div class="Louti" style="background: #669900;">图书</div>
+			<div class="Louti" style="background: #ff66cc;">服务</div>
+		</div>
+		<div id="footer">尾部</div>
+		<!--楼层内容结束-->
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript"> 
+		
+		var f = false;
+//		1  点击左侧楼层号  控制  滚动条的位置
+		$("#LoutiNav ul li:not(:last)").click(function(){
+			f = true;//  改变开关的值  停止 滚动条的操作
+			//获取每个楼层距离文档顶部的位置
+			var $top = $(".Louti").eq($(this).index()).offset().top;
+			//控制楼层号
+			$(this).find("span").addClass("active")
+			       .end().siblings().find("span").removeClass("active")
+			
+			//$(window).scrollTop($top)
+			$("html,body").animate({			
+				scrollTop:$top
+			},1000,function(){
+				f=false;  //点击之后   改变开关的值      继续可以执行   滚动条的操作
+			})
+		})
+//		2  点击 top    滚动条  回到顶部
+		$(".last").click(function(){
+			//$(window).scrollTop(0)
+			$("html,body").animate({			
+				scrollTop:0
+			},1000)
+		})
+		
+//		3  触发浏览器的滚动条事件  控制 滚动条走到一定程度时,  左侧楼层编号改变
+		$(window).scroll(function(){
+			if (!f) {
+				//滚动条向上滚动的距离
+			var scrollHeight = $(window).scrollTop();
+			
+			//找到即将显示的楼层编号  对应的  楼层
+			
+			var $floor = $(".Louti").filter(function(){
+				return  Math.abs( scrollHeight - $(this).offset().top ) < $(".Louti").outerHeight()/2;
+			})
+			
+			//即将改变样式的li
+			var $li= $("#LoutiNav ul li").eq( $floor.index() );
+			
+			$li.find("span").addClass("active")
+							.end().siblings().find("span").removeClass("active")
+			}
+			
+		})
+
+
+		/*
+		 $("p").filter(function(index) {
+		  
+		  return $("ol", this).length == 0;
+		  
+		     返回符合某个条件的对象
+		});
+	     */
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

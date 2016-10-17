@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#outer{
+				position:relative;
+				width:268px;
+				height:288px;
+				border:1px solid black;
+				margin:100px auto 0;
+				overflow:hidden;
+			}
+			#inner{
+				position:absolute;
+				list-style:none;
+				width:804px;
+				height:288px;
+				overflow:hidden;
+			}
+			#inner li{
+				width:268px;
+				height:288px;
+				overflow:hidden;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<ul id="inner">
+				<li><img src="img/wlp.jpg" alt="" /></li>
+				<li><img src="img/wbb.jpg" alt="" /></li>
+				<li><img src="img/qs.jpg" alt="" /></li>
+			</ul>
+		</div>
+		<script src="public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oInner = $("#inner");
+			oInner.init = 0;
+			oInner.end = -536;
+			oInner.speed = -2;
+			oInner.page = 0;
+			oInner.time = setInterval(autoMove,1000/60);
+			function autoMove(){
+				var nowPage;
+//				var nowPage = Math.ceil(oInner.init/268); //-267
+				oInner.init += oInner.speed;
+				console.log(oInner.init)
+				if(oInner.init<=oInner.end){
+					oInner.speed = -oInner.speed;
+					oInner.init = oInner.end;
+				}else if(oInner.init>=0){
+					oInner.speed = -oInner.speed;
+					oInner.init = 0;
+				}
+				if(oInner.speed<0){
+					nowPage = Math.ceil(oInner.init/268);
+				}else{
+					nowPage = Math.floor(oInner.init/268);
+				}
+				if(nowPage!=oInner.page){
+					clearInterval(oInner.time);
+					oInner.init = nowPage*268;
+					oInner.page = nowPage;
+					setTimeout(function(){
+						oInner.time = setInterval(autoMove,1000/60);
+					},2000);
+				}
+				oInner.style.left = oInner.init + "px";
+			}
+		</script>
+	</body>
+</html>

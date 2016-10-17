@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="inp" id="inp"/>
+		<ul id="list"></ul>
+		<script type="text/javascript">
+			var oBody = document.getElementsByTagName("body")[0];
+			var oList = document.getElementById("list");
+			var oInp = document.getElementById("inp");
+			oInp.onkeyup = function(){
+				var oScr = document.createElement("script");
+				oScr.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+this.value+"&cb=fn";
+				oBody.appendChild(oScr);
+				oBody.removeChild(oScr);
+			}
+			function fn(res){
+				list.innerHTML = "";
+				for(var i=0;i<res.s.length;i++){
+					var item = document.createElement("li");
+					item.innerHTML = res.s[i];
+					list.appendChild(item);
+				}
+			}
+		</script>
+	</body>
+</html>

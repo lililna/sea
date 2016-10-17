@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上下轮播</title>
+		<script type="text/javascript" src="jquery-1.11.1.min.js" ></script>
+		<style>
+			*{
+		 		margin: 0;
+		 		padding: 0;
+		 		list-style: none;
+		 	}
+			.carousel{
+				width: 650px;
+				height: 250px;
+				margin: 0 auto;
+				border: 2px solid plum;
+				overflow: hidden;
+				position: relative;
+			}
+			.carousel ul li{
+				position: absolute;
+				left: 0;
+				top: -250px;
+				z-index: 1;
+			}
+			.carousel ul li.showli{
+				top: 0;
+			}
+			.carousel ol{
+				width: 200px;
+				height: 20px;
+				position: absolute;
+				z-index: 15;
+				left: 250px;
+				bottom: 10px;
+			}
+			.carousel ol li{
+				float: left;
+				margin: 0 10px;
+				width: 20px;
+				height: 20px;
+				background: pink;
+				text-align: center;
+				z-index: 15;
+				border-radius: 50%;
+			}
+			.carousel ol li.bg{
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="carousel">
+			<ul>
+				<li class="showli"><img src="images/01.jpg" alt="1" /></li>
+				<li><img src="images/02.jpg" alt="2" /></li>
+				<li><img src="images/03.jpg" alt="3" /></li>
+				<li><img src="images/04.jpg" alt="4" /></li>
+				<li><img src="images/05.jpg" alt="5" /></li>
+			</ul>
+			<ol>
+				<li class="bg">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+		</div>
+		<script>
+			$(function(){
+				/*$("ol li").mouseenter(function(){
+					var index = $(this).index();
+					$(this).addClass("bg")
+					 .siblings().removeClass("bg");
+					 $("ul li").eq(index).siblings().css("z-index",-1);
+					 $("ul li").eq(index).css("z-index",10).animate({
+					 	"top":0
+					 },1000,function(){
+					 	$("ul li").eq(index).siblings().css({
+					 		"top":-250,
+					 		"z-index":-1
+					 	});
+					 })
+				})*/
+				var index = 1;
+				var timer = setInterval(pagechange,2000);
+				$("ul").mouseenter(function(){
+					clearInterval(timer);
+				}).mouseleave(function(){
+					timer = setInterval(pagechange,2000);
+				})
+				$("ol li").mouseenter(function(){
+					clearInterval(timer);
+					index = $(this).index();
+					pagechange();
+				}).mouseleave(function(){
+					timer = setInterval(pagechange,2000);
+				})
+				function pagechange(){
+					if(index==5){
+						index = 0;
+					}
+					$("ol li").eq(index).addClass("bg")
+					.siblings().removeClass("bg");
+					  
+					 $("ul li").eq(index).animate({
+					 	"top":0
+					 },1000,function(){
+			 			$(this).css("z-index",0)
+			 			.siblings().css({
+			 				"top":-250,
+			 				"z-index":1
+			 			});
+			 		})
+					index++;
+				}
+			})
+			
+		</script>
+	</body>
+</html>

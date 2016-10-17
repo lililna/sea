@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				height:3000px;
+			}
+			#outer{
+				width:1004px;
+				overflow:hidden;
+				margin:100px auto 0;
+			}
+			#leftBox{
+				position:relative;
+				float:left;
+				width:500px;
+				height:376px;
+				border:1px solid black;
+			}
+			#drag{
+				display:none;
+				position:absolute;
+				left:0;
+				top:0;
+				width:250px;
+				height:188px;
+				background:rgba(100,100,100,0.5);
+			}
+			#leftBox .smallImg{
+				width:500px;
+				height:376px;
+			}
+			#rightBox{
+				display:none;
+				position:relative;
+				float:left;
+				width:500px;
+				height:376px;
+				border:1px solid black;
+				overflow:hidden;
+			}
+			#rightBox .bigImg{
+				position:absolute;
+				left:0;
+				top:0;
+				width:1000px;
+				height:752px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="leftBox">
+				<img src="tu.jpg" alt="" class="samllImg"/>
+				<div id="drag"></div>
+			</div>
+			<div id="rightBox">
+				<img src="tu.jpg" alt="" class="bigImg" />
+			</div>
+		</div>
+		<script src="public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var leftBox = $("#leftBox");
+			var drag = $("#drag");
+			var rightBox = $("#rightBox");
+			var bigImg = $(".bigImg")[0];
+			/*var leftBoxWid = leftBox.offsetWidth;
+			var leftBoxHei = leftBox.offsetHeight;
+			var leftBoxLeft = leftBox.offsetLeft;
+			var leftBoxTop = leftBox.offsetTop;
+			var dragWid = parseInt(oGet.getStyle(drag,"width"));
+			var dragHei = parseInt(oGet.getStyle(drag,"height"));
+			var maxWid = leftBoxWid - dragWid;
+			var maxHei = leftBoxHei - dragHei;
+			leftBox.onmouseover = function(){
+				drag.style.display = "block";
+				rightBox.style.display = "block";
+			}
+			leftBox.onmouseout = function(){
+				drag.style.display = "";
+				rightBox.style.display = "";
+			}
+			document.onmousemove = function(e){
+				var e = event||window.event;
+				var disX = e.clientX - leftBoxLeft - dragWid/2;
+				var disY = e.clientY - leftBoxTop - dragHei/2;
+				if(disX>=maxWid){
+					disX = maxWid;
+				}else if(disX<=0){
+					disX = 0;
+				}
+				if(disY>=maxHei){
+					disY = maxHei;
+				}else if(disY<=0){
+					disY = 0;
+				}
+				drag.style.left = disX + "px";
+				drag.style.top = disY + "px";
+				bigImg.style.left = -2*disX + "px";
+				bigImg.style.top = -2*disY + "px";
+			}*/
+			function mirror(leftBox,drag,rightBox,bigImg){
+				this.leftBox = leftBox;
+				this.drag = drag;
+				this.rightBox = rightBox;
+				this.bigImg = bigImg;
+				this.count();
+				this.move();
+			}
+			mirror.prototype.count = function(){
+				this.leftBoxWid = this.leftBox.offsetWidth;
+				this.leftBoxHei = this.leftBox.offsetHeight;
+				this.leftBoxLeft = this.leftBox.offsetLeft;
+				this.leftBoxTop = this.leftBox.offsetTop;
+				this.dragWid = parseInt(oGet.getStyle(this.drag,"width"));
+				this.dragHei = parseInt(oGet.getStyle(this.drag,"height"));
+				this.maxWid = this.leftBoxWid - this.dragWid;
+				this.maxHei = this.leftBoxHei - this.dragHei;
+			}
+			mirror.prototype.move = function(){
+				var that = this;
+				this.leftBox.onmouseover = function(){
+				that.drag.style.display = "block";
+				that.rightBox.style.display = "block";
+			}
+			this.leftBox.onmouseout = function(){
+				that.drag.style.display = "";
+				that.rightBox.style.display = "";
+			}
+			document.onmousemove = function(e){
+				var e = event||window.event;
+				var disX = e.clientX - that.leftBoxLeft - that.dragWid/2;
+				var disY = e.clientY - that.leftBoxTop - that.dragHei/2;
+				if(disX>=that.maxWid){
+					disX = that.maxWid;
+				}else if(disX<=0){
+					disX = 0;
+				}
+				if(disY>=that.maxHei){
+					disY = that.maxHei;
+				}else if(disY<=0){
+					disY = 0;
+				}
+				that.drag.style.left = disX + "px";
+				that.drag.style.top = disY + "px";
+				that.bigImg.style.left = -2*disX + "px";
+				that.bigImg.style.top = -2*disY + "px";
+			}
+			}
+			var newMirror = new mirror(leftBox,drag,rightBox,bigImg);
+			 
+		</script>
+	</body>
+</html>

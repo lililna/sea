@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#btn{
+				position: absolute;
+				left: 50%;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">create</button>
+		<script>
+			var oBody = document.getElementsByTagName("body")[0];
+			var oBtn = document.getElementById("btn");
+			function Box(wid,hei){
+				this.wid = wid;
+				this.hei = hei;
+				this.createBox();
+			}
+			Box.prototype.getRan = function(min,max){
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+			Box.prototype.createBox = function(){
+				this.ele = document.createElement("div");
+				this.ele.style.cssText = "position:absolute;left:0;top:0;width:"+this.wid+"px;height:"+this.hei+"px;background:rgb("+this.getRan(0,255)+","+this.getRan(0,255)+","+this.getRan(0,255)+");";
+				oBody.appendChild(this.ele);
+				this.drag();
+			}
+			Box.prototype.drag = function(){
+				var that = this;
+				this.ele.onmousedown = function(e){
+					var e = e||window.event;
+					var disX = e.clientX - this.offsetLeft;
+					var disY = e.clientY - this.offsetTop;
+					document.onmousemove = function(e){
+						var e = e||window.event;
+						var nowX = e.clientX - disX;
+						var nowY = e.clientY - disY;
+					that.ele.style.left = nowX + "px";
+					that.ele.style.top = nowY + "px";
+					}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+					}
+				}
+			}
+			oBtn.onclick = function(){
+				var n = new Box(100,100);
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+ <!doctype html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8" />
+ 	<title></title>
+ 	<style>
+ 		#inner{
+				width: 800px;
+				height: 400px;
+				position: absolute;
+				overflow: hidden;
+			}
+			#inner li{
+				list-style: none;
+				width: 50px;
+				height: 400px;
+				overflow: hidden;
+				float: left;
+			}
+ 	</style>
+ </head>
+ <body>
+ 	<ul id="inner">
+			<li style="width: 600px;"><img src="img/child1.jpg" alt="1" /></li>
+			<li><img src="img/child2.jpg" alt="2" /></li>
+			<li><img src="img/child3.jpg" alt="3" /></li>
+			<li><img src="img/child4.jpg" alt="4" /></li>
+			<li><img src="img/child5.jpg" alt="5" /></li>
+		</ul>
+ 	<script>
+ 		var oLi = document.getElementsByTagName("li");
+ 		function getStyle(obj,attr){
+ 			if(obj.currentStyle){
+ 				return obj.currentStyle[attr];
+ 			}else{
+ 				return getComputedStyle(obj,null)[attr];
+ 			}
+ 		}
+ 		for(var i=0;i<oLi.length;i++){
+ 			oLi[i].index = i;
+			oLi[i].onclick = function(){
+				for(var j=0;j<oLi.length;j++){
+					move(oLi[j],50,"width");
+ 				}
+					move(oLi[this.index],600,"width"); 
+ 			}
+ 		}
+ 		 
+ 		function move(obj,end,attr){
+ 			var start = parseInt(getStyle(obj,attr));
+ 			var step = (end - start)/100;
+ 			clearInterval(obj.timer);
+ 			obj.timer = setInterval(function(){
+ 				start += step;
+ 				if(start>=end&&step>0||start<=end&&step<0){
+ 					clearInterval(timer);
+ 					start = end;
+ 				}
+ 				obj.style[attr] = start + "px";
+ 			},10)
+ 			
+ 		}
+ 	</script>
+ </body>
+ </html>

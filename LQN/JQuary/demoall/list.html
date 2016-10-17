@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="main.css" />
+		<script src="jquery.min.js"></script>
+
+		<style>
+			.header{
+				height: 40px;
+				width: 900px;
+				margin: 0 auto 50px;
+			}
+		</style>
+		<script src="myCookie.js"></script>
+	</head>
+	<body>
+		 
+		<div class="header">
+			<a href="login.html">登录 / 注册</a>
+		</div>
+		<script type="text/javascript">
+			//显示登录的用户名
+			 
+		</script>
+		<div class="nav clearfix">2222</div>
+		<ul class="shoplist clearfix"></ul>	
+	</body>
+</html>
+<script>
+		
+	/*$(function(){
+		$.ajax({
+			type:"get",
+			url:"data.json",
+			async:true,
+			success:function(glist){
+				var str = "";
+				var html = "";
+				//console.log(glist.classify001.name)
+				for (var i in glist) {
+					str += '<span>'+glist[i].name+'</span>';
+					for (var j=0;j<glist[i].list.length;j++) {
+						child = glist[i].list[j];
+						html += '<li><a href="page.html?id='+child.id+'&cname='+i+'">'+
+								'<img src="img/'+child.src+'"/>'+
+								'<p>'+child.name+'</p>'+
+								'<p>'+child.price+'</p>'+
+								'</a>'+
+								'<span style="display:none" data-id="'+child.id+'" data-name="'+child.name+'" data-src="'+child.src+'" data-price="'+child.price+'"></span>'+
+								'<button>购买</button>'+'</li>';
+					}
+				}
+				
+				$(".nav").html(str);
+				$(".shoplist").html(html);
+				//点击购买   首先将购买的商品先存入到cookie
+				$("button").click(function(){										
+					
+					 1、取出当前点击的商品信息  存入到 json对象
+					 2、当前存入到cookie中的商品是  一个
+					 3、如果将多个商品存入到cookie中   定义一个数组，将所有的商品存入到数组中 
+					 4、此时，cookie中的信息仍然会被 覆盖 ， 先将cookie中的信息取出来  存入到数组中，在将当前点击的商品 累加到数组中
+					 5、有一个问题，就是 数量不能累加   ，所以在  json对象中添加一个 count属性，默认是1 
+					 	遍历取出来的cookie数据中，是否有相同的商品编号，如果有 就进行 count ++
+					 
+					var arr = [];//数组中存储多个商品对象
+					var flag = true;//控制数据的累加
+					var d = {
+						"id":$(this).prev().data("id"),
+						"name":$(this).prev().data("name"),
+						"src":$(this).prev().data("src"),
+						"price":$(this).prev().data("price"),
+						"count":1
+					}	
+					
+					oldarr = getCookie("cartlist");
+				
+					//如果cookie中有数据  先取出cookie中的数据
+					if (oldarr.length!=0) {			
+						arr = oldarr;
+						for (var j=0;j < arr.length; j++) {
+							if (d.id == arr[j].id) {
+								arr[j].count++;
+								flag = false;
+								break;
+							}
+						}
+						
+					}				
+					if (flag) {
+						arr.push(d);
+					}
+								
+					str_d = JSON.stringify(arr);//将对象形式的参数转成字符串 存入到cookie中
+					
+					document.cookie="cartlist="+str_d;
+					document.cookie="a=111";
+					document.cookie="b=222";
+					
+				    console.log(document.cookie);
+				})
+			}
+			
+		});
+		
+	})*/
+	
+		
+</script>

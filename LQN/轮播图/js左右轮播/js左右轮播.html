@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#outer{
+				position:relative;
+				width:640px;
+				height:400px;
+				border:1px solid black;
+				margin:100px auto 0;
+				overflow:hidden;
+			}
+			#inner{
+				position:absolute;
+				list-style:none;
+				width:5120px;
+				height:400px;
+				overflow:hidden;
+				left:-640px;
+				top:0;
+			}
+			#inner li{
+				width:640px;
+				height:400px;
+				overflow:hidden;
+				float:left;
+			}
+			#leftBtn{
+				display:none;
+				position:absolute;
+				left:0;
+				top:50%;
+				margin-top:-50px;
+				width:50px;
+				height:100px;
+				background:rgba(100,100,100,0.5);
+				line-height:100px;
+				text-align:center;
+				font-size:40px;
+				color:white;
+				cursor:pointer;
+			}
+			#rightBtn{
+				display:none;
+				position:absolute;
+				right:0;
+				top:50%;
+				margin-top:-50px;
+				width:50px;
+				height:100px;
+				background:rgba(100,100,100,0.5);
+				line-height:100px;
+				text-align:center;
+				font-size:40px;
+				color:white;
+				cursor:pointer;
+			}
+			#pageList{
+				position:absolute;
+				left:50%;
+				margin-left:-90px;
+				bottom:20px;
+				width:180px;
+				height:20px;
+				overflow:hidden;
+				list-style:none;
+			}
+			#pageList li{
+				width:20px;
+				height:20px;
+				text-align:center;
+				line-height:20px;
+				color:white;
+				background:rgba(100,100,100,0.5);
+				border-radius:50%;
+				float:left;
+				margin-right:10px;
+				cursor:pointer;
+			}
+			#pageList .active{
+				background:rgba(255,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<ul id="inner">
+				<li><img src="img/pic6.jpg" alt="" /></li>
+				<li><img src="img/pic1.jpg" alt="" /></li>
+				<li><img src="img/pic2.jpg" alt="" /></li>
+				<li><img src="img/pic3.jpg" alt="" /></li>
+				<li><img src="img/pic4.jpg" alt="" /></li>
+				<li><img src="img/pic5.jpg" alt="" /></li>
+				<li><img src="img/pic6.jpg" alt="" /></li>
+				<li><img src="img/pic1.jpg" alt="" /></li>
+			</ul>
+			<p id="leftBtn"><</p>
+			<p id="rightBtn">></p>
+			<ul id="pageList">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+		<script src="public/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var outer = $("#outer");
+			var oInner = $("#inner");
+			var leftBtn = $("#leftBtn");
+			var rightBtn = $("#rightBtn");
+			var pageList = $("#pageList");
+			var pageBtn = $("#pageList li");
+			var pageNum = 1; 
+			var time = setInterval(pageChange,3000);
+			function pageChange(){
+				pageNum++;
+				count();
+			}
+			function count(fn){
+				var start = parseInt(oGet.getStyle(oInner,"left"));
+				var end = -pageNum*640;
+				var step = (end - start)/100;
+				if(fn){
+					move(start,end,step,fn);
+				}else{
+					move(start,end,step);
+				}
+			}
+			function active(){
+				for(var i=0;i<pageBtn.length;i++){
+					pageBtn[i].className = "";
+				}
+				pageBtn[pageNum-1].className = "active";
+			}
+			function move(start,end,step,fn){
+				var num = 0;
+				oInner.time = setInterval(function(){
+					start += step;
+					num++;
+					if(num==100){
+						clearInterval(oInner.time);
+						start = end;
+						if(step<0&&pageNum==7){
+							pageNum = 1;
+							start = -640;
+						}else if(step>0&&pageNum==0){
+							pageNum = 6;
+							start = -640*6;
+						}
+						if(fn){
+							fn();
+						}
+						active();
+					}
+					oInner.style.left = start + "px";
+				})
+			}
+			outer.onmouseover = function(){
+				clearInterval(time);
+				leftBtn.style.display = "block";
+				rightBtn.style.display = "block";
+			}
+			outer.onmouseout = function(){
+				time = setInterval(pageChange,3000);
+				leftBtn.style.display = "";
+				rightBtn.style.display = "";
+			}
+			
+			leftBtn.lock = true;
+			rightBtn.lock = true;
+			
+			leftBtn.onclick = function(){
+				if(leftBtn.lock&&rightBtn.lock){
+					leftBtn.lock = false;
+					pageNum --;
+					count(function(){
+						leftBtn.lock = true;
+					});
+				}
+			}
+			rightBtn.onclick = function(){
+				if(leftBtn.lock&&rightBtn.lock){
+					rightBtn.lock = false;
+					pageNum ++;
+					count(function(){
+						rightBtn.lock = true;
+					});
+				}
+			}
+			for(var i=0;i<pageBtn.length;i++){
+				pageBtn[i].index = i;
+				pageBtn[i].onclick = function(){
+					pageNum = this.index + 1;
+					count();
+				}
+			}
+			//解决窗口变小后轮播混乱问题
+			window.onblur = function(){
+				clearInterval(time);
+			}
+			window.onfocus = function(){
+				time = setInterval(pageChange,3000);
+			}
+		</script>
+	</body>
+</html>

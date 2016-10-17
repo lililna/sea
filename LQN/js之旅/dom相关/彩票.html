@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+随机一注
+</title>
+</head>
+<body>
+	<input type="button" value="随机一注" id="btn"/>
+	<div id="div1"></div>
+	<script>
+		 var oBtn = document.getElementById("btn");
+		 var oDiv = document.getElementById("div1");
+		 
+		 function rand(mn,mx){
+			return parseInt(Math.random()*(mx-mn+1)+mn);
+		 }
+		 
+		 oBtn.onclick = function(){ 
+			var count = 10;
+			var s = setInterval(function(){
+				count--;
+				if(count<0){
+					s.clearInterval();
+				}else{
+					var str =[];
+					var num;
+					 while(str.length<5){
+						num=rand(0,26);
+						if(str.indexOf(num)==-1)
+						str.push(num);
+					 }
+					oDiv.innerHTML = str;
+				}
+			 },1000);
+		 }
+	</script>
+</body>
+</html>

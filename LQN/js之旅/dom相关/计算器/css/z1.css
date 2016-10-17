@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.box{
+	margin:0 auto;
+	width:200px;
+	height:350px;
+}
+.input{
+	width:198px;
+	height:48px;
+	border:1px solid #000;
+	text-align:right;
+	background:#968f87;
+}
+#input1{
+	font-size:16px;
+	line-height:16px;
+	width:198px;
+	height:16px;
+}
+#input2{
+	font-size:20px;
+	line-height:32px;
+	width:198px;
+	height:32px;
+}
+input{
+	font-size:20px;
+	width:50px;
+	height:48px;
+	border:1px solid #000;
+	margin:0;
+	padding:0;
+	background:#d6d6d6;
+	float:left;
+}
+#btn17{
+	width:100px;
+}
+.btn,#btn19{
+	background:#fe9341;
+}
+#btn3{
+	background:#d6d6d6;
+}

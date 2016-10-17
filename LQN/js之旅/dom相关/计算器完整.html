@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+计算器
+</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.mdiv{
+		width:292px;
+		height:408px;
+		border:1px solid #000;
+		background:yellow;
+		margin:0 auto;
+		
+	}
+	.div1{
+		width:292px;
+		height:88px;
+		background:#968f87;
+	}
+	input{
+		width:73px;
+		height:64px;
+		float:left;
+		border:1px solid #000;
+		font-size:20px;
+	}
+	#ba0{
+		width:146px;
+	}
+	#bachu, #bajia,#bajian,#baxing,#badeng{
+		background:#fd9441;
+	}
+	#p1{
+		width:292px;
+		height:44px;
+		font-size:30px;
+	}
+	#p2{
+		width:292px;
+		height:44px;
+		font-size:30px;
+	}
+</style>
+</head>
+<body>
+	<div class="mdiv">
+		<div class="div1" id="diva">
+			<p id="p1"></p>
+			<p id="p2"></p>
+		</div>
+		<input type="button" value="c" class="bc" id="bac"/>
+		<input type="button" value="+/-" class="bj" id="baj"/>
+		<input type="button" value="%" class="ba" id="babai"/>
+		<input type="button" value="/" class="ba" id="bachu"/>
+		<input type="button" value="7" class="bb"/>
+		<input type="button" value="8" class="bb"/>
+		<input type="button" value="9" class="bb"/>
+		<input type="button" value="*" class="ba" id="baxing"/>
+		<input type="button" value="4" class="bb"/>
+		<input type="button" value="5" class="bb"/>
+		<input type="button" value="6" class="bb"/>
+		<input type="button" value="-" class="ba" id="bajian"/>
+		<input type="button" value="1" class="bb"/>
+		<input type="button" value="2" class="bb"/>
+		<input type="button" value="3" class="bb"/>
+		<input type="button" value="+" class="ba" id="bajia"/>
+		<input type="button" value="0" class="bb" id="ba0"/>
+		<input type="button" value="." class="ba" id="badian"/>
+		<input type="button" value="=" class="ba" id="badeng"/>
+	</div>
+	 
+	<script>
+		var oP1 = document.getElementById("p1");
+		var oP2 = document.getElementById("p2");
+		var oBac = document.getElementById("bac");
+		var oBaj = document.getElementById("baj");
+		var oBadeng = document.getElementById("badeng");
+		var oBb = document.getElementsByClassName("bb");
+		var oBa = document.getElementsByClassName("ba")
+		var index;
+		for(var i=0;i<oBb.length;i++){
+			oBb[i].onclick = function(){
+				oP1.innerHTML += this.value;
+			}
+		}
+		for(var i=0;i<oBa.length;i++){
+			oBa[i].onclick = function(){ 
+				oP1.innerHTML += this.value;
+			}
+		}
+		oBac.onclick = function(){
+			oP1.innerHTML = "";
+			oP2.innerHTML = "";
+		}
+		 
+		oBaj.onclick = function(){
+			if(oP1.innerHTML.charAt(0)!="-"){
+				oP1.innerHTML = "-" + oP1.innerHTML;
+			}else{
+			    oP1.innerHTML = oP1.innerHTML.slice(1);
+			}
+		}
+		oBadeng.onclick = function(){
+			var str = oP1.innerHTML;
+			for(var i=0;i<str.length;i++){
+				if(isNaN(str[i])&&str[i]!="."){
+					index = i;
+					break;
+				}
+			}
+			var num1str = str.slice(0,index);
+			var num1 = parseFloat(num1str);
+			var num2str = str.slice(index+1,str.length);
+			var num2 = parseFloat(num2str);
+			oP2.innerHTML = s(num1,str[index],num2);
+			 
+		}
+		function s(num1,f,num2){
+			switch(f){
+				case "+":
+				return num1+num2;
+				break;
+				case "-":
+				return num1-num2;
+				break;
+				case "*":
+				return num1*num2;
+				break;
+				case "/":
+				return num1/num2;
+				break;
+				case "%":
+				return num1%num2;
+				break;
+				default:
+				return "error";
+				break;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>面试题-动态生成表格</title>
+<style>
+body{font:700 14px/1.5 Arial;margin:0;padding:0 10px;}
+table{clear:both;border:1px solid #000;}
+td{color:#000;cursor:pointer;text-align:center;border:1px solid #000;padding:5px;}
+#setting{float:left;clear:left;line-height:28px;margin:10px 0;}
+#setting input{width:50px;font-family:inherit;border:2px solid #CCC;margin:0 5px;padding:4px;}
+#btn{font-size:14px;line-height:18px;color:#fff;text-decoration:none;background:#353535;border-top:1px #999 solid;border-radius:5px;padding:4px 6px;}
+#msg{float:left;clear:both;height:25px;display:none;line-height:25px;margin-bottom:10px;}
+#msg em{width:25px;height:25px;display:inline-block;margin-right:5px;}
+#setting label,#setting input,#setting a,#msg span,#msg em{float:left;}
+</style>
+ 
+<script src="jquery-1.11.1.min.js"></script>
+ 
+</head>
+<body>
+<div id="setting">
+    <label>行数</label><input type="text" id="row">
+    <label>列数</label><input type="text" id="col">
+    <a href="javascript:;" id="btn">生成表格</a>
+</div>
+<div id="msg" style="display: block;"></div>
+</body>
+
+<script>
+	function randomColor(){
+		var r = Math.round(Math.random()*255).toString(16);
+		var g = Math.round(Math.random()*255).toString(16);
+		var b = Math.round(Math.random()*255).toString(16);
+		return (r.length<2 ? ("0"+ r) : r) + (g.length<2 ? ("0"+ g) : g) + (b.length<2 ? ("0"+ b) : b);
+	}
+		
+		
+	$("#btn").click(function(){
+		var rows = $("#row").val();
+		var cols = $("#col").val();
+		var otab = $("<table>");
+		for(var i = 0; i<rows ; i++){
+			
+			var otr= $("<tr>");
+			for(var j = 0; j<cols ;j++){
+				var otd = $("<td>");				
+				otd.html( Math.round(Math.random()*100 ) );
+				 otd.css("background","#"+randomColor());
+				//otr.append(otd);				
+				otd.appendTo(otr);				
+			}
+			var etd = $("<td>");
+			var aa = $("<a>");
+			aa.html("删除");
+			aa.appendTo(etd);
+			aa.click(function(){
+				if(confirm("确认要删除么?"))
+					$(this).parent().parent().remove();
+			})
+			etd.appendTo(otr);
+			
+			otab.append(otr);
+		}
+		$("#msg").append(otab);
+	})
+</script>
+ 
+ 

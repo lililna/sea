@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新浪微博</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				background: #f9f9f9;
+				font-size: 14px;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#box {
+				width: 450px;
+				padding: 10px;
+				border: 1px solid #ccc;
+				background: #f4f4f4;
+				margin: 10px auto;
+			}
+			
+			#fill_in {
+				margin-bottom: 10px;
+			}
+			
+			#fill_in li {
+				padding: 5px 0;
+			}
+			
+			#fill_in .text {
+				width: 380px;
+				height: 30px;
+				padding: 0 10px;
+				border: 1px solid #ccc;
+				line-height: 30px;
+				font-size: 14px;
+				font-family: arial;
+			}
+			
+			#fill_in textarea {
+				width: 380px;
+				height: 100px;
+				line-height: 20px;
+				padding: 5px 10px;
+				border: 1px solid #ccc;
+				font-size: 14px;
+				font-family: arial;
+				overflow: auto;
+				vertical-align: top;
+			}
+			
+			#fill_in .btn {
+				border: none;
+				width: 100px;
+				height: 30px;
+				border: 1px solid #ccc;
+				background: #fff;
+				color: #666;
+				font-size: 14px;
+				position: relative;
+				left: 42px;
+				
+				
+			}
+			
+			#message_text h3 {
+				font-size: 14px;
+				padding: 6px 0 4px 10px;
+				background: #ddd;
+				border-bottom: 1px solid #ccc;
+			}
+			
+			#message_text li {
+				background: #f9f9f9;
+				border-bottom: 1px solid #ccc;
+				color: #666;
+				overflow: hidden;
+			}
+			
+			#message_text li a {
+				float: right;
+			}
+		
+			#message_text p {
+				padding: 0 10px 10px;
+				text-indent: 28px;
+				line-height: 20px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="box">
+			<h2 id="oh3"></h2>
+			<ul id="fill_in">
+				<form>
+					<li>姓名：<input id="txt1" type="text" class="text" /></li>
+					<li>内容：<textarea id="txt2"></textarea></li>
+					<li><input id="btn" type="button" value="提交" class="btn" /></li>
+				</form>
+			</ul>
+			<div id="message_text">
+				<h2>显示留言</h2>
+				<ul>
+					<!--<li><h3>名字</h3><p>内容<a href="###">删除</a></p></li>-->
+				</ul>
+			</div>
+		</div>
+		<script>
+			var oName = document.getElementById("txt1");
+			var oCont = document.getElementById("txt2");
+			var oBtn =document.getElementById("btn");
+			var oUl = document.getElementsByTagName("ul");
+			var oH3 = document.getElementById("oh3");
+			setInterval(function(){
+				var zishu = 128-oCont.value.length;
+				oH3.innerHTML = "内容还可输入" +zishu+"个字";
+			},100);
+			oBtn.onclick = function(){ 
+				var oLi = document.createElement("li");
+				var oLL =document.getElementsByTagName("li");
+				oLi.innerHTML ="<h3>"+ oName.value+"</h3>"+"<p>"+oCont.value+'<a href="#">'+"删除"+"</a>"+"</p>";
+				//oUl[1].appendChild(oLi);
+				oUl[1].insertBefore(oLi,oUl[1].firstElementChild);
+				var oA = document.getElementsByTagName("a");
+				for(var i in oA){
+					//oA[i].index = i;
+					oA[i].onclick = function(){
+						//this.parentNode.parentNode.remove();
+						oUl[1].removeChild(this.parentNode.parentNode);
+					}
+				}
+			}
+			 
+			
+		</script>
+</body>
+
+</html>

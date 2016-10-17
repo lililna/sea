@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			 
+			#inner{
+				width: 800px;
+				height: 400px;
+				position: absolute;
+				overflow: ; 
+			}
+			#inner li{
+				list-style: none;
+				width: 50px;
+				height: 400px;
+				overflow: hidden;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="inner">
+			<li style="width: 600px;"><img src="img/child1.jpg" alt="1" /></li>
+			<li><img src="img/child2.jpg" alt="2" /></li>
+			<li><img src="img/child3.jpg" alt="3" /></li>
+			<li><img src="img/child4.jpg" alt="4" /></li>
+			<li><img src="img/child5.jpg" alt="5" /></li>
+		</ul>
+		<script>
+			var oGet = {
+				"getStyle":function(obj,attr){
+					if(obj.currentStyle){
+						return obj.currentStyle[attr];//IE浏览器兼容
+					}else{
+						return getComputedStyle(obj)[attr];//非IE浏览器兼容
+					}
+				}
+			};
+			var oLi = document.getElementsByTagName("li");
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].index = i;
+				oLi[i].onclick = function(){
+					for(var j=0;j<oLi.length;j++){
+					move(oLi[j],50,"width");
+				}
+				move(oLi[this.index],600,"width");
+				}
+			}
+			
+			function move(obj,end,attr){
+				var start = parseInt(oGet.getStyle(obj,attr));
+				var step = (end-start)/500;
+				clearInterval(obj.time);
+				obj.time = setInterval(function(){
+					start += step;
+					if(start>=end&&step>0){
+						clearInterval(obj.time);
+						start = end;
+					}else if(start<=end&&step<0){
+						clearInterval(obj.time);
+						start = end;
+					}
+					obj.style[attr] = start + "px";
+				},1)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 600px;
+				/*overflow: hidden;*/
+				margin: 0 auto;
+				position: relative;
+			}
+			 #ul1{
+			 	width: 600px;
+			 	height: 400px;
+			 }
+			 li{
+			 	list-style: none;
+			 }
+			 #ul1 li{
+			 	width: 600px;
+			 	height: 400px;
+			 	position: absolute;
+			 	left: 0;
+			 	top: 0;
+			 }
+			 #ul2{
+			 	width: 600px;
+			 	height: 100px;
+			 	
+			 }
+			 #ul2 img{
+			 	width: 80px;
+			 	height: 50px;
+			 	margin-left: 20px;
+			 	float: left;
+			 	border: 2px solid rosybrown;
+			 	 
+			 }
+			 li.active{
+			 	z-index: 10;
+			 }
+			#ul2 img.border{
+			 	border: 3px solid yellow;
+			 	z-index: 10;
+			 }
+			 p{
+			 	width: 30px;
+			 	height: 60px;
+			 	background: black;
+			 	position: absolute;
+			 	font-size: 18px;
+			 	color: white;
+			 	line-height: 60px;
+			 	text-align: center;
+			 	opacity: 0.5;
+			 	z-index: 10;
+			 	cursor: pointer;
+			 }
+			 #p1{
+			 	left: 0;
+			 	top:165px;
+			 }
+			 #p2{
+			 	right: 0;
+			 	top:165px;
+			 }
+		</style>
+	</head>
+	<body>
+		<script>
+		window.onload = function(){
+			var oBox = document.getElementById("box");
+			var oLi = document.getElementsByTagName("li");
+			var oP = oBox.getElementsByTagName('p');
+			var oUl2 = document.getElementById("ul2");
+			var oImg = oUl2.getElementsByTagName("img");
+			var num = 0;
+			oLi[num].className = "active";
+			setInterval(function(){
+				num++;
+				if(num>=oLi.length){
+					num = 0;
+				}
+				fnmove();
+			},3000);
+			for(var i=0;i<oImg.length;i++){
+				oImg[i].index = i;
+				oImg[i].onclick = function(){
+					num = this.index;
+					fnmove();
+				}
+			}
+			oP[0].onclick = function(){
+				fnprove();
+			}
+			oP[1].onclick = function(){
+				fnbehind();
+			}
+			function fnprove(){
+				num--;
+				if(num<0){
+					num = oLi.length-1;
+				}
+				fnmove();
+			}
+			function fnbehind(){
+				num++;
+				if(num>=oLi.length){
+					num = 0;
+				}
+				fnmove();
+			}
+			function fnmove(){
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].className = "";
+					oImg[i].className = "";
+				}
+				oLi[num].className = "active";
+				oImg[num].className = "border";
+			}
+		}
+			
+		</script>
+		<div id="box">
+			<ul id="ul1">
+				<li><img src="img/child1.jpg" alt="" /></li>
+				<li><img src="img/child2.jpg" alt="" /></li>
+				<li><img src="img/child3.jpg" alt="" /></li>
+				<li><img src="img/child4.jpg" alt="" /></li>
+				<li><img src="img/child5.jpg" alt="" /></li>
+			</ul>
+			<p id="p1"><</p>
+			<p id="p2">></p>
+			<div id="ul2">
+				<img src="img/child1.jpg" alt="" />
+				<img src="img/child2.jpg" alt="" />
+				<img src="img/child3.jpg" alt="" />
+				<img src="img/child4.jpg" alt="" />
+				<img src="img/child5.jpg" alt="" />
+			</div>
+		</div>
+	</body>
+</html>

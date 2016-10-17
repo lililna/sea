@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js"></script>
+		
+		<style>
+			#shopbtn{
+				font-size: 30px;
+				padding: 5px 10px;
+				border: 1px solid red;
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="shopinfo">
+			
+		</div>
+		
+			
+	</body>
+</html>
+<script>
+	/*
+	   根据 href  传递过来的  id   和  cname  就能够确定要显示的某个商品  
+	 * */
+	$(function(){
+		url = location.href;
+		url = url.split('?');
+		url = url[1].split('&');
+		id = url[0].split('=')[1];
+		cname = url[1].split('=')[1];
+		//console.log(id + "," + cname);
+		$.ajax({
+			type:"get",
+			url:"data.json",
+			success:function(glist){
+				//console.log(glist[cname].list)
+				var html = "";
+				for (var i=0 ; i< glist[cname].list.length; i++ ){
+					if (id == glist[cname].list[i].id) {
+						shopInfo = glist[cname].list[i];
+						html = '<img src="img/'+shopInfo.src+'"/>'+
+							   '<p>'+shopInfo.name+'</p>'+
+							   '<p>'+shopInfo.price+'</p>'+
+							   '<button>购买</button>';
+						break;
+					}
+				}
+				$('.shopinfo').html(html);
+			}
+		});
+	})
+</script>
