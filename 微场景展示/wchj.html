@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style>
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.swiper-container{
+				width: 100%;
+				height: 100%;
+			}
+			.page01{
+				position: relative;
+				background: url(img/page1_1.png);
+				background-size: cover;
+			}
+			.page01 img:nth-child(1){
+				position: absolute;
+				left: 38%;
+				top: 10%;
+				width: 25%;
+				height: 15%;
+			}
+			.page01 img:nth-child(2){
+				position: absolute;
+				left: 10%;
+				top: 30%;
+				width: 80%;
+				height: 8%;
+			}
+			.page01 img:nth-child(3){
+				position: absolute;
+				left: 10%;
+				top: 40%;
+				width: 80%;
+				height: 3%;
+			}
+			.page01 img:nth-child(4){
+				position: absolute;
+				left: 5%;
+				top: 38%;
+				width: 30%;
+				height: 3%;
+			}
+			.page01 img:nth-child(5){
+				position: absolute;
+				right: 5%;
+				top: 30%;
+				width: 30%;
+				height: 3%;
+			}
+			.page01 img:nth-child(6){
+				position: absolute;
+				right: 10%;
+				top: 70%;
+				width: 80%;
+				height: 10%;
+			}
+			.page01 img:nth-child(7){
+				position: absolute;
+				right: 20%;
+				top: 72%;
+				width: 60%;
+				height: 3%;
+			}
+			.page01 img:nth-child(8){
+				position: absolute;
+				right: 25%;
+				top: 76%;
+				width: 50%;
+				height: 2%;
+			}
+			.page01 img:nth-child(9){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+			@keyframes name{
+				0%{transform: translateY(0px);}
+				10%{transform: translateY(-15px);}
+				100%{transform: translateY(0px);}
+			}
+			/*page02*/
+			.page02{
+				background: url(img/page2_1.png);
+				background-size: cover;
+			}
+			.page02 img:nth-child(1){
+				position: absolute;
+				right: 5%;
+				top: 8%;
+				width: 25%;
+				height: 15%;
+				animation: zhuan 2s linear;
+				transform-style: preserve-3d;
+			}
+			.page02 img:nth-child(2){
+				position: absolute;
+				left: 5%;
+				top: 8%;
+				width: 25%;
+				height: 5%;
+			}
+			.page02 img:nth-child(3){
+				position: absolute;
+				left: 15%;
+				top: 35%;
+				width: 100%;
+				height: 5%;
+			}
+			.page02 img:nth-child(4){
+				position: absolute;
+				left: 5%;
+				top: 15%;
+				width: 50%;
+				height: 8%;
+			}
+			.page02 img:nth-child(5){
+				position: absolute;
+				left: 5%;
+				top: 45%;
+				width: 90%;
+				height: 60%;
+			}
+			.page02 img:nth-child(6){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+			@keyframes zhuan{
+				0%{transform: rotateY(0deg);}
+				25%{transform: rotateY(180deg);}
+				50%{transform: rotateY(360deg);}
+				75%{transform: rotateY(180deg);}
+				100%{transform: rotateY(0deg);}
+			}
+			/*page03*/
+			.page03{
+				background: url(img/page1_2.png);
+				background-size: cover;
+			}
+			.page03 img:nth-child(1){
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.page03 img:nth-child(2){
+				position: absolute;
+				left: 5%;
+				top: 5%;
+				width: 25%;
+				height: 15%;
+			}
+			.page03 img:nth-child(3){
+				position: absolute;
+				left: 45%;
+				top: 7%;
+				width: 25%;
+				height: 3%;
+			}
+			.page03 img:nth-child(4){
+				position: absolute;
+				left: 45%;
+				top: 13%;
+				width: 45%;
+				height: 5%;
+			}
+			.page03 img:nth-child(5){
+				position: absolute;
+				left: 5%;
+				top: 32%;
+				width: 90%;
+				height: 60%;
+			}
+			.page03 img:nth-child(6){
+				position: absolute;
+				left: 9%;
+				top: 34%;
+				width: 80%;
+				height: 55%;
+			}
+			.page03 img:nth-child(7){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+			.page04{
+				background: url(img/page1_2.png);
+				background-size: cover;
+			}
+			.page04 img:nth-child(1){
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.page04 img:nth-child(2){
+				position: absolute;
+				left: 37%;
+				top: 3%;
+				width: 28%;
+				height: 4%;
+			}
+			.page04 img:nth-child(3){
+				position: absolute;
+				left: 5%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(4){
+				position: absolute;
+				left: 36%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(5){
+				position: absolute;
+				left: 67%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(6){
+				position: absolute;
+				left: 5%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(7){
+				position: absolute;
+				left: 36%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(8){
+				position: absolute;
+				left: 67%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(9){
+				position: absolute;
+				left: 5%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(10){
+				position: absolute;
+				left: 36%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(11){
+				position: absolute;
+				left: 67%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page04 img:nth-child(12){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+			/*page05*/
+			.page05{
+				background: url(img/page1_2.png);
+				background-size: cover;
+			}
+			.page05 img:nth-child(1){
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.page05 img:nth-child(2){
+				position: absolute;
+				left: 37%;
+				top: 3%;
+				width: 28%;
+				height: 4%;
+			}
+			.page05 img:nth-child(3){
+				position: absolute;
+				left: 5%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(4){
+				position: absolute;
+				left: 36%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(5){
+				position: absolute;
+				left: 67%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(6){
+				position: absolute;
+				left: 5%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(7){
+				position: absolute;
+				left: 36%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(8){
+				position: absolute;
+				left: 67%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(9){
+				position: absolute;
+				left: 5%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(10){
+				position: absolute;
+				left: 36%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(11){
+				position: absolute;
+				left: 67%;
+				top: 68%;
+				width: 26%;
+				height: 26%;
+			}
+			.page05 img:nth-child(12){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+			/*page05*/
+			.page06{
+				background: url(img/page1_2.png);
+				background-size: cover;
+			}
+			.page06 img:nth-child(1){
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.page06 img:nth-child(2){
+				position: absolute;
+				left: 37%;
+				top: 3%;
+				width: 28%;
+				height: 4%;
+			}
+			.page06 img:nth-child(3){
+				position: absolute;
+				left: 5%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page06 img:nth-child(4){
+				position: absolute;
+				left: 36%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page06 img:nth-child(5){
+				position: absolute;
+				left: 67%;
+				top: 12%;
+				width: 26%;
+				height: 26%;
+			}
+			.page06 img:nth-child(6){
+				position: absolute;
+				left: 5%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page06 img:nth-child(7){
+				position: absolute;
+				left: 36%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			.page06 img:nth-child(8){
+				position: absolute;
+				left: 67%;
+				top: 40%;
+				width: 26%;
+				height: 26%;
+			}
+			
+			.page06 img:nth-child(9){
+				position: absolute;
+				right: 47%;
+				bottom: 10px;
+				width: 6%;
+				height: 2%;
+				animation: name 1s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide page01">
+		        	 <img src="img/logo.png" class="ani"  swiper-animate-effect="flipInY" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"/>
+		        	 <img src="img/page1_4.png" class="ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s"/>
+		        	 <img src="img/page1_5.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s"/>
+		        	 <img src="img/page1_6.png" class="ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"/>
+		        	 <img src="img/page1_6.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"/>
+		        	 <img src="img/page1_7.png" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+		        	 <img src="img/page1_8.png"class="ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+		        	 <img src="img/page1_9.png"class="ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+		        	 <img src="img/arrow.png" />
+		        </div>
+		        <div class="swiper-slide page02">
+		        	<img src="img/logo.png">
+		        	<img src="img/page2_2.png" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"/>
+		        	<img src="img/page2_4.png" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"/>
+		        	<img src="img/page2_3.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"/>
+		        	<img src="img/page2_5.png"class="ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+		        	<img src="img/arrow.png" />
+		        </div>
+		        <div class="swiper-slide page03">
+		        	<img src="img/page3_1.png" class="ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		        	<img src="img/logo.png" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s"/>
+		        	<img src="img/page3_2.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s"/>
+		        	<img src="img/page3_3.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s"/>
+		        	<img src="img/page3_4.png" class="ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3s">
+		        	<img src="img/page3_6.png" class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4s">
+		        	<img src="img/arrow.png" />
+		        </div>
+		        <div class="swiper-slide page04">
+		        	<img src="img/page4_1.png" class="ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2s">
+		        	<img src="img/page4_2.png" class="ani"  swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="3s"/>
+		        	<img src="img/pro1.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro2.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro3.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro4.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro5.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro6.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro7.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro8.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro9.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/arrow.png" />
+		        </div>
+		        <div class="swiper-slide page05">
+		        	<img src="img/page4_1.png">
+		        	<img src="img/page4_2.png">
+		        	<img src="img/pro10.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro11.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro12.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro13.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro14.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro15.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro16.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro17.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro18.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/arrow.png" />
+		        </div>
+		        <div class="swiper-slide page06">
+		        	<img src="img/page4_1.png">
+		        	<img src="img/page4_2.png"> 
+		        	<img src="img/pro19.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro20.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro21.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro22.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro23.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/pro24.jpg" class="ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+		        	<img src="img/arrow.png" />
+		        </div>
+		    </div>
+		     
+		</div>
+		<script src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script>        
+  			var mySwiper = new Swiper ('.swiper-container', {
+   				direction: 'vertical',
+	   			loop: true,
+//				speed:3000,	
+				onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+			    onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				  } 
+			  })  
+		 </script>
+	</body>
+</html>
