@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 180px;
+            width: 120px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            animation: cool 5.4s infinite linear;
+            transform-origin: 60px 75px 0px;
+        }
+        div img{
+            width: 120px;
+            height: 180px;
+        }
+        li{
+            position: absolute;
+            list-style: none;
+            transform-origin: 60px 75px 224px;
+            background: #fff;
+            transform: translateZ(-224px);
+        }
+        li:nth-child(2){
+            transform: translateZ(-224px) rotateY(30deg);
+        }
+        li:nth-child(3){
+            transform: translateZ(-224px) rotateY(60deg);
+        }
+        li:nth-child(4){
+            transform: translateZ(-224px) rotateY(90deg);
+        }
+        li:nth-child(5){
+            transform: translateZ(-224px) rotateY(120deg);
+        }
+        li:nth-child(6){
+            transform: translateZ(-224px) rotateY(150deg);
+        }
+        li:nth-child(7){
+            transform: translateZ(-224px) rotateY(180deg);
+        }
+        li:nth-child(8){
+            transform: translateZ(-224px) rotateY(210deg);
+        }
+        li:nth-child(9){
+            transform: translateZ(-224px) rotateY(240deg);
+        }
+        li:nth-child(10){
+            transform: translateZ(-224px) rotateY(270deg);
+        }
+        li:nth-child(11){
+            transform: translateZ(-224px) rotateY(300deg);
+        }
+        li:nth-child(12){
+            transform: translateZ(-224px) rotateY(330deg);
+        }
+        @keyframes cool{
+            0%{transform: rotateY(0deg) rotateX(0deg);}
+            50%{transform: rotateY(180deg) rotateX(20deg);}
+            100%{transform: rotateY(360deg)  rotateX(0deg);}
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="imgg/angelababy.jpg"/></li>
+        <li><img src="imgg/liushishi.jpg"/></li>
+        <li><img src="imgg/chenhao.jpg"/></li>
+        <li><img src="imgg/fanbingbing.jpg"/></li>
+        <li><img src="imgg/gaoyuanyuan.jpg"/></li>
+        <li><img src="imgg/liutao.jpg"/></li>
+        <li><img src="imgg/liuyifei.jpg"/></li>
+        <li><img src="imgg/tongliya.jpg"/></li>
+        <li><img src="imgg/yangmi.jpg"/></li>
+        <li><img src="imgg/yangzi.jpg"/></li>
+        <li><img src="imgg/zhangxinyi.jpg"/></li>
+        <li><img src="imgg/zhaoliying.jpg"/></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--canvas自身没有行为,但却吧一个API展现给了客户端脚本javaScript,以使脚本能够把想绘制的东西都绘制到一块画布上-->
+		<!--canvas可以做动画,做游戏,但主要是为画图而生-->
+		<canvas id="canvas" width="400" height="400" style="border: 1px solid red;"></canvas>
+		<script type="text/javascript">
+//			canvas主要依赖于getContext()对象;
+		
+			var oCan = document.getElementById('canvas').getContext('2d');
+			
+				oCan.beginPath();
+				oCan.moveTo(200,50);
+				for(var i = 0; i<=1; i+=2){
+					oX = 150*Math.cos(i*72*Math.PI/180-Math.PI/2)+200;
+					console.log(Math.cos(Math.PI/180))
+					oY = 150*Math.sin(i*72*Math.PI/180-Math.PI/2)+200;
+					oCan.lineTo(oX,oY);
+				}
+				oCan.closePath();
+				oCan.stroke();
+				oCan.translate(-150,50);
+				oCan.transform(2,1,0,1,200,0);
+				oCan.fillStyle = 'red';
+				oCan.fillRect(0,0,50,50);
+				oCan.setTransform(1,1,0,5,0,0);
+				oCan.fillStyle = 'blue';
+				oCan.fillRect(100,0,50,50);
+				oCan.scale(1.5,1.5);
+				oCan.beginPath();
+				var gradient = oCan.createRadialGradient(200,200,50,200,200,100);
+				
+				gradient.addColorStop(0,'rgb(0,0,0)');
+				gradient.addColorStop(0.3,'rgb(0,122,255)');
+				gradient.addColorStop(0.5,'rgb(122,122,255)');
+				gradient.addColorStop(1,'rgb(255,122,0)');
+				oCan.fillStyle = gradient;
+				oCan.rect(100,100,200,200);
+				oCan.fill();
+				
+				oCan.beginPath()
+				oCan.font = '56px 仿宋';
+				oCan.fillStyle = 'yellow';
+				oCan.fillText('我只是个胖次',50,50);
+				oCan.closePath();
+				oCan.beginPath();
+				oCan.fillStyle = 'blue';
+				oCan.fillText('我只是个胖次',45,55);
+				oCan.closePath();
+				
+//				oCan.beginPath();
+//				oCan.rotate(Math.PI/4);
+//				oCan.translate(200,-100);
+//				oCan.scale(0.5,1);
+//				oCan.moveTo(100,300);
+//				oCan.quadraticCurveTo(
+//					200,100,300,300
+//				)
+//				oCan.stroke();
+//				oCan.beginPath();
+//				oCan.moveTo(50,50);
+//				oCan.arcTo(150,150,150,150,50);
+//				oCan.shadowColor = 'red';
+//				oCan.stroke();
+//				oCan.beginPath();
+//				oCan.moveTo(50,50);
+//				oCan.lineTo(150,150);
+//				oCan.lineTo(50,150);
+//				oCan.closePath();
+//				oCan.strokeStyle = 'blue';
+//				oCan.stroke();
+//				oCan.clearRect(50,50,50,50);
+//				oCan.beginPath();
+//				oCan.moveTo(200,150);
+//				oCan.arc(150,150,50,0,Math.PI*2,false);
+//				oCan.closePath();
+//				oCan.strokeStyle = 'red';
+//				oCan.stroke();
+//				
+//				oCan.beginPath();
+//				oCan.moveTo(120,120);
+//				oCan.lineWidth = '10';
+//				oCan.strokeStyle = 'blue';
+//				oCan.stroke();
+//				oCan.closePath();
+//				oCan.rectc(0,0,50,50);
+//				oCan.fillStyle = 'blue';
+//				oCan.strokeStyle = 'red'
+//				oCan.fillRect(50,50,100,50);
+//				oCan.strokeRect(200,0,50,50);
+//			
+////			初始化坐标
+//			var lastX = oCan.canvas.width*Math.random();
+//			var lastY = oCan.canvas.height*Math.random();
+//			var hue = 0;
+//			function line (){
+////				保存状态
+//				oCan.save();
+//				
+////				画布坐标调整
+////				oCan.translate(500, 500);
+//				oCan.scale(0.9,.9);
+////				oCan.translate(500, 500);
+//				
+////				设置路径
+//				oCan.beginPath();
+//				
+////				随机产生坐标点
+//				oCan.lineWidth = 1 + Math.random()*10;
+//				oCan.moveTo(lastX,lastY);
+//				lastX = oCan.canvas.width * Math.random();
+//  			lastY = oCan.canvas.height * Math.random();
+//  			
+////  			三次贝塞尔曲线
+//				
+//				oCan.bezierCurveTo(oCan.canvas.width*Math.random(),
+//								oCan.canvas.height*Math.random(),
+//								oCan.canvas.width*Math.random(),
+//								oCan.canvas.width*Math.random(),
+//								lastX,lastY);
+//								
+////				canvas基本属性设置
+//				hue = hue + 10 * Math.random();
+////				色相(hue),饱和度(stauration),亮度(lightness)
+//				oCan.strokeStyle = 'hsl('+ hue + ',50%,50%)';
+//				oCan.shadowColor = 'yellow';
+//				oCan.shadowBlur = 100;
+//				
+////				绘制
+//				oCan.stroke();
+//				
+////				恢复状态
+//				oCan.restore();
+//			}
+//			setInterval(line,50);
+//			function blank(){
+//				oCan.fillStyle = 'rgba(0,0,0,1)';
+//				oCan.fillRect(0,0,oCan.canvas.width,oCan.canvas.height);
+//			}
+//			setInterval(blank,40);
+//			
+		</script>
+	</body>
+</html>

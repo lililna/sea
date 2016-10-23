@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5练习</title>
+    <style>
+        img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--<canvas id="myCanvas" width="500" height="300"-->
+            <!--style="background-color: #0066cc">-->
+        <canvas id="mCanvas2" width="500" height="400"
+                style="background-color: yellow;">
+
+        </canvas>
+    <img src="img/05.jpg" id="im"/>
+    <!--</canvas>-->
+    <script>
+        /*function drawr(){
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = "rgb(200,0,0)";
+            ctx.fillRect(10,100,50,50);
+            ctx.strokeStyle = "yellow";
+            ctx.strokeRect(22,22,12,12);
+        }
+        function drawball(){
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = "rgb(0,200,0)";
+            ctx.beginPath();
+            ctx.arc(250,150,70,0,Math.PI*2,false);
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 24;
+            ctx.strokeRect(39,39,34,34);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+        }
+        window.onload = function(){
+            drawr();
+            drawball();
+        }*/
+        /*画线*/
+        function line(){
+            var canvas = document.getElementById("mCanvas2");
+            var cxt = canvas.getContext('2d');
+            cxt.beginPath();
+            cxt.lineWidth = 4;
+            cxt.strokeStyle = "blue";
+            cxt.moveTo(20,20);
+            cxt.lineTo(100,20);
+            cxt.stroke();
+            cxt.closePath();
+        }
+        function ball(){
+            /*空圆*/
+            var canvas = document.getElementById("mCanvas2");
+            var cxtball = canvas.getContext('2d');
+            cxtball.beginPath();
+            cxtball.lineWidth = 4;
+            cxtball.strokeStyle = "blue";
+            cxtball.arc(100,100,50,0,Math.PI*2,true);
+            cxtball.stroke();
+            cxtball.closePath();
+            /*实心圆*/
+            cxtball.beginPath();
+            cxtball.arc(200,200,60,0,Math.PI*2,false);
+            cxtball.fillStyle = "pink";
+            cxtball.lineWidth = 1;
+            cxtball.strokeStyle = "green";
+            cxtball.fill();
+            cxtball.stroke();
+            cxtball.closePath();
+        }
+        function rangle(){
+            var canvas = document.getElementById("mCanvas2");
+            var r = canvas.getContext('2d');
+            r.beginPath();
+            r.rect(300,300,60,40);
+            r.fillStyle = "green";
+            r.fill();
+            r.closePath();
+            /*画长方形*/
+            r.fillRect(200,300,80,40);
+            /*实心字*/
+            r.font = "40px 黑体";
+            r.fillText("W",200,400,200);
+            r.fillText("O",300,400,30);
+            /*空心字*/
+            r.lineWidth = 1;
+            r.strokeText("娜",300,100);
+
+        }
+        /*图片画入画板*/
+        function img(){
+            var imgC = document.getElementById("mCanvas2").getContext('2d');
+            var img = document.getElementById("im");
+            imgC.drawImage(img,30,30);
+        }
+        /*画三角*/
+        function sanjiao(){
+            var sj = document.getElementById("mCanvas2").getContext('2d');
+            sj.beginPath();
+            sj.moveTo(300,100);
+            sj.lineTo(300,200);
+            sj.lineTo(350,150);
+            sj.closePath();
+            /*空心*/
+            sj.stroke();
+            /*实心*/
+            sj.fill();
+            /*不懂*//**//**//**/
+            sj.save();
+            sj.translate(150,150);
+            sj.rotate(-30*Math.PI/180);
+            sj.beginPath();      //旋转线段
+            sj.lineWidth=4;
+            sj.moveTo(0,0);
+            sj.lineTo(20,100);
+            sj.stroke();
+            sj.closePath();
+            //将旋转后的图片返回原画布
+            sj.restore();
+        }
+        window.onload = function(){
+            //line();
+            //ball();
+            //rangle();
+            //img();
+            sanjiao();
+        }
+
+    </script>
+</body>
+</html>

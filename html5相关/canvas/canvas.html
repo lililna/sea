@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: #000000;
+			}
+			#myCanvas{
+				background: white;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var myCan = document.getElementById('myCanvas').getContext('2d');
+			var r = 0;
+
+			myCan.beginPath();
+			myCan.fillStyle = "red";
+			myCan.translate(200,200)
+			var start = 0;
+			var end = 0;
+			var a = 50;
+			for (var i = 0;i<1000;i++) {
+				start+= Math.PI*2/1000;
+				end = start+Math.PI*2/1000;
+				r =a*(1-Math.sin(start));
+				
+				myCan.arc(0,0,r,start,end,false);	
+			}
+			myCan.fill();
+			myCan.clearRect(-100,-100,200,50)
+//			 r = Arccos(sinθ)
+		</script>
+	</body>
+</html>

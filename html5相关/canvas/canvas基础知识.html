@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: #000000;
+			}
+			#can{
+				background-color: #FFFFff;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--canvas标签宽高在标签上进行设置-->
+		<canvas id="can" width="400" height="400">
+			<span>不支持canvas的浏览器</span>
+		</canvas>
+		<!--默认宽300像素高150像素-->
+		<script>
+			var mycan = document.getElementById('can');
+			var oc =mycan.getContext('2d'); //webgl   3d
+			
+			oc.lineWidth = 10;
+			oc.beginPath();
+			oc.lineCap = 'square';
+//			高度多出的为宽一半的值;
+			oc.moveTo(100,100);
+			oc.lineTo(300,300);
+			oc.stroke();
+			
+			
+			
+//			oc.save();
+//			
+//			oc.fillStyle = 'red';
+//			oc.beginPath();
+//			oc.moveTo(100,100);
+//			oc.lineTo(200,200);
+//			oc.lineTo(300,200);
+//			oc.closePath();
+//			oc.fill();
+//			
+//			oc.restore();
+//			oc.beginPath();
+//			oc.moveTo(100,200);
+//			oc.lineTo(200,300);
+//			oc.lineTo(300,300);
+//			oc.closePath();
+//			oc.fill();
+
+
+
+
+//			oc.beginPath();
+//			oc.rect(100,100,100,100);
+//			oc.closePath();
+//			oc.fill();
+//			oc.clearRect(0,0,oc.width,oc.height);
+			
+//			oc.beginPath();
+//			oc.moveTo(100,100);
+//			oc.lineTo(200,200);
+//			oc.lineTo(300,200);
+//			oc.closePath();
+//			oc.stroke();
+//			
+//			oc.beginPath();
+//			oc.moveTo(100,200);
+//			oc.lineTo(200,300);
+//			oc.lineTo(300,300);
+//			oc.closePath();
+//			oc.fill();
+//			oc.stroke();
+			
+//			oc.fillStyle = 'red';
+//			oc.strokeStyle = 'blue';
+//			oc.lineWidth = 10;
+//			oc.lineJoin = 'round';
+//			
+//			
+//			oc.fillRect(50.5,50.5,100,100);
+//
+//			oc.strokeRect(50,50,100,100);
+//			//默认一像素边框变为了两像素;
+		
+		</script>
+	</body>
+</html>

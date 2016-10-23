@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            position: relative;
+            /*background: yellow;*/
+            transform-origin: 50% 50%;
+            animation: change 2s infinite step-end;
+        }
+
+        ul li{
+            list-style: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: green;
+            position: absolute;
+            animation: change 1s infinite  linear;
+        }
+        li:first-child{
+            top: -15px;
+            left: 45px;
+           animation-delay: .1s;
+        }
+        li:nth-child(2){
+            top: 0px;
+            right: 0;
+            animation-delay: .2s;
+
+        }
+        li:nth-child(3){
+            top:45px;
+            right: -15px;
+            animation-delay: .3s;
+
+        }
+        li:nth-child(4){
+            bottom: 0;
+            right: 0;
+            animation-delay: .4s;
+
+        }
+        li:nth-child(5){
+            bottom:-15px;
+            right: 45px;
+            animation-delay: .5s;
+
+        }
+        li:nth-child(8){
+            top:0;
+            left: 0;
+            animation-delay: .8s;
+
+        }
+        li:nth-child(7){
+            top:45px;
+            left: -15px;
+            animation-delay: .7s;
+
+        }
+        li:nth-child(6){
+            bottom:0;
+            left: 0;
+            animation-delay: .6s;
+        }
+        @keyframes change {
+             0%{opacity: 1}
+            50%{opacity: 0.5}
+            100%{opacity: 0}
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

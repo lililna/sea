@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>哆啦A梦</title>
+    <style>
+        body{
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="800" style="background: lightcyan" id="mycanvas"></canvas>
+    <script>
+        drawhead();
+        drawface();
+        yanl();
+        yanr();
+        nose();
+        faceline();
+        zui();
+        shenti();
+        duzi();
+        jian();
+       ling();
+        dang();
+        jiaol();
+        jiaor();
+        gebol();
+        gebor();
+        function drawhead(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.arc(206,113,112,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function drawface(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(206,135,85,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function yanl(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(175,64,30,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.arc(193,74,5,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function yanr(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(237,64,30,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.arc(220,74,5,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function nose(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.arc(206,104,20,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function faceline(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(206,132);
+            ctx.lineTo(206,178);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(184,132);
+            ctx.lineTo(147,124);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(226,132);
+            ctx.lineTo(264,124);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(184,142);
+            ctx.lineTo(147,134);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(184,152);
+            ctx.lineTo(147,144);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(226,142);
+            ctx.lineTo(264,134);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.beginPath();
+            ctx.moveTo(226,152);
+            ctx.lineTo(264,144);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function jian(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.lineWidth = 20;
+            ctx.strokeStyle = "red";
+            ctx.lineCap = "round";
+            ctx.moveTo(90,215);
+            ctx.lineTo(316,215);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function zui(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "black";
+            ctx.moveTo(140, 147);
+            ctx.quadraticCurveTo(206, 250, 270, 147);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function ling(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 1;
+            ctx.arc(206,229,20,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.arc(206,229,5,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(206,229);
+            ctx.lineTo(206,249);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function shenti(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.fillRect(113,225,185,158);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function duzi(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(206,274,62,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(206,274,50,0,Math.PI,false);
+            ctx.lineTo(256,274);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function dang(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "lightcyan";
+            ctx.arc(206,380,20,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.closePath();
+        }
+        function jiaol(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.lineWidth = 20;
+            ctx.strokeStyle = "black";
+            ctx.lineCap = "round";
+            ctx.moveTo(112,392);
+            ctx.lineTo(188,392);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function jiaor(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.lineWidth = 20;
+            ctx.strokeStyle = "black";
+            ctx.lineCap = "round";
+            ctx.moveTo(225,392);
+            ctx.lineTo(301,392);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        function gebol(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.lineWidth = 1;
+            ctx.moveTo(113,225);
+            ctx.lineTo(58,279);
+            ctx.lineTo(86,308);
+            ctx.lineTo(115,276);
+            ctx.lineTo(113,225);
+            ctx.fill();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(65,304,25,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+        }
+        function gebor(){
+            var mc = document.getElementById("mycanvas");
+            var ctx = mc.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.lineWidth = 1;
+            ctx.moveTo(298,225);
+            ctx.lineTo(356,279);
+            ctx.lineTo(325,308);
+            ctx.lineTo(296,276);
+            ctx.lineTo(298,225);
+            ctx.fill();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc(350,304,25,0,Math.PI*2,false);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: black;
+			}
+			#can{
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var mycan = document.getElementById('can');
+			var oc = mycan.getContext('2d');
+			var arcX = 200;
+			var arcY = 200;
+			var ran = 100;
+			setInterval(function  () {
+				oc.clearRect(0,0,oc.canvas.width,oc.canvas.height);
+				//添加阴影
+				oc.shadowColor = '#444444';//阴影颜色
+				oc.shadowOffsetX = 3;//阴影偏移
+				oc.shadowOffsetY = 3;
+				oc.shadowBlur = 5;//阴影模糊度
+				
+	//			渐变色
+	 			
+	 			var objColor = oc.createRadialGradient(arcX,arcY,1,arcX,arcY,100);
+	 			objColor.addColorStop(0,'#fff');
+	 			objColor.addColorStop(0.5,"#ccc");
+	// 			objColor.addColorStop(1,"#000");
+	 			oc.fillStyle = objColor;
+	 			oc.lineWidth = 8;
+				oc.beginPath();
+	 			oc.strokeStyle = objColor;
+				oc.arc(arcX,arcY,ran,0,Math.PI*2);//坐标原点 X,Y,半径,起始角度,结束角度;
+				oc.stroke();
+				oc.fill();
+	//			去掉阴影
+				oc.shadowColor = '#444444';//阴影颜色
+				oc.shadowOffsetX = 0;//阴影偏移
+				oc.shadowOffsetY = 0;
+				oc.shadowBlur = 0;//阴影模糊度
+	//			画刻度
+				function drawMark () {
+					for (var i = 0;i<60;i++) {
+						oc.strokeStyle = "#999";
+						oc.lineWidth = 2;
+						var radius = ran-8;
+						if (i%5==0) {
+							radius = ran-12;
+							oc.lineWidth = 4;						
+						}
+						oc.beginPath();
+						oc.moveTo(arcX+ran*Math.cos(i*6*Math.PI/180),arcY+ran*Math.sin(i*6*Math.PI/180));
+						oc.lineTo(arcX+(radius)*Math.cos(i*6*Math.PI/180),arcY+(radius)*Math.sin(i*6*Math.PI/180));
+						oc.stroke();
+					}
+				}
+				drawMark();
+				
+	//			画指针
+	
+//				function hourPointer () {
+//					oc.lineWidth = 4;
+//					oc.lineCap = 'round';
+//					oc.strokeStyle = '#000000';
+//					oc.beginPath();
+//					oc.moveTo(arcX,arcY);
+//					oc.lineTo(arcX+(ran-40)*Math.cos(0),arcY+(ran-40)*Math.sin(0));
+//					oc.stroke();
+//				}
+//				function minute () {
+//					oc.lineWidth = 2;
+//					oc.lineCap = 'round';
+//					oc.strokeStyle = 'red';
+//					oc.beginPath();
+//					oc.moveTo(arcX,arcY);
+//					oc.lineTo(arcX+(ran-30)*Math.cos(0),arcY+(ran-30)*Math.sin(0));
+//					oc.stroke();
+//				}
+//				function second () {
+//					oc.lineWidth = 1;
+//					oc.lineCap = 'round';
+//					oc.strokeStyle = 'blue';
+//					oc.beginPath();
+//					oc.moveTo(arcX,arcY);
+//					oc.lineTo(arcX+(ran-20)*Math.cos(0),arcY+(ran-20)*Math.sin(0));
+//					oc.stroke();
+//				}
+	//			hourPointer();
+	//			minute();
+	//			second();
+	//			画针的函数
+				var date = new Date();
+				var second = date.getSeconds()*6-90;
+				var minute = date.getMinutes()*6-90;
+				var hour = date.getHours()*30+(date.getMinutes()*6/12)-90;
+	//			时针
+				drawPointer({
+					width:4,
+					color:'#000',
+					size:60,
+					angle:hour
+					
+				})
+	//			分针
+				drawPointer({
+					width:2,
+					color:'red',
+					size:70,
+					angle:minute
+					
+				})
+	//			秒针
+				drawPointer({
+					width:1,
+					color:'#000',
+					size:80,
+					angle:second
+					
+				})
+	//			圆心
+				oc.fillStyle = '#777777';
+				oc.beginPath();
+				oc.arc(arcX,arcY,4,0,2*Math.PI);
+				oc.fill();
+				
+			},1000)
+				function drawPointer (obj) {
+					oc.lineWidth = obj.width;
+					oc.strokeStyle = obj.color;
+					oc.lineCap = 'round';
+					oc.beginPath();
+					oc.moveTo(arcX,arcY);
+					oc.lineTo(arcX+obj.size*Math.cos(obj.angle*Math.PI/180),arcY+obj.size*Math.sin(obj.angle*Math.PI/180));
+					oc.stroke();
+				}
+//			var num = 200;
+//			var numA=2;
+//			function fun () {
+//				oc.clearRect(0,0,oc.canvas.width,oc.canvas.height);
+//				oc.fillStyle = 'red';
+//				oc.beginPath();
+//				oc.arc(200,num,200,0,Math.PI,0);
+//				oc.closePath();
+//				oc.fill();
+//				num+=numA;
+//				if (num == 0 || num == oc.canvas.height ) {
+//					numA *= -1
+//				}
+//			}
+////			fun()
+//			setInterval(fun,10);
+
+		</script>
+	</body>
+</html>

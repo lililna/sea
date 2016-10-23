@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>视频</title>
+	</head>
+	<body>
+		<video src="mov_bbb.mp4" id="video" poster="../img/5.jpg" controls="controls"></video><br>
+		<!--<video autoplay="autoplay">
+			<source src="movie.ogg" type="audio/ogg"></source>
+		</video>-->
+		<input type="button" value="开始" onclick="start()" />
+		<input type="button" value="暂停" onclick="stop()" />
+		<input type="button" value="快进" onclick="fast()" />
+		<input type="button" value="退" onclick="man()" />
+		<input type="button" value="静音" id="j" onclick="shutup(j)" />
+		<input type="button" value="加速" onclick="jiasu()" />
+		<input type="button" value="减速" onclick="jiansu()" />
+		<input type="button" value="加声音" onclick="high()" />
+		<input type="button" value="减声音" onclick="cut()" />
+		
+		
+		<script>
+			var video = document.getElementById("video");
+			var j = document.getElementById("j");
+			
+			function start(){
+				video.play();
+			}
+			function stop(){
+				video.pause();
+			}
+			function fast(){
+				video.currentTime += 4;
+			}
+			function man(){
+				video.currentTime -= 4;
+			}
+			function shutup(obj){
+				if(video.muted){
+					obj.value = "闭嘴";
+					video.muted = false;
+				}else{
+					obj.value = "张嘴";
+					video.muted = true;
+				}
+			}
+			function jiasu(){
+				video.playbackRate = 3;
+			}
+			function jiansu(){
+				video.playbackRate = 1/3;
+			}
+			function high(){
+				video.volume += 0.2;
+			}
+			function cut(){
+				video.volume -= 0.2;
+			}
+		</script>
+	</body>
+</html>

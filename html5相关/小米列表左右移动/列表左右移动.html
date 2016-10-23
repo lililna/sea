@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小米</title>
+		<script type="text/javascript" src="jquery-1.11.1.min.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 2600px;
+				overflow: hidden;
+				position: absolute;
+			}
+			li{
+				list-style: none;
+				float: left;
+			}
+			h3{
+				line-height: 60px;
+				position: relative;
+			}
+			.ct{
+				width: 100%;
+				overflow: hidden;
+			}
+			.mi{
+				width: 1255px;
+				height: 500px;
+				margin: 0 auto;
+				position: relative;
+			}
+			dt>img{
+				width: 200px;
+				height: 220px;
+				vertical-align: middle;
+			}
+			dl{
+				background: white;
+				width: 240px;
+				border-top: 1px solid #90EE90;
+				margin: 5px;
+				float: left;
+			}
+			dt{
+				width: 240px;
+				height: 270px;
+				text-align: center;
+			}
+			dd{
+				width: 240px;
+				line-height: 20px;
+				text-align: center;							
+			}
+			dd span{
+				color: #666666;
+				font-size: 14px;
+				line-height: 28px;
+			}
+			dd b{
+				color: orange;
+				line-height: 40px;
+			}
+			dt>span{
+				width: 0;
+				height: 300px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			h3>span{
+				width: 30px;
+				height: 20px;
+				display: block;
+				text-align: center;
+				line-height: 20px;
+				border: 1px solid #CCCCCC;
+				position: absolute;
+				color: #CCCCCC;
+				cursor: pointer;
+			}
+			
+			.left{
+				right: 50px;
+				top:20px
+			}
+			.right{
+				right: 20px;
+				top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ct">
+			<div class="mi">
+				
+				<h3>小米明星单品
+					<span class="left">&lt;</span>
+				    <span class="right">&gt;</span>
+				</h3>
+				<ul>
+					<li>
+						<dl>
+							<dt>
+								<img src="1.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="2.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="3.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="1.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="2.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						 
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<img src="3.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="1.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="2.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="3.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="1.png"/>
+								<span></span>
+							</dt>
+							<dd>
+								<p>小米5 高配64GB</p>
+								<span>四轴防抖相机 是公交卡也是银行卡</span><br />
+								<b>1799元</b>
+							</dd>
+						</dl>
+						 
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+		function rand(min,max){
+			return parseInt(Math.random()*(max-min+1)+min);
+		}
+		for(var i=0;i<10;i++){
+			$("dl").eq(i).css("border-color","rgb("+rand(0,225)+","+rand(0,225)+","+rand(0,255)+")");
+		}
+			$("h3 span").mouseenter(function(){
+				$(this).css("color","red")
+			}).mouseleave(function(){
+				$(this).css("color","#CCCCCC")
+			})
+			$(".left").click(function(){
+				clearInterval(time);
+				if(!i){
+					$("ul").animate({
+						left:-1255
+					},1000,function(){
+						i=true;
+						time = setInterval(change,3000);
+					})
+				}else{
+					return;
+				}
+				
+			})
+			$(".right").click(function(){
+				clearInterval(time);
+				//$(this).disabled = true;
+				if(!i){
+					return;
+				}else{
+					$("ul").animate({
+					    left:0
+					},1000,function(){
+						i=false;
+						time = setInterval(change,3000);
+					})
+				}
+				
+			})
+			var i=true;
+			function change(){
+				
+				if(!i){
+					$("ul").animate({
+						left:-1255
+					},1000,function(){
+						i=true;
+					})
+				}else{
+					$("ul").animate({
+						left:0
+					},1000,function(){
+						i=false;
+					})
+				}
+				for(var j=0;j<10;j++){
+					$("dl").eq(j).css("border-color","rgb("+rand(0,225)+","+rand(0,225)+","+rand(0,255)+")");
+				}
+			}
+			var time = setInterval(change,3000)
+		</script>
+	</body>
+</html>

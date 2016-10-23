@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: black;
+			}
+			#can{
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var mycan = document.getElementById('can');
+			var oc = mycan.getContext('2d');
+			mycan.onmousedown = function  (ev) {
+				var e = ev || window.event;
+				oc.moveTo(e.clientX-mycan.offsetLeft,e.clientY-mycan.offsetTop)
+				document.onmousemove = function  (ev) {
+					var e = ev||window.event;
+					oc.lineTo(e.clientX-mycan.offsetLeft,e.clientY-mycan.offsetTop);
+					oc.stroke();
+				}
+				document.onmouseup = function (){
+					document.onmousedown = null;
+					document.onmousemove = null;
+				}
+			}
+		</script>
+	</body>
+</html>
