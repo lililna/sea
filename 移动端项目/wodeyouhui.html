@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的优惠券</title>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			header{
+				width: 100%;
+				height: 10rem;
+				background: #cc3366;
+				font-size: 5rem;
+				color: #fff;
+				text-align: center;
+				line-height: 10rem;
+				border-bottom: 0.3rem solid #000;
+			}
+			
+			footer{
+				width: 100%;
+				height: 15rem;
+				background: #000;
+				position: fixed;
+				bottom: 0;
+				display: flex;
+			}
+			footer>a{
+				width: 20%;
+				height: 15rem;
+				font-size: 4rem;
+				text-align: center;
+				color: #fff;
+				border-top: 1rem solid #000;
+				text-decoration: none;
+			}
+			.fticon{
+				font-size: 9rem;
+				line-height: 9.4rem;
+				color: #FFF;
+			}
+			footer>a:nth-child(4){
+				border-top: 1rem solid #F00;
+			}
+			section{
+				width: 100%;
+				height: 40rem;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: center;
+			}
+			section ul{
+				width: 80%;
+				display: flex;
+				border-radius: 2rem;
+				background: -webkit-gradient(linear,0 0,0 100%,from(#fff), to(#ccc));
+				background: -moz-gradient(linear,0 0,0 100%,from(#fff), to(#ccc));
+				background: gradient(linear,0 0,0 100%,from(#fff), to(#ccc));
+			}
+			section ul li:nth-child(1){
+				border-radius: 2rem 0 0 2rem;
+			}
+			section ul li:nth-child(4){
+				border-radius: 0 2rem 2rem 0;
+			}
+			section ul li{
+				list-style: none;
+				font-size: 4rem;
+				width: 25%;
+				height: 6rem;
+				border: 0.3rem solid #CCCCCC;
+				text-align: center;
+				line-height: 6rem;
+				
+			}
+			 
+			section ol{
+				width: 80%;
+				height: 20rem;
+				
+			}
+			section div{
+				width: 100%;
+				height: 4rem;
+			}
+			section ol li{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				/*background: bisque;*/
+				border-radius: 2rem;
+				border: 0.3rem solid #CCCCCC;
+			}
+			/*section ol li:nth-child(1){
+				background: lightblue;
+			}
+			section ol li:nth-child(2){
+				background: lightpink;
+			}
+			section ol li:nth-child(2){
+				background: yellow;
+			}*/
+			section ol li p{
+				font-size: 4rem;
+				height: 4.8rem;
+				width: 95%;
+				line-height: 5rem;
+			}
+			section ol li{
+				display: none;
+			}
+			.show{
+				display: flex;
+			}
+			.bg{
+				color: #fff;
+				background: -webkit-gradient(linear,0 0,0 100%,from(#ff6699), to(#cc0066));
+				background: -moz-gradient(linear,0 0,0 100%,from(#ff6699), to(#cc0066));
+				background: gradient(linear,0 0,0 100%,from(#ff6699), to(#cc0066));
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/swiper.js"></script>
+		<header>
+			我的优惠券
+		</header>
+		 
+		 <section>
+		 	<ul>
+		 		<li class="bg">未使用</li>
+		 		<li>已使用</li>
+		 		<li>已过期</li>
+		 		<li>未激活</li>
+		 	</ul>
+		 	<div></div>
+		 	<ol>
+		 		<li class="show">
+		 			<p>40元现金券(满299元可使用)</p>
+		 			<p>号码：<span>DSMFKSC2WX47VL</span></p>
+		 			<p>过期时间：<span>2015年11月30日</span></p>
+		 			<p>状态：<span>未使用</span></p>
+		 		</li>
+		 		<li>
+		 			<p>40元现金券(满299元可使用)</p>
+		 			<p>号码：<span>DSMFKSC2WX47VL</span></p>
+		 			<p>过期时间：<span>2015年11月30日</span></p>
+		 			<p>状态：<span>已使用</span></p>
+		 		</li>
+		 		<li>
+		 			<p>40元现金券(满299元可使用)</p>
+		 			<p>号码：<span>DSMFKSC2WX47VL</span></p>
+		 			<p>过期时间：<span>2015年11月30日</span></p>
+		 			<p>状态：<span>已过期</span></p>
+		 		</li>
+		 		<li>
+		 			<p>40元现金券(满299元可使用)</p>
+		 			<p>号码：<span>DSMFKSC2WX47VL</span></p>
+		 			<p>过期时间：<span>2015年11月30日</span></p>
+		 			<p>状态：<span>未激活</span></p>
+		 		</li>
+		 	</ol>
+		 </section>
+		 
+		<footer>
+			 
+			<a href="index.html">
+			 	<div class="iconfont icon-shouye-copy fticon"></div>
+				<p>首页</p>
+			 </a>
+			<a href="selector.html">
+				<div class="iconfont icon-fenlei fticon"></div>
+				<p>分类</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-gouwuche fticon"></div>
+				<p>购物车</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-wode fticon"></div>
+				<p>我的秀</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-kaixin fticon"></div>
+				<p>更多</p>
+			</a>
+			
+		</footer>
+		
+		<script>        
+		      $("ul li").click(function(){
+		      	$("ol li").eq($(this).index()).addClass("show")
+		      		.siblings().removeClass("show");
+		      		$(this).addClass("bg")
+		      			.siblings().removeClass("bg");
+		      })
+		</script>
+	</body>
+</html>

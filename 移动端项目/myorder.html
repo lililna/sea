@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			header{
+				width: 100%;
+				height: 10rem;
+				background: #cc3366;
+				font-size: 5rem;
+				color: #fff;
+				text-align: center;
+				line-height: 10rem;
+				border-bottom: 0.3rem solid #000;
+			}
+			
+			.mycart{
+				width: 100%;
+				height: 30rem;
+				border-bottom: 0.3rem solid #666666;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: space-around;
+				-webkit-justify-content: space-around;
+				align-items: center;
+				-webkit-align-items: center;
+			}
+			.leftimg{
+				width: 30%;
+				height: 80%;
+			}
+			.leftimg img{
+				width: 100%;
+				height: 100%;
+			}
+			.rightct{
+				width: 60%;
+				height: 80%;
+				display: flex;
+				display: -webkit-flex;
+				flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				align-content: space-around;
+			}
+			.rightct div:nth-child(1){
+				width: 100%;
+				height: 40%;
+				font-size: 5rem;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: space-between;
+				-webkit-justify-content: space-between;
+			}
+			.rightct div:nth-child(1) p:nth-child(1){
+				width: 70%;
+			}
+			.rightct div:nth-child(2){
+				width: 100%;
+				height: 40%;
+				font-size: 5rem;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: space-between;
+				-webkit-justify-content: space-between;
+			}
+			.rightct div:nth-child(2) p:nth-child(1){
+				width: 70%;
+			}
+			.rightct div:nth-child(2) p:nth-child(1) span{
+				color: #cc3366;
+				font-weight: bold;
+			}
+			.rightct div:nth-child(2){
+				width: 100%;
+				height: 20%;
+			}
+			.rightct div:nth-child(3){
+				width: 100%;
+				height: 20%;
+				font-size: 4rem;
+				display: flex;
+				display: -webkit-flex;
+			}
+			.rightct div:nth-child(3) p{
+				width: 20%;
+			}
+			.rightct div:nth-child(3) span{
+				width: 45%;
+			}
+			.rightct div:nth-child(3) a{
+				display: block;
+				width: 35%;
+				height: 5rem;
+				background: #cc0066;
+				float: right;
+				color: #fff;
+				text-decoration: none;
+				line-height: 5rem;
+				text-align: center;
+				border-radius: 1rem;
+				font-size: 3.5rem;
+			}
+			.sm{
+				width: 15%;
+				font-size: 8rem;
+				color: #CC0066;
+			}
+			 
+			footer{
+				width: 100%;
+				height: 15rem;
+				background: #000;
+				position: fixed;
+				bottom: 0;
+				display: flex;
+			}
+			footer>a{
+				width: 20%;
+				height: 15rem;
+				font-size: 4rem;
+				text-align: center;
+				color: #fff;
+				border-top: 1rem solid #000;
+				text-decoration: none;
+			}
+			.fticon{
+				font-size: 9rem;
+				line-height: 9.4rem;
+				color: #FFF;
+			}
+			footer>a:nth-child(1){
+				border-top: 1rem solid #F00;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/swiper.js"></script>
+		<header>
+			我的订单
+		</header>
+		 
+		 
+		<div class="mycart">
+		 	<div class="leftimg">
+		 		<img src="img/t4.jpg">
+		 	</div>
+		 	<div class="rightct">
+		 		<div>
+		 			<p>ESPRIT 气质V领玫红T恤</p>
+		 			<p class="iconfont icon-kaixinkefu sm"></p>
+		 		</div>
+		 		<div>
+		 			<p>单价：<span>￥199</span></p>
+		 			<p>L</p>
+		 		</div>
+		 		<div>
+		 			<p>数量:</p>
+		 			<span id="count">1</span>
+		 			<a href="#" id="quxiao">取消订单</a>
+		 		</div>
+		 		
+		 	</div>
+		 </div>
+		 
+		 <div class="mycart">
+		 	<div class="leftimg">
+		 		<img src="img/t7.jpg">
+		 	</div>
+		 	<div class="rightct">
+		 		<div>
+		 			<p>CACBM 盖尔斯条纹单肩包</p>
+		 			<p class="iconfont icon-kaixinkefu sm"></p>
+		 		</div>
+		 		<div>
+		 			<p>单价：<span>￥399</span></p>
+		 			<p>L</p>
+		 		</div>
+		 		<div>
+		 			<p>数量:</p>
+		 			<span id="count">1</span>
+		 			<a href="#" id="quxiao">取消订单</a>
+		 		</div>
+		 		
+		 	</div>
+		 </div>
+		 
+		<footer>
+			 
+			<a href="index.html">
+			 	<div class="iconfont icon-shouye-copy fticon"></div>
+				<p>首页</p>
+			 </a>
+			<a href="selector.html">
+				<div class="iconfont icon-fenlei fticon"></div>
+				<p>分类</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-gouwuche fticon"></div>
+				<p>购物车</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-wode fticon"></div>
+				<p>我的秀</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-kaixin fticon"></div>
+				<p>更多</p>
+			</a>
+			
+		</footer>
+		
+		<script>        
+		      
+		</script>
+	</body>
+</html>

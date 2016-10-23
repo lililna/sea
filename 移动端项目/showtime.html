@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-注册</title>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			header{
+				width: 100%;
+				height: 10rem;
+				background: #cc3366;
+				font-size: 5rem;
+				color: #fff;
+				text-align: center;
+				line-height: 10rem;
+			}
+			 
+			footer{
+				width: 100%;
+				height: 15rem;
+				background: #000;
+				position: fixed;
+				bottom: 0;
+				display: flex;
+			}
+			footer>a{
+				width: 20%;
+				height: 15rem;
+				font-size: 4rem;
+				text-align: center;
+				color: #fff;
+				border-top: 1rem solid #000;
+				text-decoration: none;
+			}
+			.fticon{
+				font-size: 9rem;
+				line-height: 9.4rem;
+				color: #FFF;
+			}
+			footer>a:nth-child(4){
+				border-top: 1rem solid #F00;
+			}
+			section{
+				width: 100%;
+				height: 110rem;
+				display: flex;
+				display: -webkit-flex;
+				flex-wrap: wrap;
+				align-content: space-around;
+				justify-content: center;
+			}
+			section div:nth-child(1){
+				width: 85%;
+				height: 30rem;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: space-between;
+				-webkit-justify-content: space-between;
+				align-items: flex-end;
+			}
+			section div:nth-child(1) p:nth-child(1){
+				width: 35%;
+				height: 80%;
+				background: green;
+			}
+			section div:nth-child(1) p:nth-child(1) img{
+				width: 100%;
+				height: 100%;
+			}
+			section div:nth-child(1) p:nth-child(2){
+				width: 60%;
+				height: 80%;
+				font-size: 6rem;
+			}
+			section div:nth-child(1) p:nth-child(2) span:nth-child(1){
+				line-height: 10rem;
+			}
+			section div:nth-child(1) p:nth-child(2) span:nth-child(3){
+				display: block;
+				display: flex;
+				display: -webkit-flex;
+				/*justify-content: space-around;*/
+			}
+			section div:nth-child(1) p:nth-child(2) span:nth-child(3) a{
+				display: block;
+				width: 40%;
+				height: 7rem;
+				border-radius: 2rem;
+				text-align: center;
+				line-height: 7rem;
+				background: -webkit-gradient(linear,0 0,0 100%,from(#ff6699),to(#cc0066));
+				text-decoration: none;
+				color: #fff;
+			}
+			section div:nth-child(2){
+				width: 85%;
+				height: 60rem;
+				border-radius: 3rem;
+				border: 0.5rem solid #CCCCCC;
+			}
+			section div:nth-child(2) ul{
+				height: 100%;
+			}
+			section div:nth-child(2) ul li{
+				font-size: 6rem;
+				list-style: none;
+				height: 24%;
+				font-weight: bold;
+				line-height: 15rem;
+				border-bottom: 0.5rem solid #CCCCCC;
+				padding: 0 2.2rem;
+				position: relative;
+			}
+			section div:nth-child(2) ul li span:nth-child(2){
+				position: absolute;
+				right: 2.5rem; 
+			}
+			section div:nth-child(2) ul li:last-child{
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/swiper.js"></script>
+		<header>
+			ZXIU 走秀网
+		</header>
+		
+		<section>
+			<div>
+				<p>
+					<img src="img/t6.jpg">
+				</p>
+				<p>
+					<span>昵称:<b>未知</b></span><br />
+					<span>
+						<a href="login.html">登录</a>
+						&nbsp;
+						<a href="zhuce.html">注册</a>	
+					</span>
+				</p>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<span>我的订单</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>我的优惠券</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>浏览记录</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>我的收藏</span>
+						<span>&gt;</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		<footer>
+			 
+			<a href="index.html">
+			 	<div class="iconfont icon-shouye-copy fticon"></div>
+				<p>首页</p>
+			 </a>
+			<a href="selector.html">
+				<div class="iconfont icon-fenlei fticon"></div>
+				<p>分类</p>
+			</a>
+			<a href="cart.html">
+				<div class="iconfont icon-gouwuche fticon"></div>
+				<p>购物车</p>
+			</a>
+			<a href="showtime.html">
+				<div class="iconfont icon-wode fticon"></div>
+				<p>我的秀</p>
+			</a>
+			<a href="more.html">
+				<div class="iconfont icon-kaixin fticon"></div>
+				<p>更多</p>
+			</a>
+			
+		</footer>
+		
+		 
+	</body>
+</html>

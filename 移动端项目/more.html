@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>更多</title>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			header{
+				width: 100%;
+				height: 10rem;
+				background: #cc3366;
+				font-size: 5rem;
+				color: #fff;
+				text-align: center;
+				line-height: 10rem;
+			}
+			
+			 
+			 
+			footer{
+				width: 100%;
+				height: 15rem;
+				background: #000;
+				position: fixed;
+				bottom: 0;
+				display: flex;
+			}
+			footer>a{
+				width: 20%;
+				height: 15rem;
+				font-size: 4rem;
+				text-align: center;
+				color: #fff;
+				border-top: 1rem solid #000;
+				text-decoration: none;
+			}
+			.fticon{
+				font-size: 9rem;
+				line-height: 9.4rem;
+				color: #FFF;
+			}
+			footer>a:nth-child(5){
+				border-top: 1rem solid #F00;
+			}
+			/*section*/
+			section{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			section ul{
+				font-size: 6rem;
+				border: 2px solid #666666;
+				padding: 0 3rem;
+				font-weight: bold;
+				width: 80%;
+				border-radius: 2rem;
+			}
+			section span:nth-child(2){
+				float: right;
+				color: #666666;
+			}
+			 
+			section ul li{
+				list-style: none;
+				padding-left: 3rem;
+				height: 10rem;
+				line-height: 10rem;
+				border-bottom: 2px solid #666666;
+			}
+			section ul li:last-child{
+				border: 0;
+			}
+			section div{
+				width: 100%;
+				height: 10rem;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/swiper.js"></script>
+		<header>
+			更多
+		</header>
+		 
+		<section>
+			 	<div></div>
+				<ul>
+					<li>
+						<span>常见问题</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>系统设置</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>软件更新</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>扫描二维码</span>
+						<span>&gt;</span>
+					</li>
+					 
+				</ul>
+				<div></div>
+				<ul>
+					<li>
+						<span>我要提意见</span>
+						<span>&gt;</span>
+					</li>
+					<li>
+						<span>关于</span>
+						<span>&gt;</span>
+					</li> 
+				</ul>
+			 
+		</section>
+
+
+		 
+		<footer>
+			 
+			<a href="index.html">
+			 	<div class="iconfont icon-shouye-copy fticon"></div>
+				<p>首页</p>
+			 </a>
+			<a href="selector.html">
+				<div class="iconfont icon-fenlei fticon"></div>
+				<p>分类</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-gouwuche fticon"></div>
+				<p>购物车</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-wode fticon"></div>
+				<p>我的秀</p>
+			</a>
+			<a href="#">
+				<div class="iconfont icon-kaixin fticon"></div>
+				<p>更多</p>
+			</a>
+			
+		</footer>
+		
+		 <script>
+		 	var oUl = document.getElementsByTagName("ul")[0];
+		 	var oDiv = document.getElementById("d");
+		 	var oSpan = document.getElementById("s");
+		 	var i = 0;
+		 	oDiv.onclick = function(){
+		 		if(i==0){
+		 			oUl.style.display = "block";
+		 			oSpan.innerHTML = "&upsilon;";
+		 			i=1;
+		 		}else{
+		 			oUl.style.display = "none";
+		 			oSpan.innerHTML = "&gt;";
+		 			i=0;
+		 		}
+		 		
+		 	}
+		 </script>
+	</body>
+</html>

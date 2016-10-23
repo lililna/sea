@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品介绍</title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			.thejieshao header{
+				width: 100%;
+				height: 10rem;
+				background: #cc3366;
+				font-size: 5rem;
+				color: #fff;
+				text-align: center;
+				line-height: 10rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			.thejieshao header div{
+				width: 40%;
+				font-size: 6rem;
+				font-weight: bold;
+			}
+			.thejieshao header div:nth-child(3){
+				width: 40%;
+			}
+			.thejieshao header a{
+				width: 20%;
+				height: 10%;
+				background: #ff6699;
+				text-decoration: none;
+				font-size: 4rem;
+				padding: 1rem;
+				border-radius: 0.6rem;
+				color: #fff;
+				border: 1px solid #fff;
+				
+			}
+			.thejieshao .time{
+				width: 100%;
+				height: 10rem;
+				background: #333333;
+				font-size: 4rem;
+				color: #fff;
+				line-height: 10rem;
+				display: flex;
+				justify-content: flex-end;
+			}
+			.thejieshao .time p{
+				width: 90%;
+				
+			}
+			.thejieshao section{
+				width: 100%;
+				height: 100rem;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				align-content: space-around;
+			}
+			.thejieshao section .ct{
+				width: 80%;
+				height: 60%;
+				border: 0.5rem solid #CCCCCC;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.thejieshao section p:nth-child(2){
+				width: 80%;
+				font-size: 6rem;
+				height: 8rem;
+				background: #CC0066;
+				line-height: 8rem;
+				color: #fff;
+				text-align: center;
+				border-radius: 2rem;
+			}
+			.thejieshao section p:nth-child(3){
+				width: 80%;
+				height: 8rem;
+				font-size: 4rem;
+				color: #666666;
+				display: flex;
+				justify-content: space-between;
+			}
+			.thejieshao section p:nth-child(3) span:nth-child(2){
+				text-decoration: line-through;
+			}
+			.thejieshao section p:nth-child(3) span:nth-child(3){
+				width: 40%;
+			}
+			.thejieshao section .ct img{
+				width: 70%;
+				height: 80%;
+			}
+			.thejieshao footer{
+				width: 100%;
+				height: 10rem;
+				background: #666666;
+				font-size: 5rem;
+				color: #fff;
+				position: fixed;
+				bottom: 0;
+			}
+			.thejieshao footer ul{
+				display: flex;
+				justify-content: space-between;
+			}
+			.thejieshao footer ul li{
+				width: 33%;
+				line-height: 9rem;
+				list-style: none;
+				border-top: 0.6rem solid #666666;
+				text-align: center;
+			}
+			.thejieshao footer ul li:nth-child(1){
+				border-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="thejieshao">
+			<header>
+				<div></div>
+				<div>商品介绍</div>
+				<div>
+					<a href="#">分享</a>
+				</div>
+			</header>
+			<div class="time">
+				<p>距离结束时间：
+					<span></span>天
+					<span></span>时
+					<span></span>分
+					<span></span>秒
+				</p>
+			</div>
+			<section>
+				<div class="ct">
+					<img src="img/t11.jpg" />
+				</div>
+				<p>￥259 灰色印花短袖T恤</p>
+				<p>
+					<span>市场价：</span>
+					<span>439</span>
+					<span>4.8折</span>
+					<span>125人购买</span>
+				</p>
+			</section>
+			<footer>
+				<ul>
+					<li>介绍</li>
+					<li>详情</li>
+					<li>实拍</li>
+				</ul>
+			</footer>
+			<script>
+				function time(){
+					var endtime = new Date(2016,10,25);
+					var starttime = new Date();
+					var t = endtime - starttime;
+					var d = 0;
+					var h = 0;
+					var m = 0;
+					var s = 0;
+					if(t>0){
+						d = Math.floor(t/1000/60/60/24);
+						h = Math.floor(t/1000/60/60%24);
+						m = Math.floor(t/1000/60%60);
+						s = Math.floor(t/1000%60);
+					}
+					 
+					$(".time p span").eq(0).html(d);
+					$(".time p span").eq(1).html(h);
+					$(".time p span").eq(2).html(m);
+					$(".time p span").eq(3).html(s);
+							 
+				}
+				time();
+				setInterval(time,1000);
+			</script>
+		</div>
+		
+	</body>
+</html>
