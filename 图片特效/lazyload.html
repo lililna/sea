@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片懒加载</title>
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="jquery.lazyload.js" type="text/javascript"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+				float: left;
+				margin: 3px 5px;
+			}
+			img{
+				/*width: 280px;
+				height: 300px;*/
+				border: 12px solid lightpink;
+			}
+			.lazy {
+			    display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			 
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			 <li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+			<li><img width="280" height="300" src="img/b.jpg" alt="" class="lazy"/></li>
+		</ul>
+		<script>
+//			$(function() {
+//			    $("img.lazy").lazyload();
+////			    threshold : 200;
+////			    event : "click"
+//			});
+			$("img.lazy").show().lazyload();
+		</script>
+	</body>
+</html>

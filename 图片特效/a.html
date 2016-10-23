@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*图一*/
+			.box1{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+			}
+			.d1{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background: url(img/b.jpg);
+				background-size: cover;
+				border: 2px solid lightpink;
+				position: absolute;
+				transition: all 1s;
+			}
+			.d2{
+				width: 160px;
+				height: 150px;
+				border-radius: 50%;
+				background: gray;
+				background-size: cover;
+				border: 2px solid lightpink;
+				position: absolute;
+				left: -220px;
+				transition: all 0.5s;
+				opacity: 0;
+				padding: 30px 20px 20px 20px;
+				color: lightcoral;
+				line-height: 60px;
+			}
+			 
+			.box1:hover .d1{
+				transform: scale(0.4,0.4) translateX(250px);
+			}
+			.box1:hover .d2{
+				transform: translateX(220px);
+				opacity: 1;
+			}
+			
+			/*图二*/
+			.yuan{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background: url(img/timg.jpg) no-repeat;
+				background-size: cover;
+				position: relative;
+				margin: 20px auto;
+			}
+			.border{
+				width: 180px;
+				height: 180px;
+				border-bottom: 10px solid #0000FF;
+				border-right: 10px solid #0000FF;
+				border-top: 10px solid #00FF00;
+				border-left: 10px solid #00FF00;
+				border-radius: 50%;
+				transition: all 2s;
+			}
+			.yuan:hover .border{
+				transform: rotate(180deg);
+			}
+			.yuan:hover .mast{
+				opacity: .6;
+				transform: rotateY(180deg);
+			}
+			.yuan:hover .zi{
+				opacity: 1;
+			}
+			.mast{
+				width: 180px;
+				height: 180px;
+				background: #000;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				border-radius: 50%;
+				opacity: 0;
+				transition: all 2s;
+			}
+			.zi{
+				width: 160px;
+				height: 160px;
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				text-align: center;
+				color: #fff;
+				line-height: 40px;
+				opacity: 0;
+				transition: all 2s;
+			}
+			.zi p{
+				line-height: 60px;
+			}
+			/*图三*/
+			.box3{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+			}
+			.b3a{
+				width: 200px;
+				height: 200px;
+				background: url(img/ab.jpg);
+				background-size: cover;
+				position: absolute;
+				border-radius: 50%;
+				transition: all 1s;
+			}
+			.b3b{
+				width: 100px;
+				height: 100px;
+				background: url(img/ac.jpg) no-repeat;
+				background-size: cover;
+				position: absolute;
+				border-radius: 50%;
+				opacity: 0;
+				transition: all 1s;
+				left: 50px;
+				top: 50px;
+			}
+			.box3:hover .b3a{
+				transform: scale(1.5,1.5);
+				opacity: 0;
+			}
+			.box3:hover .b3b{
+				transform: scale(2,2);
+				opacity: 1;
+			}
+			/*图四*/
+			.box4{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+			}
+			.b4a{
+				width: 200px;
+				height: 200px;
+				background: url(img/ad.jpg);
+				background-size: cover;
+				position: absolute;
+				left: 0;
+				border-radius: 50%;
+				transition: all 1s;
+			}
+			.b4b{
+				width: 100px;
+				height: 100px;
+				background: url(img/b.jpg);
+				background-size: cover;
+				position: absolute;
+				left: -220px;
+				top: 50px;
+				border: 2px solid lightpink;
+				border-radius: 50%;
+				transition: all 1s;
+				opacity: 0;
+			}
+			.box4:hover .b4a{
+				animation: b4aa 1s;
+				transform: scale(0.5,0.5) translateX(150px);
+				opacity: 0;
+			}
+			.box4:hover .b4b{
+				animation: b4ab 1.5s;
+				transform: translateX(270px) scale(2,2);
+				transition-delay: 0.5s;
+				opacity: 1;
+			}
+			@keyframes b4ab{
+				0%{transform: translateX(0px);}
+				33%{transform: translateX(0px);}
+				66%{transform: translateX(270px) scale(1,1);}
+				100%{transform: translateX(270px) scale(2,2);}
+			}
+			@keyframes b4aa{
+				0%{transform: scale(1,1);}
+				50%{transform: scale(0.5,0.5);opacity: 1;}
+				100%{transform: scale(0.5,0.5) translateX(150px);opacity: 0;}
+			}
+			
+			/*图五*/
+			.box5{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+			}
+			.b5a{
+				width: 200px;
+				height: 200px;
+				background: url(img/b.jpg);
+				background-size: cover;
+				position: absolute;
+				left: 0;
+				border-radius: 50%;
+				transition: all 1s;
+				border: 2px solid lightsalmon;
+			}
+			.b5b{
+				width: 50px;
+				height: 50px;
+				background: url(img/ac.jpg);
+				background-size: cover;
+				position: absolute;
+				left: 75px;
+				top: 75px;
+				border-radius: 50%;
+				transition: all 0.3s;
+				transform: rotateY(-90deg);
+				transition-delay: 0.5s;
+			}
+			.box5:hover .b5a{
+				transform: scale(0,0) rotateY(-90deg);
+			}
+			.box5:hover .b5b{
+				transform: scale(4,4) rotateY(0deg);
+			}
+			/*图六*/
+			.box6{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+			}
+			.b6a{
+				width: 200px;
+				height: 200px;
+				background: url(img/ac.jpg) no-repeat center right;
+				background-size: cover;
+				position: absolute;
+				left: 0;
+				border-radius: 50%;
+				transition: all 0.5s;
+			}
+			.box6:hover .b6a{
+				transform: translateX(250px) rotateZ(180deg);
+				opacity: 0;
+			}
+			.b6b{
+				width: 200px;
+				height: 200px;
+				background: url(img/ad.jpg) no-repeat center right;
+				background-size: cover;
+				position: absolute;
+				left: 200px;
+				border-radius: 50%;
+				transition: all 0.5s;
+				opacity: 0;
+				
+			}
+			.box6:hover .b6b{
+				transition-delay: 0.5s;
+				transform: translateX(-200px) rotateZ(-180deg);
+				opacity: 1;
+			}
+			/*图七*/
+			.box7{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+				
+			}
+			.box7 img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				transform-origin: 3% 50%;
+				transition: all 0.35s;
+			}
+			.box7:hover img:nth-child(2){
+				transform: rotate(120deg);
+			}
+			.box7 p{
+				width: 10px;
+				height: 10px;
+				background: gray;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 95px;
+			}
+			/*图八*/
+			.box8{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+				transform-style: preserve-3d;
+			}
+			.box8 img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.box8 img:nth-child(2){
+				transform: rotateX(0deg) rotateY(0deg);
+            	transform-origin: 0 0;
+				transition: all 1s;
+			}
+			.box8:hover img:nth-child(2){
+				transform: rotateX(0deg) rotateY(-180deg);
+			}
+			/*图九*/
+			.box9{
+				width: 200px;
+				height: 200px;
+				/*border: 2px solid #0000FF;*/
+				margin: 20px auto;
+				position: relative;
+				transform-style: preserve-3d;
+			}
+			.box9 img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				transition: all 0.5s;
+				
+			}
+			.box9 img:nth-child(1){
+				transform: scaleY(0);
+				transform-origin: 0 200px;
+			}
+			.box9 img:nth-child(2){
+				transform-origin: 0 0;
+			}
+			.box9:hover img:nth-child(2){
+				transform: scaleY(0);
+				opacity: 0;
+			}
+			.box9:hover img:nth-child(1){
+				transform: scaleY(1);
+				opacity: 1;
+			}
+			 
+		</style>
+	</head>
+	<body>
+		<!--图一-->
+		<div class="box1">
+			<div class="d2">
+				<h2>(*@ο@*) ～</h2>
+				<hr />
+				<p>美女，交个朋友吧</p>
+			</div>
+			<div class="d1"></div>
+		</div>
+		<!--图二-->
+		<div class="yuan">
+			<div class="border"></div>
+			<div class="mast">
+				
+			</div>
+			<div class="zi">
+				<h1>heading here</h1>
+				<hr />
+				<p>waqdbddshz</p>
+			</div>
+		</div>
+		<!--图三-->
+		<div class="box3">
+			<div class="b3a"></div>
+			<div class="b3b">	
+			</div>
+		</div>
+		<!--图四-->
+		<div class="box4">
+			<div class="b4a"></div>
+			<div class="b4b"></div>
+		</div>
+		
+		<!--图五-->
+		<div class="box5">
+			<div class="b5a"></div>
+			<div class="b5b"></div>
+		</div>
+		<!--图六-->
+		<div class="box6">
+			<div class="b6a"></div>
+			<div class="b6b"></div>
+		</div>
+		<!--图七-->
+		<div class="box7">
+			<img src="img/ac.jpg" />
+			<img src="img/timg.jpg" />
+			<p></p>
+		</div>
+		<!--图八-->
+		<div class="box8">
+			 <img src="img/aa.jpeg" />
+			 <img src="img/ad.jpg" />
+		</div>
+		<!--图九-->
+		<div class="box9">
+			 <img src="img/ac.jpg" />
+			 <img src="img/ab.jpg" />
+		</div>
+		 
+	</body>
+</html>
