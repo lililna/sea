@@ -1,0 +1,11 @@
+body{
+	background: deepskyblue;
+}
+p{
+	width: 200px;
+	height: 200px;
+	border: 3px solid #0000FF;
+	background: url(../fpic7200.jpg);
+	font-size: 30px;
+	font-weight: bold;
+}
