@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/rem.js"></script>
+		<script src="../js/zepto.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont2/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dingdan.css"/>
+		<link rel="stylesheet" type="text/css" href="../jumpiconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jump.css"/>
+	</head>
+	<body>
+		<header>
+			<p class="iconfont icon-jiantouzuo zuo1"></p>
+			<p class="txt_head">我的订单</p>
+			<p class="iconfont icon-fenlei fenlei"></p>
+		</header>
+		<div class="main">
+			<ul id="list">
+				<li class="item">待支付</li>
+				<li class="item">待发货</li>
+				<li class="item">待收货</li>
+				<li class="item">已完成</li>
+				<li class="item">退换货</li>
+			</ul>
+			<a href="dizhi.html">管理收货地址</a>
+		</div>
+		<div class="main1">
+			您暂时没有任何订单！
+		</div>
+		
+		<div class="jump">
+	        <a href="../index.html">
+	            <i class="iconfont icon-shouye icon-footer"></i>
+	            <p>首页</p>
+	        </a>
+	        <a href="fenlei.html">
+	            <i class="iconfont icon-fenlei icon-footer"></i>
+	            <p>分类</p>
+	        </a>
+	        <a href="gwc.html">
+	            <i class="iconfont icon-gouwuche icon-footer"></i>
+	            <p>购物车</p>
+	        </a>
+	        <a href="dingdan.html">
+	            <i class="iconfont icon-icon icon-footer"></i>
+	            <p>我的订单</p>
+	        </a>
+	        <a href="ZX.html">
+	            <i class="iconfont icon-gerenzhongxin icon-footer"></i>
+	            <p>个人中心</p>
+	        </a>
+	    </div>
+		<script>
+			var list = $("#list");
+			list.on("click",".item",function(event){
+				$(this).css({
+					"background":"#fe9901",
+					"color":"#fff"
+				}).siblings().css({
+					"background":"",
+					"color":""
+				})
+			})
+		</script>
+	</body>
+</html>

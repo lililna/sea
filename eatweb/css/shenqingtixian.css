@@ -1,0 +1,53 @@
+body，html {
+  height: 100%;
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 2.2rem;
+  font-size: 0.8rem;
+  background: gainsboro;
+  font-family: "微软雅黑";
+  color: #797876;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a:nth-child(1) {
+  margin-left: 0.8rem;
+}
+header .font_1 {
+  font-size: 1.2rem;
+}
+header a:nth-child(3) {
+  margin-right: 0.75rem;
+}
+.main {
+  font-family: "微软雅黑";
+  width: 94%;
+  margin: 2.5rem 3% 0 3%;
+  height: 5.5rem;
+  background: #f2dedf;
+  border-radius: 0.2rem;
+}
+.main ul {
+  padding-top: 0.5rem;
+  display: flex;
+}
+.main ul li {
+  padding-left: 0.5rem;
+}
+.main ul li:nth-child(2) p:nth-child(1) {
+  font-size: 1.2rem;
+  color: #a9533a;
+  font-weight: 800;
+}
+.main ul li:nth-child(2) p:nth-child(2) {
+  font-size: 0.5rem;
+  color: #8c817f;
+  height: 2rem;
+  line-height: 2rem;
+}
+.main ul li:nth-child(2) a {
+  color: #1677aa;
+}

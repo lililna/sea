@@ -1,0 +1,184 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  background: #EEEEEE;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+html body span {
+  font-size: 0.8rem;
+}
+html body #txt {
+  font-size: 0.8rem;
+}
+html body b {
+  font-size: 0.6rem;
+}
+html body .top {
+  width: 92%;
+  background: #fff;
+  height: 5rem;
+  margin-top: 4%;
+}
+html body .top h3 {
+  width: 92%;
+  height: 40%;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding: 0 4%;
+}
+html body .top p {
+  width: 92%;
+  height: 60%;
+  padding: 0 4%;
+  line-height: 3rem;
+  font-size: 1rem;
+}
+html body .top .xinxi {
+  width: 92%;
+  height: 60%;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .top .xinxi .address {
+  display: block;
+  width: 40%;
+  height: 70%;
+  background: #f00;
+  color: #fff;
+  line-height: 2rem;
+  border-radius: 0.1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+html body .top .xinxi b {
+  display: block;
+}
+html body .fangshi {
+  width: 92%;
+  background: #fff;
+  height: 8rem;
+  margin-top: 4%;
+}
+html body .fangshi h3 {
+  width: 92%;
+  height: 2rem;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding: 0 4%;
+}
+html body .fangshi p {
+  width: 92%;
+  height: 3rem;
+  padding: 0 4%;
+  line-height: 3rem;
+  font-size: 1rem;
+  border-bottom: 0.01rem solid #CCCCCC;
+}
+html body .xq {
+  width: 92%;
+  background: #fff;
+  height: 10rem;
+  margin-top: 4%;
+}
+html body .xq h3 {
+  width: 92%;
+  height: 2rem;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding: 0 4%;
+  border-bottom: 0.01rem solid #CCCCCC;
+}
+html body .xq .goods {
+  height: 8rem;
+  width: 100%;
+}
+html body .xq .goods .shuoming {
+  line-height: 0.8rem;
+  font-size: 0.2rem;
+}
+html body .xq .goods .gdetl {
+  width: 100%;
+  display: flex;
+}
+html body .xq .goods .gdetl span {
+  line-height: 2rem;
+  margin: 1rem;
+  font-size: 0.6rem;
+}
+html body .xq .goods .gdetl span b {
+  color: #f00;
+}
+html body .xq .goods .gdetl img {
+  display: block;
+  width: 30%;
+  height: 5rem;
+}
+html body .beizhu {
+  width: 92%;
+  background: #fff;
+  height: 5rem;
+  margin-top: 4%;
+}
+html body .beizhu h3 {
+  width: 92%;
+  height: 2rem;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding: 0 4%;
+  border-bottom: 0.01rem solid #CCCCCC;
+}
+html body .beizhu input {
+  width: 92%;
+  margin-left: 4%;
+  height: 2rem;
+  border: 0;
+}
+html body .bottom {
+  width: 100%;
+  height: 7rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+html body footer {
+  width: 100%;
+  height: 4rem;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+html body footer span {
+  width: 60%;
+  margin-left: 5%;
+}
+html body footer span #zong {
+  font-size: 1rem;
+  color: red;
+}
+html body footer a {
+  width: 30%;
+  height: 2.5rem;
+  background: #f00;
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 2.5rem;
+  text-align: center;
+  display: block;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.ziliao {
+  width: 100%;
+  height: 2.2rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  font-size: 0.8rem;
+}
+.ziliao .ziliao1 {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.8rem;
+}
+.ziliao .ziliao1 div {
+  font-size: 0.8rem;
+}
+.xiamian {
+  width: 100%;
+  height: 97%;
+  background: #eeeeee;
+  margin-top: 2.2rem;
+}
+.xiamian div {
+  width: 80%;
+  height: 4.6rem;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  position: relative;
+}
+.xiamian div p {
+  line-height: 2.3rem;
+  font-size: 0.8rem;
+}
+.xiamian div input {
+  width: 100%;
+  height: 2.3rem;
+  border: none;
+  font-size: 0.8rem;
+}
+.xiamian div span {
+  width: 5rem;
+  height: 2.3rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: green;
+  display: none;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 2.3rem;
+}
+.xiamian div:nth-child(6) {
+  width: 75%;
+  height: 2.5rem;
+}
+.xiamian div:nth-child(6) input {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  background: #48c5c6;
+  margin-top: 0.5rem;
+}
+.xiamian div:nth-child(7) {
+  width: 100%;
+  height: 2.65rem;
+}

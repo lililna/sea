@@ -1,0 +1,112 @@
+body，html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #EEEEEE;
+}
+header {
+  width: 100%;
+  height: 2.2rem;
+  font-size: 0.8rem;
+  background: gainsboro;
+  font-family: "微软雅黑";
+  color: #797876;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a:nth-child(1) {
+  margin-left: 0.8rem;
+}
+header .font_1 {
+  font-size: 1.2rem;
+}
+header a:nth-child(3) {
+  margin-right: 0.75rem;
+}
+.dingDanShuJu {
+  font-family: "微软雅黑";
+  width: 90%;
+  background: white;
+  color: #3a3a3a;
+  box-shadow: 0 0 15px 0 #dcdcdc;
+  padding: 0 5%;
+  margin-top: 0.1rem;
+}
+.dingDanShuJu p {
+  height: 2.1rem;
+  width: 100%;
+  border-bottom: 0.05rem solid #eaeaea;
+  font-size: 0.8rem;
+  line-height: 2.1rem;
+}
+.dingDanShuJu p img {
+  height: 1rem;
+  margin-top: 0.55rem;
+  margin-right: 0.55rem;
+  float: left;
+}
+.dingDanShuJu div {
+  width: 100%;
+  height: 5.175rem;
+  margin-top: 1.325rem;
+}
+.dingDanShuJu div ul {
+  width: 100%;
+  display: flex;
+}
+.dingDanShuJu div ul li {
+  height: 3.6rem;
+  width: 33%;
+  border-right: 0.05rem solid #ededed;
+  padding-left: 2%;
+}
+.dingDanShuJu div ul li p {
+  font-size: 0.625rem;
+  border: none;
+  line-height: 0.625rem;
+  color: #303030;
+  height: 0.625rem;
+}
+.dingDanShuJu div ul li span {
+  font-size: 1rem;
+  color: #f27674;
+  display: block;
+  padding-top: 1rem;
+}
+.dingDanShuJu div ul li:nth-child(3) {
+  border-right: none;
+}
+.xiangXiDingDan {
+  margin-top: 0.575rem;
+  font-family: "微软雅黑";
+  width: 90%;
+  background: white;
+  color: #3a3a3a;
+  padding: 0 5%;
+}
+.xiangXiDingDan p:nth-child(1) {
+  height: 2.1rem;
+  width: 100%;
+  border-bottom: 0.05rem solid #eaeaea;
+  font-size: 0.8rem;
+  line-height: 2.1rem;
+}
+.xiangXiDingDan p:nth-child(1) img {
+  height: 1rem;
+  margin-top: 0.55rem;
+  margin-right: 0.55rem;
+  float: left;
+}
+.xiangXiDingDan p:nth-child(2) {
+  padding-top: 0.3rem;
+  height: 2.1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  line-height: 2.1rem;
+}
+.kongbai {
+  width: 100%;
+  height: 2.5rem;
+}

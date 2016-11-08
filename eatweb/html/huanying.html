@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/rem.js"></script>
+		<script src="../js/zepto.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont2/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/huanying.css"/>
+	</head>
+	<body>
+		<header>
+			<p class="iconfont icon-jiantouzuo zuo1"></p>
+			<p class="txt_head">我的订单</p>
+			<p class="iconfont icon-fenlei fenlei"></p>
+		</header>
+		<ul class="footer">
+			<li class="item">
+				<span class="iconfont icon-fenlei fenlei1"></span>
+				<ul class="list">
+					<li class="list_li"><a href="../index.html">商城首页</a></li>
+					<li class="list_li"><a href="#">限时秒杀</a></li>
+					<li class="list_li"><a href="#">店长推荐</a></li>
+				</ul>
+				<span>我要购物</span>
+			</li>
+			<li class="item">
+				<span class="iconfont icon-fenlei fenlei1"></span>
+				<ul class="list">
+					<li class="list_li"><a href="../index.html">商城首页</a></li>
+					<li class="list_li"><a href="#">限时秒杀</a></li>
+					<li class="list_li"><a href="#">店长推荐</a></li>
+				</ul>
+				<span>会员管理</span>
+			</li>
+			<li class="item">
+				<span class="iconfont icon-fenlei fenlei1"></span>
+				<ul class="list">
+					<li class="list_li"><a href="../index.html">商城首页</a></li>
+					<li class="list_li"><a href="#">限时秒杀</a></li>
+					<li class="list_li"><a href="#">店长推荐</a></li>
+				</ul>
+				<span>活动</span>
+			</li>
+		</ul>
+		<script>
+			var body=$("body");
+			var footer=$(".footer");
+			var list=$(".list");
+			footer.on("touchstart",".item",function(event){
+				var ev = event||window.event;
+				$(this).css("background","#EEEEEE").find(".list").show();
+				$(this).siblings().css("background","").find(".list").hide();
+				if(ev.stopPropagation){
+					ev.stopPropagation(); 
+				}else{
+					ev.cancelBubble = true; //ie下取消冒泡
+				}	
+			})
+			list.on("touchstart",".list_li",function(){
+				$(this).css("background","#E3E3E3").siblings().css("background","");
+			})
+			body.on("touchstart",function(){
+				$(".item").css("background","")
+				$(".list").hide();
+			})
+		</script>
+	</body>
+</html>

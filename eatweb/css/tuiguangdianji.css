@@ -1,0 +1,42 @@
+body，html {
+  height: 100%;
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 2.2rem;
+  font-size: 0.8rem;
+  background: gainsboro;
+  font-family: "微软雅黑";
+  color: #797876;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a:nth-child(1) {
+  margin-left: 0.8rem;
+}
+header .font_1 {
+  font-size: 1.2rem;
+}
+header a:nth-child(3) {
+  margin-right: 0.75rem;
+}
+.main {
+  width: 100%;
+  font-family: "微软雅黑";
+  text-align: center;
+  padding-top: 4rem;
+  color: #afafaf;
+}
+.main a {
+  font-size: 5rem;
+  color: #afafaf;
+}
+.main p {
+  font-size: 0.6rem;
+}
+.kongbai {
+  width: 100%;
+  height: 2.5rem;
+}

@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+}
+header {
+  width: 100%;
+  height: 2.2rem;
+  background-color: #fff ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .txt_head {
+  color: #7c7c7c;
+  font-size: 0.7rem;
+}
+header .zuo1,
+header .fenlei {
+  font-size: 1rem ;
+  color: #b0b0b0;
+}
+header .zuo1 {
+  margin-left: 5%;
+}
+header .fenlei {
+  margin-right: 5%;
+}
+.footer {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #B0B0B0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  background-color: #fff ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.footer .item {
+  position: relative;
+  font-size: 0.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  width: 33.3%;
+}
+.footer .item ul {
+  position: absolute;
+  width: 4.25rem;
+  bottom: 2.5rem;
+  left: 0.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fafafa;
+  display: none;
+}
+.footer .item ul li {
+  border-bottom: 1px solid #B0B0B0;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.footer .item ul li a {
+  font-size: 0.7rem;
+  color: #474747;
+  text-decoration: none;
+}
+.footer .item ul:nth-child(1) {
+  height: 6rem;
+}
+.footer .item ul:nth-child(2) {
+  height: 6rem;
+}
+.footer .item ul:nth-child(3) {
+  height: 4rem;
+}
+@media only screen and (min-width: 640px) {
+  .footer .item ul {
+    left: 1.4rem;
+  }
+}

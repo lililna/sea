@@ -1,0 +1,155 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+}
+header{
+    width: 100%;
+    height: 2.2rem;
+    background:#747787 ;
+}
+#main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    #mainc{     
+        width: 96%;
+        span{
+            font-size: 0.7rem;
+        }
+         #kong{
+             width: 100%;
+             height: 10rem;
+             background: white;
+             border-radius: 10px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             img{
+                 width: 60%;
+                 height: 80%;
+             }
+         }
+        div.sp{
+            margin-bottom:0.2rem ;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height:6rem;
+            align-items: center;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 0 10px #CCCCCC;
+            box-shadow: 0 0 10px #CCCCCC;
+            img{
+                width: 5.5rem;
+            }
+            div{                       
+                width: 60%;                             
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p:nth-child(1){
+                    white-space: nowrap;
+                    width: 96%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                p{
+                    font-size: 0.7rem;
+                    line-height:1rem;
+                }
+                p.colors{
+                    color:#e9342a;
+                }
+                div{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    span{
+                        font-size: 0.7rem;
+                        color: #d5a7a7;
+                    }
+                    div{
+                        font-size:0.7rem;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 40%;
+                        
+                        .txt{
+                            font-size: 0.7rem;
+                            height: 0.8rem;
+                            text-align: center;
+                            border: 1px solid #e1e1e1;
+                            width: 35%;
+                         
+                        }
+                        .btn1{
+                            font-size: 0.7rem;
+                            height: 1rem;
+                            background: #f2f2f2;
+                            width: 30%;
+                            border: 1px solid #e1e1e1;
+                        }
+                        .btn2{
+                            font-size: 0.7rem;
+                            height: 1rem;
+                            background: #f2f2f2;
+                            width: 30%;
+                            border: 1px solid #e1e1e1;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+#bottom{
+    position: fixed;
+    left: 0;
+    bottom: 2.8rem;
+    width: 100%;
+    height: 2rem;
+    background: #747787;
+    display: flex;
+    justify-content: center;
+    #bottomc{
+        height: 100%;
+        width: 96%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+            color: white;
+            font-weight: bold;
+            span{
+                font-size: 0.7rem;
+            }
+        }
+        div:nth-child(2){
+            #btnall{
+                width: 4rem;
+                height: 1.5rem;
+                margin-left:0.5rem ;
+                background: #64bb64;
+                font-size: 0.7rem;
+                border:none;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 5.5rem;
+}
