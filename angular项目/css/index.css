@@ -1,0 +1,106 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+div.wrap{
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+header{
+	width: 100%;
+	height: 5rem;
+	background: lightcyan;
+}
+header ul{
+	display: flex;
+}
+header ul li{
+	flex: 1;
+	text-align: center;
+	border: 0.01rem solid #fff;
+}
+header ul li a{
+	font-size: 1.5rem;
+	color: #000;
+	line-height: 5rem;
+}
+.main{
+	flex: 1;
+	background: lightgoldenrodyellow;
+	overflow: hidden;
+}
+.search{
+	width: 100%;
+	height: 4rem;
+	background: lightgoldenrodyellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#txt{
+	width: 74%;
+	height: 70%;
+	border-radius: 1rem;
+	font-size: 1rem;
+	padding-left: 1rem;
+	border: 0;
+}
+#btn{
+	width: 15%;
+	height: 74%;
+	font-size: 1rem;
+	border-radius: 1rem;
+	background: lightcyan;
+	border: 0;
+}
+/*fridend*/
+.friend ul{
+	display: flex;
+	flex-flow: column;
+	
+}
+.friend ul li{
+	width: 100%;
+	height: 8rem;
+	background: lightcyan;
+	border: 0.05rem solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.friend ul li img{
+	width: 30%;
+	height: 90%;
+	border: 0.3rem solid yellow;
+}
+.friend .jieshao{
+	width: 50%;
+	height: 80%;
+	font-size: 1rem;
+	line-height: 2rem;
+	font-size: 1.2rem;
+}
+.friend span{
+	display: block;
+	font-size: 3rem;
+	width: 3rem;
+	height: 3rem;
+	color: darkgray;
+}
+/*details*/
+.detail{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.detail img{
+	width: 70%;
+}
+.detail p{
+	width: 70%;
+	height: 3rem;
+	border-bottom: 0.1rem solid #CCCCCC;
+	line-height: 3rem;
+	font-size: 1rem;
+}

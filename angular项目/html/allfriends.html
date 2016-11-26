@@ -1,0 +1,12 @@
+<div class="friend">
+	<ul>
+		<li ng-repeat="x in friend|filter:sx" ng-click="$location.path('view/'+x.objid+'/'+x.id)">
+			<img ng-src="{{x.img}}"/>
+			<div class="jieshao">
+				<p>{{x.name}}</p>
+				<p>分组：{{x.name}}</p>
+			</div>
+			<span>&gt;</span>
+		</li>
+	</ul>
+</div>
